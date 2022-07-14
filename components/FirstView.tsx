@@ -4,7 +4,7 @@ type Props = {};
 
 function FirstView({}: Props) {
   return (
-    <section className="flex h-full flex-col items-center bg-primary-50 pt-24 pb-10 bg-[url('/img/bg.first.view.jpg')] bg-bottom bg-no-repeat bg-contain">
+    <section className="flex h-[100vh] flex-col items-center bg-primary-50 pt-24 pb-10 bg-[url('/img/bg.first.view.jpg')] bg-bottom bg-no-repeat bg-contain">
       <h2 className="font-semibold text-6xl text-primary-900 tracking-tight text-center">
         Your Social Media Privately Hosted
       </h2>
