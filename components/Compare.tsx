@@ -37,7 +37,7 @@ function Compare({}: Props) {
       <h2 className="font-semibold text-5xl text-gray-900 mb-24 text-center">
         Compare our tool with others
       </h2>
-      <div className="pb-24 border-b border-gray-200 w-fit sm:w-full overflow-auto">
+      <div className="pb-24 border-b border-gray-200 md:w-fit sm:w-full overflow-auto">
         <table className="table border-b m-auto">
           <thead className="border-solid border-b border-gray-200">
             <tr>
