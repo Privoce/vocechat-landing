@@ -10,7 +10,7 @@ const Cell = ({
   return (
     <td
       align={type === "title" ? "left" : "center"}
-      className="w-60 text-gray-400 xl:w-50 sm:w-10 px-6 py-5 text-md sm:text-xl md:text-md"
+      className="w-60 text-gray-400 xl:w-50 sm:w-10 px-6 py-5 text-md"
     >
       {type == "check" ? (
         <Image className="w-6 h-6" src={"/img/check.svg"} alt="check icon"></Image>
@@ -24,10 +24,7 @@ const Cell = ({
 };
 const HeaderCell = ({ isFirst = false, children }: { isFirst?: boolean; children: ReactNode }) => {
   return (
-    <td
-      align={isFirst ? "left" : "center"}
-      className="w-60 xl:w-50 px-6 py-5 font-bold text-md sm:text-2xl md:text-md"
-    >
+    <td align={isFirst ? "left" : "center"} className="w-60 xl:w-50 px-6 py-5 font-bold text-md ">
       {children}
     </td>
   );
@@ -40,8 +37,8 @@ function Compare({}: Props) {
       <h2 className="font-semibold text-5xl text-gray-900 mb-24 text-center">
         Compare our tool with others
       </h2>
-      <div className="pb-24 border-b border-gray-200 w-fit overflow-auto">
-        <table className="border-b m-auto">
+      <div className="pb-24 border-b border-gray-200 w-fit sm:w-full overflow-auto">
+        <table className="table border-b m-auto">
           <thead className="border-solid border-b border-gray-200">
             <tr>
               <HeaderCell isFirst={true}>Products</HeaderCell>
@@ -51,7 +48,7 @@ function Compare({}: Props) {
               <HeaderCell>Private Hosting</HeaderCell>
             </tr>
           </thead>
-          <tbody className="[&_tr]:odd:bg-gray-50">
+          <tbody className="[&_tr:nth-child(odd)]:bg-gray-50">
             <tr>
               <Cell type="title">VoceChat</Cell>
               <Cell />

@@ -5,10 +5,10 @@ type Props = {};
 function FirstView({}: Props) {
   return (
     <section className="flex h-full flex-col items-center bg-primary-50 pt-24 pb-10 bg-[url('/img/bg.first.view.jpg')] bg-bottom bg-no-repeat bg-contain">
-      <h2 className="font-semibold text-6xl sm:text-7xl md:text-6xl text-[#164C63] tracking-tight text-center">
+      <h2 className="font-semibold text-6xl text-primary-900 tracking-tight text-center">
         Your Social Media Privately Hosted
       </h2>
-      <p className="text-xl sm:text-3xl md:text-xl w-[768px] text-center text-primary-700 mt-6 mb-16 mx-4">
+      <p className="text-xl sm:text-2xl md:text-xl w-[768px] sm:w-[90%] text-center text-primary-700 mt-6 mb-16 mx-4">
         As a top alternative to centralized chat services, Voce chat is a superlight Rust powered
         open-core chat app that prioritizes private hosting.
       </p>

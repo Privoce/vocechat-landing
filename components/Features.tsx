@@ -35,7 +35,7 @@ const data = [
 type FeatureProps = { icon: string; title: string; list: string[] };
 const Feature = ({ icon, title, list }: FeatureProps) => {
   return (
-    <div className="flex flex-col w-[272px] sm:w-[80%] sm:items-center md:items-start md:w-[272px]">
+    <div className="flex flex-col w-[272px] sm:w-[75%] sm:items-center md:items-start md:w-[272px]">
       <Image
         alt="Feature Icon"
         src={icon}
@@ -79,7 +79,7 @@ const Features = (props: Props) => {
           })}
         </div>
         <div className="relative w-[480px] flex justify-center sm:order-1 md:order-2">
-          <div className="w-[532px] h-[480px] rounded-[40%_60%_70%_30%_/_40%_50%_60%_50%] bg-[#CFF9FE] absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] animate-morph"></div>
+          <div className="w-[532px] h-[480px] rounded-[40%_60%_70%_30%_/_40%_50%_60%_50%] bg-primary-100 absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] animate-morph"></div>
           <Image
             className="w-[290px] translate-x-0 translate-y-0"
             src={"/img/mobile.png"}
