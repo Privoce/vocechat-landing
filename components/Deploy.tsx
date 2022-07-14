@@ -1,27 +1,74 @@
-import React from 'react'
-type Props = {}
+import React from "react";
+import Image from "next/future/image";
+type Props = {};
 
 const Deploy = (props: Props) => {
   return (
-    <section className="flex flex-col items-center py-[96px] bg-[#1D2939] text-[#fff]">
-      <h3 className="font-[600] text-[36px] leading-[44px] tracking-[-0.02em] text-[#FCFCFD]">Deploy our free-trial version through docker:</h3>
-      <p className="font-[400] leading-[30px] text-center text-[#D0D5DD] text-[20px]">For other ways of installation, check out our documentation.</p>
-      <div className="relative my-[64px]">
-        <code className="min-w-[300px] bg-[#050702] px-[40px] py-[20px] rounded-[10px]">
+    <section className="flex flex-col items-center py-[96px] bg-gray-800 text-white">
+      <h3 className="font-semibold text-4xl sm:text-6xl md:text-4xl tracking-tight text-gray-25 text-center">
+        Deploy our free-trial version through docker:
+      </h3>
+      <p className="text-center text-gray-300 text-xl mt-5">
+        For other ways of installation, check out our{" "}
+        <a
+          className="text-primary-500"
+          href="https://doc.voce.chat/en-us/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          documentation
+        </a>
+        .
+      </p>
+      <div className="mt-16 mb-10 py-2">
+        <code className="w-fit bg-gray-900 px-10 py-5 rounded-xl whitespace-pre">
           curl -sf https://sh.rustchat.com/install.sh a+x install.sh && ./install.sh
         </code>
-        <button className="absolute top-[-25px] right-[5px] px-[5px] py-[6px] rounded-[5px] cursor-pointer opacity-40 hover:opacity-100">Copy</button>
       </div>
-      <span className="my-[64px] text-[#FCFCFD] leading-[24px] font-[400] text-[16px]">After starting the server, visit http://localhost:3000/ to use the app.</span>
+      <div className="flex gap-2">
+        <button className="btn-primary-large flex gap-3 items-center">
+          <Image className="w-6 h-6" src={"/img/icon.copy.svg"} alt="Copy Icon"></Image>
+          Copy Code
+        </button>
+        <a
+          className="btn-primary-large bg-white text-gray-700 hover:bg-gray-25/80"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="//privoce.voce.chat"
+        >
+          Demo
+        </a>
+      </div>
+      <span className="my-16 text-gray-25 text-md">
+        After starting the server, visit http://localhost:3000/ to use the app.
+      </span>
       <div className="flex flex-col items-center">
-        <h4 className="font-[600] text-[36px] leading-[44px] text-[#FCFCFD]">Still having a problem?</h4>
-        <span className="mt-[12px] mb-[64px]">
-          Check out <a className='text-[#22CCEE]' href="https://www.youtube.com/watch?v=RzmwpFWY-kI" target="_blank" rel="noopener noreferrer">video instruction</a> . Or book a consulting meeting with us:
+        <h4 className="font-semibold text-4xl sm:text-6xl md:text-4xl text-[#FCFCFD]">
+          Still having a problem?
+        </h4>
+        <span className="mt-3 mb-16">
+          Check out{" "}
+          <a
+            className="text-primary-400"
+            href="https://www.youtube.com/watch?v=RzmwpFWY-kI"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            video instruction
+          </a>{" "}
+          . Or book a consulting meeting with us:
         </span>
-        <a href="#" className="bg-[#22CCEE] rounded-[8px] px-[20px] py-[12px] font-[500] leading-[24px] shadow-[0px_1px_2px_rgba(16,24,40,0.05)]">Book a Meeting</a>
+        <a
+          href="https://calendly.com/hansu/han-meeting"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-primary"
+        >
+          Book a Meeting
+        </a>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Deploy
+export default Deploy;

@@ -1,104 +1,153 @@
-import React from 'react'
-import styled from 'styled-components';
-import Image from 'next/future/image'
-const Styled = styled.section`
-  table{
-    thead{
-      font-weight: 700;
-font-size: 16px;
-line-height: 24px;
-color: #101828;
-border-bottom: 1px solid #EAECF0;
-
-th{
-  padding: 22px 24px;
-  padding-bottom: 16px;
-}
-    }
-    tbody{
-      margin-top: 5px;
-      tr{
-        &:nth-child(odd){
-          background-color: #F9FAFB;
-        }
-        td{
-          width: 240px;
-          padding: 22px 24px;
-          img{
-    width: 24px;
-    height: 24px;
-  }
-        }
-      }
-    }
-  }
-`;
-type Props = {}
-
-function Compare({ }: Props) {
+import React, { ReactElement, ReactNode } from "react";
+import Image from "next/future/image";
+const Cell = ({
+  type = "check",
+  children
+}: {
+  type?: "title" | "check" | "none";
+  children?: ReactNode;
+}) => {
   return (
-    <section className="flex flex-col items-center py-[96px]">
-      <h2 className="font-[600] text-[48px] leading-[60px] text-[#101828] mb-[96px]">Compare our tool with others</h2>
-      <table>
-        <thead className="border-solid border-b border-[#EAECF0]">
-          <tr>
-            <th align='left'>Products</th>
-            <th align='center'>Security & Privacy</th>
-            <th align='center'>Open Source</th>
-            <th align='center'>Mobile App</th>
-            <th align='center'>Private Hosting</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr className='bg-[#F9FAFB]'>
-            <td align='left'>VoceChat</td>
-            <td align='center'>
-              <Image className='w-[24px] h-[24px]' src={'/img/check.png'} alt="check icon"></Image>
-            </td>
-            <td align='center'>
-              <Image className='w-[24px] h-[24px]' src={'/img/check.png'} alt="check icon"></Image>
-            </td>
-            <td align='center'>
-              <Image className='w-[24px] h-[24px]' src={'/img/check.png'} alt="check icon"></Image>
-            </td>
-            <td align='center'>
-              <Image className='w-[24px] h-[24px]' src={'/img/check.png'} alt="check icon"></Image>
-            </td>
-          </tr>
-          <tr>
-            <td align='left'>Maxtrix</td>
-            <td align='center'>
-              <Image className='w-[24px] h-[24px]' src={'/img/check.png'} alt="check icon"></Image>
-            </td>
-            <td align='center'>
-              <Image className='w-[24px] h-[24px]' src={'/img/check.png'} alt="check icon"></Image>
-            </td>
-            <td align='center'>
-              <Image className='w-[24px] h-[24px]' src={'/img/check.png'} alt="check icon"></Image>
-            </td>
-            <td align='center'>
-              <Image className='w-[24px] h-[24px]' src={'/img/check.png'} alt="check icon"></Image>
-            </td>
-          </tr>
-          <tr className='bg-[#F9FAFB]'>
-            <td align='left'>XMPP</td>
-            <td align='center'>
-              <Image className='w-[24px] h-[24px]' src={'/img/check.png'} alt="check icon"></Image>
-            </td>
-            <td align='center'>
-              <Image className='w-[24px] h-[24px]' src={'/img/check.png'} alt="check icon"></Image>
-            </td>
-            <td align='center'>
-              <Image className='w-[24px] h-[24px]' src={'/img/check.png'} alt="check icon"></Image>
-            </td>
-            <td align='center'>
-              <Image className='w-[24px] h-[24px]' src={'/img/check.png'} alt="check icon"></Image>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+    <td
+      align={type === "title" ? "left" : "center"}
+      className="w-60 text-gray-400 xl:w-50 sm:w-10 px-6 py-5 text-md sm:text-xl md:text-md"
+    >
+      {type == "check" ? (
+        <Image className="w-6 h-6" src={"/img/check.svg"} alt="check icon"></Image>
+      ) : type === "title" ? (
+        children
+      ) : (
+        "-"
+      )}
+    </td>
+  );
+};
+const HeaderCell = ({ isFirst = false, children }: { isFirst?: boolean; children: ReactNode }) => {
+  return (
+    <td
+      align={isFirst ? "left" : "center"}
+      className="w-60 xl:w-50 px-6 py-5 font-bold text-md sm:text-2xl md:text-md"
+    >
+      {children}
+    </td>
+  );
+};
+type Props = {};
+
+function Compare({}: Props) {
+  return (
+    <section className="flex flex-col items-center pt-24">
+      <h2 className="font-semibold text-5xl text-gray-900 mb-24 text-center">
+        Compare our tool with others
+      </h2>
+      <div className="pb-24 border-b border-gray-200 w-fit overflow-auto">
+        <table className="border-b m-auto">
+          <thead className="border-solid border-b border-gray-200">
+            <tr>
+              <HeaderCell isFirst={true}>Products</HeaderCell>
+              <HeaderCell>Security & Privacy</HeaderCell>
+              <HeaderCell>Open Source</HeaderCell>
+              <HeaderCell>Mobile App</HeaderCell>
+              <HeaderCell>Private Hosting</HeaderCell>
+            </tr>
+          </thead>
+          <tbody className="[&_tr]:odd:bg-gray-50">
+            <tr>
+              <Cell type="title">VoceChat</Cell>
+              <Cell />
+              <Cell />
+              <Cell />
+              <Cell />
+            </tr>
+            <tr>
+              <Cell type="title">Maxtrix</Cell>
+              <Cell />
+              <Cell />
+              <Cell />
+              <Cell />
+            </tr>
+            <tr>
+              <Cell type="title">XMPP</Cell>
+              <Cell />
+              <Cell />
+              <Cell />
+              <Cell type="none" />
+            </tr>
+            <tr>
+              <Cell type="title">Rocketchat</Cell>
+              <Cell />
+              <Cell />
+              <Cell />
+              <Cell />
+            </tr>
+            <tr>
+              <Cell type="title">Mattermost</Cell>
+              <Cell />
+              <Cell />
+              <Cell />
+              <Cell />
+            </tr>
+            <tr>
+              <Cell type="title">Signal</Cell>
+              <Cell />
+              <Cell type="none" />
+              <Cell />
+              <Cell type="none" />
+            </tr>
+            <tr>
+              <Cell type="title">Telegram</Cell>
+              <Cell />
+              <Cell />
+              <Cell />
+              <Cell type="none" />
+            </tr>
+            <tr>
+              <Cell type="title">Discord</Cell>
+              <Cell />
+              <Cell />
+              <Cell />
+              <Cell type="none" />
+            </tr>
+            <tr>
+              <Cell type="title">Whatsapp</Cell>
+              <Cell />
+              <Cell type="none" />
+              <Cell />
+              <Cell type="none" />
+            </tr>
+            <tr>
+              <Cell type="title">Line</Cell>
+              <Cell />
+              <Cell type="none" />
+              <Cell />
+              <Cell type="none" />
+            </tr>
+            <tr>
+              <Cell type="title">Slack</Cell>
+              <Cell />
+              <Cell type="none" />
+              <Cell />
+              <Cell type="none" />
+            </tr>
+            <tr>
+              <Cell type="title">Wechat</Cell>
+              <Cell />
+              <Cell type="none" />
+              <Cell />
+              <Cell type="none" />
+            </tr>
+            <tr>
+              <Cell type="title">MSN</Cell>
+              <Cell />
+              <Cell type="none" />
+              <Cell type="none" />
+              <Cell type="none" />
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </section>
-  )
+  );
 }
 
-export default Compare
+export default Compare;

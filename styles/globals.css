@@ -1,13 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components{
+  .btn-primary{
+    @apply text-gray-25 px-5 py-3 sm:text-lg md:text-md font-medium rounded-lg  shadow-[0_1px_2px_rgba(16,24,40,0.05)] cursor-pointer bg-primary-400 hover:bg-primary-400/80
+  },
+  .btn-primary-small{
+    @apply text-gray-25 px-4 py-2 sm:text-md md:text-sm font-medium rounded-lg  shadow-[0_1px_2px_rgba(16,24,40,0.05)] cursor-pointer bg-primary-400 hover:bg-primary-400/80
+  }
+  .btn-primary-large{
+    @apply text-gray-25 px-7 py-4 sm:text-xl md:text-lg font-medium rounded-lg  shadow-[0_1px_2px_rgba(16,24,40,0.05)] cursor-pointer bg-primary-400 hover:bg-primary-400/80
+  }
+}
+
 html,
 body {
+  overflow-x: hidden;
+  display: flex;
+  width: 100%;
   padding: 0;
   margin: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
 }
-
+#__next{
+  width: 100%;
+}
 a {
   color: inherit;
   text-decoration: none;

@@ -1,32 +1,35 @@
-import React from 'react'
-import styled from 'styled-components';
-const Styled = styled.footer`
-  background-color:#1D2939;
-  padding: 48px 112px;
-  display: flex;
-  justify-content: space-between;
-  .copyright{
-    font-weight: 400;
-font-size: 16px;
-line-height: 24px;
-color: #98A2B3;
-  }
-`;
-type Props = {}
+import React from "react";
+import Image from "next/future/image";
+type Props = {};
 
 const Footer = (props: Props) => {
-    return (
-        <footer className="bg-[#1D2939] py-[48px] px-[112px] flex justify-between">
-            <span className="font-[400] text-[16px] leading-[24px] text-[#98A2B3]">
-                © 2022 Privoce Inc. All rights reserved.
-            </span>
-            <ul className="socials">
-                <li className="social">
-                    github
-                </li>
-            </ul>
-        </footer>
-    )
-}
+  return (
+    <footer className="bg-gray-800 py-12 px-28 flex justify-between sm:px-10 md:px-28">
+      <span className="text-md sm:text-xl md:text-md text-gray-400">
+        © 2022 Privoce Inc. All rights reserved.
+      </span>
+      <ul className="flex gap-6">
+        <li>
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            <Image
+              className="w-6 h-6 sm:w-8 sm:h-8 md:w-6 md:h-6"
+              alt="Social Icon"
+              src={"/img/icon.twitter.svg"}
+            />
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/Privoce" target="_blank" rel="noopener noreferrer">
+            <Image
+              className="w-6 h-6 sm:w-8 sm:h-8 md:w-6 md:h-6"
+              alt="Social Icon"
+              src={"/img/icon.github.svg"}
+            />
+          </a>
+        </li>
+      </ul>
+    </footer>
+  );
+};
 
-export default Footer
+export default Footer;
