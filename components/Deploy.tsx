@@ -2,7 +2,10 @@ import React, { useState } from "react";
 import Image from "next/future/image";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 type Props = {};
-const shellCode = `curl -sf https://sh.rustchat.com/install.sh a+x install.sh && ./install.sh`;
+const shellCode = `docker run -d --restart=always \
+-p 3000:3000 \
+--name vocechat-server \
+privoce/vocechat-server:latest`;
 const Deploy = (props: Props) => {
   const [copied, setCopied] = useState(false);
   const handleCopy = () => {

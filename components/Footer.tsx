@@ -8,7 +8,7 @@ const Footer = (props: Props) => {
       <span className="text-md text-gray-400">© 2022 Privoce Inc. All rights reserved.</span>
       <ul className="flex gap-6">
         <li>
-          <a href="#" target="_blank" rel="noopener noreferrer">
+          <a href="https://twitter.com/Privoce1" target="_blank" rel="noopener noreferrer">
             <Image className="w-6 h-6" alt="Social Icon" src={"/img/icon.twitter.svg"} />
           </a>
         </li>
