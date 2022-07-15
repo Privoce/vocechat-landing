@@ -16,7 +16,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="selection:bg-primary-300 selection:text-primary-900">
+      <main>
         <FirstView />
         <Features />
         <Deploy />
