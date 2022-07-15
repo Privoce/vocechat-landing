@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import Image from "next/future/image";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 type Props = {};
-const shellCode = `docker run -d --restart=always \
--p 3000:3000 \
---name vocechat-server \
+const shellCode = `docker run -d --restart=always \\ \n
+-p 3000:3000 \\ \n
+--name vocechat-server \\ \n
 privoce/vocechat-server:latest`;
 const Deploy = (props: Props) => {
   const [copied, setCopied] = useState(false);
@@ -16,10 +16,10 @@ const Deploy = (props: Props) => {
   };
   return (
     <section className="flex flex-col items-center py-[96px] bg-gray-800 text-white text-center">
-      <h3 className="font-semibold text-4xl sm:text-5xl md:text-4xl tracking-tight text-gray-25 ">
+      <h3 className="font-semibold text-4xl tracking-tight text-gray-25 ">
         Deploy our free-trial version through docker:
       </h3>
-      <p className=" text-gray-300 text-xl mt-5">
+      <p className="text-gray-300 text-xl mt-5">
         For other ways of installation, check out our{" "}
         <a
           className="text-primary-500"
@@ -31,7 +31,7 @@ const Deploy = (props: Props) => {
         </a>
         .
       </p>
-      <code className="flex w-fit bg-gray-900 sm:px-8 md:px-10 py-5 rounded-xl whitespace-pre mt-16 mb-10 sm:w-[90%] md:w-fit overflow-x-auto overflow-y-hidden">
+      <code className="flex w-fit font-mono text-md leading-none bg-gray-900 sm:px-8 md:px-10 py-5 rounded-xl whitespace-pre mt-16 mb-10 sm:w-[90%] md:w-fit overflow-x-auto overflow-y-hidden text-left">
         {shellCode}
       </code>
       <div className="flex gap-2">

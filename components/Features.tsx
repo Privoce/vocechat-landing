@@ -64,7 +64,7 @@ type Props = {};
 const Features = (props: Props) => {
   return (
     <section className="flex flex-col items-center pb-24">
-      <h3 className="font-semibold text-4xl sm:text-6xl md:text-4xl tracking-tight text-gray-900 text-center">
+      <h3 className="font-semibold text-4xl tracking-tight text-gray-900 text-center">
         Cutting-edge features for advanced analytics
       </h3>
       <p className="sm:w-[80%] w-[768px] text-center text-xl sm:text-2xl md:text-xl text-gray-500 mt-5 mb-16 ">
