@@ -15,11 +15,15 @@ const Home: NextPage = () => {
         <meta name="description" content="Welcome to vocechat" />
         <link rel="icon" href="/favicon.ico" />
         <meta name="theme-color" content="#527ff1" />
-        <meta name="description" content="Your private chat APP" />
+        <meta name="description" content="Your Social Media Privately Hosted" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
         {/* Twitter */}
-        <meta name="twitter:card" content="summary" key="twcard" />
+        <meta
+          name="twitter:card"
+          content="Your Social Media Privately Hosted.As a top alternative to centralized chat services, Voce chat is a superlight Rust powered open-core chat app that prioritizes private hosting."
+          key="twcard"
+        />
         <meta name="twitter:creator" content={"privoce1"} key="twhandle" />
 
         {/* Open Graph */}
@@ -27,7 +31,11 @@ const Home: NextPage = () => {
         <meta property="og:image" content={"/android-chrome-512x512.png"} key="ogimage" />
         <meta property="og:site_name" content={"VoceChat"} key="ogsitename" />
         <meta property="og:title" content={"VoceChat"} key="ogtitle" />
-        <meta property="og:description" content={"Your perivate chat APP"} key="ogdesc" />
+        <meta
+          property="og:description"
+          content={"Your Social Media Privately Hosted"}
+          key="ogdesc"
+        />
         <link
           href="/splash/iphone5_splash.png"
           media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)"

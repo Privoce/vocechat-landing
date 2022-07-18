@@ -1,8 +1,7 @@
-import React, { ChangeEvent, useState, useRef, FormEvent } from "react";
-import { PopupModal } from "react-calendly";
-type Props = {};
-
-const Booking = (props: Props) => {
+import React, { useState, useRef, FormEvent } from "react";
+import { PopupModal, InlineWidget } from "react-calendly";
+import Modal from "./Modal";
+const Booking = () => {
   const emailRef = useRef<HTMLInputElement | null>(null);
   const [opened, setOpened] = useState(false);
   const [email, setEmail] = useState("");
@@ -12,7 +11,6 @@ const Booking = (props: Props) => {
       return;
     }
     const emailVal = evt.currentTarget.email.value;
-    console.log("wtf", emailVal);
     setEmail(emailVal);
     setOpened(true);
   };
@@ -42,14 +40,14 @@ const Booking = (props: Props) => {
         </button>
       </form>
       {opened && (
-        <PopupModal
-          url="https://calendly.com/hansu"
-          prefill={{ email }}
-          onModalClose={() => setOpened(false)}
-          open={true}
-          // open={opened}
-          rootElement={document.getElementById("root_modal") as HTMLElement}
-        />
+        <Modal>
+          <div className="sm:w-full md:w-[600px] relative">
+            <InlineWidget url="https://calendly.com/hansu" prefill={{ email }} />
+            <button className="btn-primary-small absolute -bottom-20 left-[50%] translate-x-[-50%]">
+              Close
+            </button>
+          </div>
+        </Modal>
       )}
     </section>
   );
