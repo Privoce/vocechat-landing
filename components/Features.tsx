@@ -37,6 +37,8 @@ const Feature = ({ icon, title, list }: FeatureProps) => {
   return (
     <div className="flex flex-col w-[272px] sm:w-[75%] sm:items-center md:items-start md:w-[272px]">
       <Image
+        width={48}
+        height={48}
         alt="Feature Icon"
         src={icon}
         className="w-12 h-12 sm:w-24 sm:h-24 md:w-12 md:h-12"
@@ -68,9 +70,17 @@ const Features = (props: Props) => {
         Open API and SDK for your to host anywhere. No central service.
       </h3>
       <p className="sm:w-[80%] w-[768px] text-center text-xl sm:text-2xl md:text-xl text-gray-500 mt-5 mb-16 ">
-        Modern features, open API, open sourced SDK, iterate based on users feedback. Trusted by over 4,000
-        customers. 
+        Modern features, open API, open sourced SDK, iterate based on users feedback. Trusted by
+        over 4,000 customers.
       </p>
+      <a
+        href="https://dev.voce.chat/api/swagger"
+        target={"_blank"}
+        rel="noopener noreferrer"
+        className="btn-primary mb-16"
+      >
+        Test Live API
+      </a>
       <div className="flex gap-24 sm:flex-col sm:items-center md:flex-row">
         <div className="flex flex-col gap-24 sm:items-center sm:order-2 md:order-1">
           {data.slice(0, 2).map((f) => {
@@ -81,6 +91,8 @@ const Features = (props: Props) => {
         <div className="relative w-[480px] flex justify-center sm:order-1 md:order-2">
           <div className="w-[532px] h-[480px] rounded-[40%_60%_70%_30%_/_40%_50%_60%_50%] bg-primary-100 absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] animate-morph"></div>
           <Image
+            width={290}
+            height={600}
             className="w-[290px] translate-x-0 translate-y-0"
             src={"/img/mobile.png"}
             alt="Mobile Demo Picture"

@@ -12,7 +12,13 @@ function FirstView({}: Props) {
         As a top alternative to centralized chat services, Voce chat is a superlight Rust powered
         open-core chat app that prioritizes private hosting.
       </p>
-      <Image className="sm:w-[90%] md:w-[800px]" src={"/img/demo.png"} alt="demo picture" />
+      <Image
+        width={800}
+        height={600}
+        className="sm:w-[90%] md:w-[800px]"
+        src={"/img/demo.png"}
+        alt="demo picture"
+      />
     </section>
   );
 }

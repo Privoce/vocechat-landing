@@ -9,12 +9,24 @@ const Footer = (props: Props) => {
       <ul className="flex gap-6">
         <li>
           <a href="https://twitter.com/Privoce1" target="_blank" rel="noopener noreferrer">
-            <Image className="w-6 h-6" alt="Social Icon" src={"/img/icon.twitter.svg"} />
+            <Image
+              width={24}
+              height={24}
+              className="w-6 h-6"
+              alt="Social Icon"
+              src={"/img/icon.twitter.svg"}
+            />
           </a>
         </li>
         <li>
           <a href="https://github.com/Privoce" target="_blank" rel="noopener noreferrer">
-            <Image className="w-6 h-6" alt="Social Icon" src={"/img/icon.github.svg"} />
+            <Image
+              width={24}
+              height={24}
+              className="w-6 h-6"
+              alt="Social Icon"
+              src={"/img/icon.github.svg"}
+            />
           </a>
         </li>
       </ul>

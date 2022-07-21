@@ -4,10 +4,9 @@ import Modal from "./Modal";
 import Plyr from "plyr";
 import "plyr/dist/plyr.css";
 import { CopyToClipboard } from "react-copy-to-clipboard";
-type Props = {};
-const shellCode = `docker run -d --restart=always \\ \n
--p 3000:3000 \\ \n
---name vocechat-server \\ \n
+const shellCode = `docker run -d --restart=always \\
+-p 3000:3000 \\
+--name vocechat-server \\
 privoce/vocechat-server:latest`;
 const YoutubePlayer = ({ closePlayer }: { closePlayer?: () => void }) => {
   useEffect(() => {
@@ -21,20 +20,19 @@ const YoutubePlayer = ({ closePlayer }: { closePlayer?: () => void }) => {
   }, []);
 
   return (
-    <div className="sm:w-full md:w-[800px] relative">
-      <div id="youtube_player" data-plyr-provider="youtube" data-plyr-embed-id="RzmwpFWY-kI" />
+    <div className="flex flex-col items-center gap-3 sm:w-full md:w-[800px] px-2">
+      <div className="shadow-xl rounded-2xl overflow-hidden w-full">
+        <div id="youtube_player" data-plyr-provider="youtube" data-plyr-embed-id="RzmwpFWY-kI" />
+      </div>
       {closePlayer && (
-        <button
-          onClick={closePlayer}
-          className="btn-primary-small absolute -bottom-20 left-[50%] translate-x-[-50%]"
-        >
+        <button onClick={closePlayer} className="btn-primary-small ">
           Close
         </button>
       )}
     </div>
   );
 };
-const Deploy = (props: Props) => {
+const Deploy = () => {
   const [copied, setCopied] = useState(false);
   const [showPlayer, setShowPlayer] = useState(false);
   const handleCopy = () => {
@@ -64,13 +62,19 @@ const Deploy = (props: Props) => {
           </a>
           .
         </p>
-        <code className="flex w-fit font-mono text-md leading-none bg-gray-900 sm:px-8 md:px-10 py-5 rounded-xl whitespace-pre mt-16 mb-10 sm:w-[90%] md:w-fit overflow-x-auto overflow-y-hidden text-left">
+        <code className="flex w-fit font-mono text-md bg-gray-900 sm:px-8 md:px-10 py-5 rounded-xl whitespace-pre mt-16 mb-10 sm:w-[90%] md:w-fit overflow-x-auto overflow-y-hidden text-left">
           {shellCode}
         </code>
         <div className="flex gap-2">
           <CopyToClipboard text={shellCode} onCopy={handleCopy}>
             <button className="btn-primary-large flex gap-3 items-center">
-              <Image className="w-6 h-6" src={"/img/icon.copy.svg"} alt="Copy Icon"></Image>
+              <Image
+                width={24}
+                height={24}
+                className="w-6 h-6"
+                src={"/img/icon.copy.svg"}
+                alt="Copy Icon"
+              ></Image>
               {copied ? `Copied!` : `Copy Code`}
             </button>
           </CopyToClipboard>
@@ -80,7 +84,7 @@ const Deploy = (props: Props) => {
             rel="noopener noreferrer"
             href="//privoce.voce.chat"
           >
-            Demo
+            Live Demo
           </a>
         </div>
         <span className="my-16 text-gray-25 text-md">
@@ -95,14 +99,24 @@ const Deploy = (props: Props) => {
             </button>{" "}
             . Or book a consulting meeting with us:
           </span>
-          <a
-            href="https://calendly.com/hansu/han-meeting"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-primary"
-          >
-            Book a Meeting
-          </a>
+          <div className="flex gap-2">
+            <a
+              href="https://calendly.com/hansu/han-meeting"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary"
+            >
+              Book a Meeting
+            </a>
+            <a
+              href="https://doc.voce.chat/en-us/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary bg-white text-gray-700 hover:bg-gray-25/80"
+            >
+              View Doc
+            </a>
+          </div>
         </div>
       </section>
       {showPlayer && (

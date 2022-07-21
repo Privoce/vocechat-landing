@@ -14,6 +14,9 @@ const Booking = () => {
     setEmail(emailVal);
     setOpened(true);
   };
+  const handleCloseModal = () => {
+    setOpened(false);
+  };
   return (
     <section className="flex flex-col items-center py-24">
       <h3 className="font-semibold text-4xl sm:text-5xl md:text-4xl tracking-tight text-gray-900 w-[768px] sm:w-[80%] md:w-[768px] text-center">
@@ -43,7 +46,10 @@ const Booking = () => {
         <Modal>
           <div className="sm:w-full md:w-[600px] relative">
             <InlineWidget url="https://calendly.com/hansu" prefill={{ email }} />
-            <button className="btn-primary-small absolute -bottom-20 left-[50%] translate-x-[-50%]">
+            <button
+              onClick={handleCloseModal}
+              className="btn-primary-small absolute -bottom-20 left-[50%] translate-x-[-50%]"
+            >
               Close
             </button>
           </div>

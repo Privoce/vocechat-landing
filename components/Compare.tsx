@@ -1,4 +1,4 @@
-import React, { ReactElement, ReactNode } from "react";
+import React, { ReactNode } from "react";
 import Image from "next/future/image";
 const Cell = ({
   type = "check",
@@ -13,7 +13,13 @@ const Cell = ({
       className="w-60 text-gray-400 xl:w-50 sm:w-10 px-6 py-5 text-md"
     >
       {type == "check" ? (
-        <Image className="w-6 h-6" src={"/img/check.svg"} alt="check icon"></Image>
+        <Image
+          width={24}
+          height={24}
+          className="w-6 h-6"
+          src={"/img/check.svg"}
+          alt="check icon"
+        ></Image>
       ) : type === "title" ? (
         children
       ) : (
