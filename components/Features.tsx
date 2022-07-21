@@ -65,11 +65,11 @@ const Features = (props: Props) => {
   return (
     <section className="flex flex-col items-center pb-24">
       <h3 className="font-semibold text-4xl tracking-tight text-gray-900 text-center">
-        Cutting-edge features for advanced analytics
+        Open API and SDK for your to host anywhere. No central service.
       </h3>
       <p className="sm:w-[80%] w-[768px] text-center text-xl sm:text-2xl md:text-xl text-gray-500 mt-5 mb-16 ">
-        Modern features, open-source SDK, iterate based on users feedback. Trusted by over 4,000
-        customers.
+        Modern features, open API, open sourced SDK, iterate based on users feedback. Trusted by over 4,000
+        customers. 
       </p>
       <div className="flex gap-24 sm:flex-col sm:items-center md:flex-row">
         <div className="flex flex-col gap-24 sm:items-center sm:order-2 md:order-1">
