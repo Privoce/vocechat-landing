@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Image from "next/future/image";
 import Modal from "./Modal";
 import Plyr from "plyr";
@@ -33,6 +33,8 @@ const YoutubePlayer = ({ closePlayer }: { closePlayer?: () => void }) => {
   );
 };
 const Deploy = () => {
+  const demoWrapper = useRef<HTMLDivElement | null>(null);
+  const [demoVisible, setDemoVisible] = useState(false);
   const [copied, setCopied] = useState(false);
   const [showPlayer, setShowPlayer] = useState(false);
   const handleCopy = () => {
@@ -44,6 +46,16 @@ const Deploy = () => {
   const handleYoutubeOpen = () => {
     setShowPlayer(true);
   };
+  const toggleDemoVisible = () => {
+    setDemoVisible((prev) => !prev);
+  };
+  useEffect(() => {
+    if (demoVisible && demoWrapper) {
+      const wrapper = demoWrapper.current;
+      wrapper?.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+    }
+  }, [demoVisible]);
+
   return (
     <>
       <section className="flex flex-col items-center py-[96px] bg-gray-800 text-white text-center">
@@ -78,14 +90,20 @@ const Deploy = () => {
               {copied ? `Copied!` : `Copy Code`}
             </button>
           </CopyToClipboard>
-          <a
+          <button
+            onClick={toggleDemoVisible}
             className="btn-primary-large bg-white text-gray-700 hover:bg-gray-25/80"
-            target="_blank"
-            rel="noopener noreferrer"
-            href="//privoce.voce.chat"
           >
-            Live Demo
-          </a>
+            {demoVisible ? `Close Live Demo` : `Live Demo`}
+          </button>
+        </div>
+        <div
+          ref={demoWrapper}
+          className={`w-[95%] h-screen my-4 shadow-md rounded-md overflow-hidden border bg-white ${
+            demoVisible ? "" : "hidden"
+          }`}
+        >
+          <iframe src="//privoce.voce.chat" className="w-full h-full"></iframe>
         </div>
         <span className="my-16 text-gray-25 text-md">
           After starting the server, visit http://localhost:3000/ to use the app.
