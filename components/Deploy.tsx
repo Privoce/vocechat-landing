@@ -34,7 +34,7 @@ const YoutubePlayer = ({ closePlayer }: { closePlayer?: () => void }) => {
 };
 const Deploy = () => {
   const demoWrapper = useRef<HTMLDivElement | null>(null);
-  const [demoVisible, setDemoVisible] = useState(false);
+  const [demoVisible, setDemoVisible] = useState(true);
   const [copied, setCopied] = useState(false);
   const [showPlayer, setShowPlayer] = useState(false);
   const handleCopy = () => {
@@ -47,14 +47,14 @@ const Deploy = () => {
     setShowPlayer(true);
   };
   const toggleDemoVisible = () => {
-    setDemoVisible((prev) => !prev);
-  };
-  useEffect(() => {
-    if (demoVisible && demoWrapper) {
+    setDemoVisible((prev) => {
+      return !prev;
+    });
+    setTimeout(() => {
       const wrapper = demoWrapper.current;
       wrapper?.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
-    }
-  }, [demoVisible]);
+    }, 100);
+  };
 
   return (
     <>
