@@ -103,7 +103,7 @@ const Deploy = () => {
             demoVisible ? "" : "hidden"
           }`}
         >
-          <iframe src="https://privoce.voce.chat/#/v" className="w-full h-full"></iframe>
+          <iframe src="https://privoce.voce.chat/" className="w-full h-full"></iframe>
         </div>
         <span className="my-16 text-gray-25 text-md">
           After starting the server, visit http://localhost:3000/ to use the app.

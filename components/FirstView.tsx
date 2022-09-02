@@ -15,7 +15,7 @@ function FirstView({}: Props) {
       <Image
         width={800}
         height={600}
-        className="sm:w-[90%] md:w-[800px]"
+        className="sm:w-[90%] md:w-[800px] lg:w-[1200px]"
         src={"/img/demo.png"}
         alt="demo picture"
       />
