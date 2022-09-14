@@ -23,6 +23,40 @@ function FirstView({}: Props) {
         src={"/img/demo.png"}
         alt="demo picture"
       />
+      <div className="flex gap-12 mt-16">
+        <a
+          title="download Android APP from google play"
+          className="flex flex-col items-center gap-4"
+          href="https://play.google.com/store/apps/details?id=com.privoce.vocechatclient"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image
+            width={24}
+            height={24}
+            alt="Google Play  Icon"
+            src={`/img/icon.google.play.svg`}
+            className="w-24 h-24 sm:w-32 sm:h-32 md:w-24 md:h-24 hover:scale-110 transition-transform"
+          ></Image>
+          <span className="text-primary-700 text-md">Google Play</span>
+        </a>
+        <a
+          title="download iOS APP from app store"
+          className="flex flex-col items-center gap-4"
+          href="https://apps.apple.com/app/vocechat/id1631779678"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image
+            width={24}
+            height={24}
+            alt="App Store  Icon"
+            src={`/img/icon.app.store.svg`}
+            className="w-24 h-24 sm:w-32 sm:h-32 md:w-24 md:h-24 hover:scale-110 transition-transform"
+          ></Image>
+          <span className="text-primary-700 text-md">APP Store</span>
+        </a>
+      </div>
     </section>
   );
 }
