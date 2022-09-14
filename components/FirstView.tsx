@@ -23,7 +23,7 @@ function FirstView({}: Props) {
         src={"/img/demo.png"}
         alt="demo picture"
       />
-      <div className="flex gap-12 mt-16">
+      <div className="flex gap-12 mt-24">
         <a
           title="download Android APP from google play"
           className="flex flex-col items-center gap-4"
@@ -36,7 +36,7 @@ function FirstView({}: Props) {
             height={24}
             alt="Google Play  Icon"
             src={`/img/icon.google.play.svg`}
-            className="w-24 h-24 sm:w-32 sm:h-32 md:w-24 md:h-24 hover:scale-110 transition-transform"
+            className="w-24 h-24 sm:w-16 sm:h-16 md:w-24 md:h-24 hover:scale-110 transition-transform"
           ></Image>
           <span className="text-primary-700 text-md">Google Play</span>
         </a>
@@ -52,7 +52,7 @@ function FirstView({}: Props) {
             height={24}
             alt="App Store  Icon"
             src={`/img/icon.app.store.svg`}
-            className="w-24 h-24 sm:w-32 sm:h-32 md:w-24 md:h-24 hover:scale-110 transition-transform"
+            className="w-24 h-24 sm:w-16 sm:h-16 md:w-24 md:h-24 hover:scale-110 transition-transform"
           ></Image>
           <span className="text-primary-700 text-md">APP Store</span>
         </a>
