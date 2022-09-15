@@ -1,7 +1,26 @@
 import React from "react";
 import Image from "next/future/image";
 type Props = {};
-
+const downloads = [
+  {
+    title: "download Android APP from Google Play",
+    icon: `/img/icon.app.google.play.png`,
+    alt: "Google Play Icon",
+    link: "https://play.google.com/store/apps/details?id=com.privoce.vocechatclient"
+  },
+  {
+    title: "download Android APP from APK file",
+    icon: `/img/icon.app.apk.png`,
+    alt: "APK Icon",
+    link: "https://vocechat.s3.amazonaws.com/vocechat.android.apk"
+  },
+  {
+    title: "download iOS APP from app store",
+    icon: `/img/icon.app.ios.png`,
+    alt: "App Store Icon",
+    link: "https://apps.apple.com/app/vocechat/id1631779678"
+  }
+];
 function FirstView({}: Props) {
   return (
     <section className="flex min-h-screen flex-col items-center bg-primary-50 pt-24 pb-10 bg-[url('/img/bg.first.view.jpg')] bg-bottom bg-no-repeat bg-contain">
@@ -24,38 +43,25 @@ function FirstView({}: Props) {
         alt="demo picture"
       />
       <div className="flex gap-12 mt-24">
-        <a
-          title="download Android APP from google play"
-          className="flex flex-col items-center gap-4"
-          href="https://play.google.com/store/apps/details?id=com.privoce.vocechatclient"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            width={24}
-            height={24}
-            alt="Google Play  Icon"
-            src={`/img/icon.google.play.svg`}
-            className="w-24 h-24 sm:w-16 sm:h-16 md:w-24 md:h-24 hover:scale-110 transition-transform"
-          ></Image>
-          <span className="text-primary-700 text-md">Google Play</span>
-        </a>
-        <a
-          title="download iOS APP from app store"
-          className="flex flex-col items-center gap-4"
-          href="https://apps.apple.com/app/vocechat/id1631779678"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            width={24}
-            height={24}
-            alt="App Store  Icon"
-            src={`/img/icon.app.store.svg`}
-            className="w-24 h-24 sm:w-16 sm:h-16 md:w-24 md:h-24 hover:scale-110 transition-transform"
-          ></Image>
-          <span className="text-primary-700 text-md">APP Store</span>
-        </a>
+        {downloads.map(({ title, link, alt, icon }) => (
+          <a
+            key={link}
+            title={title}
+            className="flex"
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              unoptimized={true}
+              width={270}
+              height={80}
+              alt={alt}
+              src={icon}
+              className="hover:scale-110 transition-transform"
+            ></Image>
+          </a>
+        ))}
       </div>
     </section>
   );
