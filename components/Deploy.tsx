@@ -66,7 +66,7 @@ const Deploy = () => {
           For other ways of installation, check out our{" "}
           <a
             className="text-primary-500"
-            href="https://doc.voce.chat/en-us/"
+            href="https://doc.voce.chat"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -127,7 +127,7 @@ const Deploy = () => {
               Book a Meeting
             </a>
             <a
-              href="https://doc.voce.chat/en-us/"
+              href="https://doc.voce.chat"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary bg-white text-gray-700 hover:bg-gray-25/80"
