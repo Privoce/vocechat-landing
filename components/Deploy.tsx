@@ -11,7 +11,7 @@ privoce/vocechat-server:latest`;
 const YoutubePlayer = ({ closePlayer }: { closePlayer?: () => void }) => {
   useEffect(() => {
     const player = new Plyr("#youtube_player", {
-      autoplay: true
+      autoplay: false
     });
 
     return () => {
@@ -33,120 +33,78 @@ const YoutubePlayer = ({ closePlayer }: { closePlayer?: () => void }) => {
   );
 };
 const Deploy = () => {
-  const demoWrapper = useRef<HTMLDivElement | null>(null);
-  const [demoVisible, setDemoVisible] = useState(true);
   const [copied, setCopied] = useState(false);
-  const [showPlayer, setShowPlayer] = useState(false);
   const handleCopy = () => {
     setCopied(true);
     setTimeout(() => {
       setCopied(false);
     }, 2000);
   };
-  const handleYoutubeOpen = () => {
-    setShowPlayer(true);
-  };
-  const toggleDemoVisible = () => {
-    setDemoVisible((prev) => {
-      return !prev;
-    });
-    setTimeout(() => {
-      const wrapper = demoWrapper.current;
-      wrapper?.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
-    }, 100);
-  };
-
   return (
-    <>
-      <section className="flex flex-col items-center py-[96px] bg-gray-800 text-white text-center">
-        <h3 className="font-semibold text-4xl tracking-tight text-gray-25 ">
-          Deploy our free-trial version through docker:
-        </h3>
-        <p className="text-gray-300 text-xl mt-5">
-          For other ways of installation, check out our{" "}
+    <section className="flex flex-col items-center py-[96px] bg-gray-800 text-white text-center">
+      <h3 className="font-semibold text-4xl tracking-tight text-gray-25 ">
+        Deploy our free-trial version through docker:
+      </h3>
+      <p className="text-gray-300 text-xl mt-5">
+        For other ways of installation, check out our{" "}
+        <a
+          className="text-primary-500"
+          href="https://doc.voce.chat"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          documentation
+        </a>
+        .
+      </p>
+      <code className="flex w-fit font-mono text-md bg-gray-900 sm:px-8 md:px-10 py-5 rounded-xl whitespace-pre mt-16 mb-10 sm:w-[90%] md:w-fit overflow-x-auto overflow-y-hidden text-left">
+        {shellCode}
+      </code>
+      <div className="flex gap-2">
+        <CopyToClipboard text={shellCode} onCopy={handleCopy}>
+          <button className="btn-primary-large flex gap-3 items-center">
+            <Image
+              width={24}
+              height={24}
+              className="w-6 h-6"
+              src={"/img/icon.copy.svg"}
+              alt="Copy Icon"
+            ></Image>
+            {copied ? `Copied!` : `Copy Code`}
+          </button>
+        </CopyToClipboard>
+      </div>
+
+      <span className="my-16 text-gray-25 text-md">
+        After starting the server, visit http://localhost:3000/ to use the app.
+      </span>
+      <div className="flex flex-col items-center">
+        <h4 className="font-semibold text-4xl text-gray-25 ">Still having a problem?</h4>
+        <span className="mt-3">We would like to have a 25min chat with you to help you out!</span>
+        <div className="my-8">
+          {/* video embed */}
+          <YoutubePlayer />
+        </div>
+        <div className="flex gap-2">
           <a
-            className="text-primary-500"
+            href="https://calendly.com/hansu/han-meeting"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary"
+          >
+            Book a Meeting
+          </a>
+          <a
             href="https://doc.voce.chat"
             target="_blank"
             rel="noopener noreferrer"
+            className="btn-primary bg-white text-gray-700 hover:bg-gray-25/80"
           >
-            documentation
+            View Doc
           </a>
-          .
-        </p>
-        <code className="flex w-fit font-mono text-md bg-gray-900 sm:px-8 md:px-10 py-5 rounded-xl whitespace-pre mt-16 mb-10 sm:w-[90%] md:w-fit overflow-x-auto overflow-y-hidden text-left">
-          {shellCode}
-        </code>
-        <div className="flex gap-2">
-          <CopyToClipboard text={shellCode} onCopy={handleCopy}>
-            <button className="btn-primary-large flex gap-3 items-center">
-              <Image
-                width={24}
-                height={24}
-                className="w-6 h-6"
-                src={"/img/icon.copy.svg"}
-                alt="Copy Icon"
-              ></Image>
-              {copied ? `Copied!` : `Copy Code`}
-            </button>
-          </CopyToClipboard>
-          <button
-            onClick={toggleDemoVisible}
-            className="btn-primary-large bg-white text-gray-700 hover:bg-gray-25/80"
-          >
-            {demoVisible ? `Close Live Demo` : `Live Demo`}
-          </button>
         </div>
-        <div
-          ref={demoWrapper}
-          className={`w-[95%] h-screen my-4 shadow-md rounded-md overflow-hidden border bg-white ${
-            demoVisible ? "" : "hidden"
-          }`}
-        >
-          <iframe src="https://privoce.voce.chat/" className="w-full h-full"></iframe>
-        </div>
-        <span className="my-16 text-gray-25 text-md">
-          After starting the server, visit http://localhost:3000/ to use the app.
-        </span>
-        <div className="flex flex-col items-center">
-          <h4 className="font-semibold text-4xl text-gray-25 ">Still having a problem?</h4>
-          <span className="mt-3 mb-16 ">
-            Check out{" "}
-            <button onClick={handleYoutubeOpen} className="text-primary-400">
-              video instruction
-            </button>{" "}
-            . Or book a consulting meeting with us:
-          </span>
-          <div className="flex gap-2">
-            <a
-              href="https://calendly.com/hansu/han-meeting"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-primary"
-            >
-              Book a Meeting
-            </a>
-            <a
-              href="https://doc.voce.chat"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-primary bg-white text-gray-700 hover:bg-gray-25/80"
-            >
-              View Doc
-            </a>
-          </div>
-        </div>
-      </section>
-      {showPlayer && (
-        <Modal>
-          <YoutubePlayer
-            closePlayer={() => {
-              setShowPlayer(false);
-            }}
-          />
-        </Modal>
-      )}
-    </>
+      </div>
+    </section>
   );
 };
 
