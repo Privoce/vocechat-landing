@@ -1,7 +1,13 @@
+import { useEffect } from "react";
 import type { AppProps } from "next/app";
 import Script from "next/script";
+import { hotjar } from "react-hotjar";
 import "../styles/globals.css";
 function MyApp({ Component, pageProps }: AppProps) {
+  useEffect(() => {
+    hotjar.initialize(3177531, 6);
+  }, []);
+
   return (
     <>
       {/* Google tag (gtag.js) */}

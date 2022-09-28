@@ -15,6 +15,7 @@
     "react-calendly": "^4.1.0",
     "react-copy-to-clipboard": "^5.1.0",
     "react-dom": "18.2.0",
+    "react-hotjar": "^5.1.0",
     "styled-components": "^5.3.5",
     "styled-reset": "^4.4.2"
   },
