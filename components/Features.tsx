@@ -67,7 +67,7 @@ const Features = (props: Props) => {
   return (
     <section className="flex flex-col items-center pb-24">
       <h3 className="font-semibold text-4xl tracking-tight text-gray-900 text-center">
-        Open API and SDK for your to host anywhere. No central service.
+        Open API and SDK for you to host anywhere. No central service.
       </h3>
       <p className="sm:w-[80%] w-[768px] text-center text-xl sm:text-2xl md:text-xl text-gray-500 mt-5 mb-16 ">
         Modern features, open API, open sourced SDK, iterate based on users feedback. Trusted by
