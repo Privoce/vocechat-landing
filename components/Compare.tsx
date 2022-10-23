@@ -37,7 +37,7 @@ const HeaderCell = ({ isFirst = false, children }: { isFirst?: boolean; children
 };
 type Props = {};
 
-function Compare({}: Props) {
+function Compare({ }: Props) {
   return (
     <section className="flex flex-col items-center pt-24">
       <h2 className="font-semibold text-5xl text-gray-900 mb-24 text-center">
@@ -93,7 +93,7 @@ function Compare({}: Props) {
             <tr>
               <Cell type="title">Signal</Cell>
               <Cell />
-              <Cell type="none" />
+              <Cell />
               <Cell />
               <Cell type="none" />
             </tr>
