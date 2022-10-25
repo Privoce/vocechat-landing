@@ -28,6 +28,44 @@ function MyApp({ Component, pageProps }: AppProps) {
           `
         }}
       />
+      <Script
+        id="vocochat-init"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            const container = document.createElement('iframe');
+            container.height = 52;
+            container.width = 52;
+            container.src = "https://voco.community/chatbot/1033949766452772916";
+            container.style.position = "fixed";
+            container.style.right = '16px';
+            container.style.bottom = '16px';
+            container.style.borderRadius = '8px';
+            container.style.overflow = 'hidden';
+            container.style.boxShadow = '0 25px 50px -12px rgb(0 0 0 / 0.25)';
+            container.scrolling = 'no';
+            container.frameBorder = '0';
+            
+            document.body.appendChild(container);
+            
+            window.addEventListener('message', (event) => {
+              const { data } = event;
+              switch (data) {
+                case 'OPEN':
+                  container.setAttribute('width', 380);
+                  container.setAttribute('height', 668);
+                  break;
+                case 'CLOSE':
+                  container.setAttribute('width', 52);
+                  container.setAttribute('height', 52);
+                  break;
+                default:
+                  break;
+              }
+            }, false);
+          `
+        }}
+      />
       <Component {...pageProps} />
     </>
   );
