@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import Image from "next/future/image";
+import Image from "next/image";
 import Modal from "./Modal";
 import Plyr from "plyr";
 import "plyr/dist/plyr.css";

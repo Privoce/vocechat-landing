@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/future/image";
+import Image from "next/image";
 type Props = {};
 const downloads = [
   {
@@ -21,7 +21,7 @@ const downloads = [
     link: "https://apps.apple.com/app/vocechat/id1631779678"
   }
 ];
-function FirstView({}: Props) {
+function FirstView({ }: Props) {
   return (
     <section className="flex min-h-screen flex-col items-center bg-primary-50 pt-24 xl:pt-16 pb-10 xl:pb-4 bg-[url('/img/bg.first.view.jpg')] bg-bottom bg-no-repeat bg-contain">
       <h2 className="font-semibold xl:text-5xl sm:text-4xl text-primary-900 tracking-tight text-center">
