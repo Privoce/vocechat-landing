@@ -21,8 +21,9 @@ const Index = (props: Props) => {
       <meta name="twitter:creator" content={"privoce1"} key="twhandle" />
 
       {/* Open Graph */}
+      <meta property='og:type' content='website' />
       <meta property="og:url" content={"https://voce.chat"} key="ogurl" />
-      <meta property="og:image" content={"/android-chrome-512x512.png"} key="ogimage" />
+      <meta property="og:image" content={"https://voce.chat/api/og"} key="ogimage" />
       <meta property="og:site_name" content={"VoceChat"} key="ogsitename" />
       <meta property="og:title" content={"VoceChat"} key="ogtitle" />
       <meta property="og:description" content={"Your Social Media Privately Hosted"} key="ogdesc" />
