@@ -1,0 +1,14 @@
+[
+    {
+        "relation": [
+            "delegate_permission/common.handle_all_urls"
+        ],
+        "target": {
+            "namespace": "android_app",
+            "package_name": "com.privoce.vocechatclient",
+            "sha256_cert_fingerprints": [
+                "50:17:86:D9:26:94:DE:B4:32:C6:F0:42:CF:BE:41:A2:68:CB:BA:D6:F5:FE:67:5B:50:1B:99:69:66:9A:55:EE"
+            ]
+        }
+    }
+]
