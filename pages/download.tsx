@@ -33,7 +33,7 @@ const Index = (props: Props) => {
                     {download ? <a href={download.link} target="_blank" rel="noopener noreferrer" className="mt-14 mb-16">
                         <img alt="App Download Icon" src={download.icon} className="max-w-[80%] h-auto m-auto" />
                     </a> : null}
-                    {link && <p className="text-md text-gray-600">Have the app already? <a href={`${location.origin}/join?magic_link=${link}`} className="text-blueLight-600">Open VoceChat</a> </p>}
+                    {link && <p className="text-md text-gray-600">Have the app already? <a href={`https://voce.chat/join?magic_link=${link}`} className="text-blueLight-600">Open VoceChat</a> </p>}
                 </div>
             </main>
         </>
