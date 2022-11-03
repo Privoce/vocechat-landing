@@ -31,7 +31,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       {/* voco chatbot */}
       <Script
         strategy="afterInteractive"
-        src={`https://static.voco.community/sdk/v0.0.3/widget.js`}
+        src={`https://static.voco.community/sdk/v0.0.4/widget.js`}
       />
       <Script
         id="voco-chatbot-init"
