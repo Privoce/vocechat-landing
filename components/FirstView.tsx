@@ -31,10 +31,10 @@ function FirstView({ }: Props) {
         As a top alternative to centralized chat services, Voce chat is a superlight Rust powered
         open-core chat app that prioritizes private hosting.
       </p>
-      <div className={`w-[95%] h-screen my-4 shadow-md rounded-md overflow-hidden border bg-white`}>
+      <div className={`w-[95%] h-screen my-4 shadow-md rounded-md overflow-hidden border bg-white hidden tablet:block`}>
         <iframe src="https://privoce.voce.chat/" className="w-full h-full"></iframe>
       </div>
-      <div className="flex gap-12 mt-10">
+      <div className="flex    flex-col mobile:flex-col tablet:flex-row mobile:mt-4 tablet:mt-10 mobile:gap-4 tablet:gap-12">
         {downloads.map(({ title, link, alt, icon }) => (
           <a
             key={link}
@@ -50,7 +50,7 @@ function FirstView({ }: Props) {
               height={75}
               alt={alt}
               src={icon}
-              className="hover:scale-110 transition-transform"
+              className="hover:scale-110 transition-transform h-[66px]"
             ></Image>
           </a>
         ))}
