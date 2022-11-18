@@ -1,5 +1,5 @@
 import React, { useState, useRef, FormEvent } from "react";
-import { PopupModal, InlineWidget } from "react-calendly";
+import { InlineWidget } from "react-calendly";
 import Modal from "./Modal";
 const Booking = () => {
   const emailRef = useRef<HTMLInputElement | null>(null);
