@@ -19,8 +19,8 @@ const Index = (props: Props) => {
     <>
       <Head />
       <main className="flex min-h-screen flex-col items-center justify-center bg-primary-50">
-        <ul className="flex flex-col justify-center items-center p-4">
-          <li className="mb-2 text-2xl font-bold">Redirecting...</li>
+        <ul className="flex flex-col justify-center items-center p-4 pt-2">
+          <li className="mb-1 text-2xl font-bold">Open APP to join</li>
           <div className="overflow-hidden w-full">
             <Image
               width={412}
