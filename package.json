@@ -9,9 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@vercel/og": "^0.0.20",
-    "next": "13.0.3",
-    "plyr": "^3.7.2",
+    "@vercel/og": "^0.0.21",
+    "next": "13.0.4",
+    "plyr": "^3.7.3",
     "react": "18.2.0",
     "react-calendly": "^4.1.0",
     "react-copy-to-clipboard": "^5.1.0",
@@ -27,8 +27,8 @@
     "@types/react-dom": "18.0.9",
     "@types/styled-components": "^5.1.26",
     "autoprefixer": "^10.4.13",
-    "eslint": "8.27.0",
-    "eslint-config-next": "13.0.3",
+    "eslint": "8.28.0",
+    "eslint-config-next": "13.0.4",
     "postcss": "^8.4.19",
     "prettier": "^2.7.1",
     "tailwindcss": "^3.2.4",
