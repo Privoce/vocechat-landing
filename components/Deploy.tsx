@@ -42,7 +42,7 @@ const Deploy = () => {
   return (
     <section className="flex flex-col items-center py-[96px] bg-gray-800 text-white text-center">
       <h3 className="font-semibold text-4xl tracking-tight text-gray-25 ">
-        Deploy our free-trial version through docker:
+        Deploy only your own server through docker:
       </h3>
       <p className="text-gray-300 text-xl mt-5">
         For other ways of installation, check out our{" "}
