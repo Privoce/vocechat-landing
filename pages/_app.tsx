@@ -35,22 +35,6 @@ function MyApp({ Component, pageProps }: AppProps) {
           `
         }}
       />
-      {/* voco chatbot */}
-      <Script
-        strategy="afterInteractive"
-        src={`https://static.voco.community/sdk/v0.0.4/widget.js`}
-      />
-      <Script
-        id="voco-chatbot-init"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
-            window.onload = function() {
-            Voco.initChatbotWidget({ id: '1033949766452772915' });
-          }
-          `
-        }}
-      />
       <Component {...pageProps} />
     </>
   );
