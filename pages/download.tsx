@@ -26,13 +26,13 @@ const Index = (props: Props) => {
     return (
         <>
             <Head />
-            <main className="flex min-h-screen flex-col items-center justify-start">
+            <main className="flex h-screen flex-col items-center justify-around">
                 <div className="flex relative">
                     <img src="/img/app.grid.png" className="object-cover max-w-[unset]" alt="APP grid" />
                     <span className="absolute left-1/2 bottom-0 -translate-x-1/2 bg-white font-bold text-lg leading-[1.1] bg-gradient-to-b from-[#f0f0f0] via-white to-white">VoceChat</span>
                 </div>
                 <div className="flex flex-col items-center w-72">
-                    <h1 className="mt-8 text-2xl font-bold text-center">Start by downloading VoceChat mobile app</h1>
+                    <h1 className="mt-6 text-2xl font-bold text-center">Start by downloading VoceChat mobile app</h1>
                     {download ? Array.isArray(download) ? <ul className="mt-14 mb-12"> {download.map(d => {
                         const { link, icon } = d
                         return <li key={link}><a href={link} target="_blank" rel="noopener noreferrer" >
@@ -41,7 +41,7 @@ const Index = (props: Props) => {
                     })}</ul> : <a href={download.link} target="_blank" rel="noopener noreferrer" className="mt-14 mb-16">
                         <img alt="App Download Icon" src={download.icon} className="max-w-[80%] h-auto m-auto" />
                     </a> : null}
-                    {link && <p className="text-md text-gray-600">Have the app already? <a href={`https://voce.chat/join?magic_link=${link}`} className="text-blueLight-600">Open VoceChat</a> </p>}
+                    {link && <p className="text-md text-gray-600 pb-2">Have the app already? <a href={`https://voce.chat/join?magic_link=${link}`} className="text-blueLight-600">Open VoceChat</a> </p>}
                 </div>
             </main>
         </>
