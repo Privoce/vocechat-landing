@@ -35,17 +35,17 @@ const Index: NextPage = (props: Props) => {
                     <img src="/img/app.grid.png" className="object-cover max-w-[unset]" alt="APP grid" />
                     <span className="absolute left-1/2 bottom-0 -translate-x-1/2 bg-white font-bold text-lg leading-[1.1] bg-gradient-to-b from-[#f0f0f0] via-white to-white">VoceChat</span>
                 </div>
-                <div className="flex flex-col items-center w-72">
-                    <h1 className="mt-6 text-2xl font-bold text-center">{t("start_download")}</h1>
-                    {download ? Array.isArray(download) ? <ul className="mt-14 mb-12"> {download.map(d => {
+                <div className="flex flex-col items-center w-72 mb-20">
+                    <h1 className="text-2xl font-bold text-center">{t("start_download")}</h1>
+                    {download ? Array.isArray(download) ? <ul className="my-10"> {download.map(d => {
                         const { link, icon } = d
                         return <li key={link}><a href={link} target="_blank" rel="noopener noreferrer" >
-                            <img alt="App Download Icon" src={icon} className="max-w-[80%] h-auto m-auto mb-4" />
+                            <img alt="App Download Icon" src={icon} className="max-w-[80%] h-auto m-auto mb-2" />
                         </a></li>
-                    })}</ul> : <a href={download.link} target="_blank" rel="noopener noreferrer" className="mt-14 mb-16">
+                    })}</ul> : <a href={download.link} target="_blank" rel="noopener noreferrer" className="my-10">
                         <img alt="App Download Icon" src={download.icon} className="max-w-[80%] h-auto m-auto" />
                     </a> : null}
-                    {link && <p className="text-md text-gray-600 pb-4">{t("have_already")} <a href={`https://voce.chat/join?magic_link=${link}`} className="text-blueLight-600">{t("open")}</a> </p>}
+                    {link && <p className="text-md text-gray-600">{t("have_already")} <a href={`https://voce.chat/join?magic_link=${link}`} className="text-blueLight-600">{t("open")}</a> </p>}
                 </div>
             </main>
         </>
