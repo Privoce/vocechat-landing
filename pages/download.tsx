@@ -33,10 +33,10 @@ const Index: NextPage = (props: Props) => {
             <main className="flex h-screen flex-col items-center justify-between">
                 <div className="flex relative">
                     <img src="/img/app.grid.png" className="object-cover max-w-[unset]" alt="APP grid" />
-                    <span className="absolute left-1/2 bottom-0 -translate-x-1/2 bg-white font-bold text-lg leading-[1.1] bg-gradient-to-b from-[#f0f0f0] via-white to-white">VoceChat</span>
+                    <span className="absolute left-1/2 bottom-8 -translate-x-1/2 bg-transparent font-bold text-lg leading-[1.1] ">VoceChat</span>
                 </div>
-                <div className="flex flex-col items-center w-72 mb-20">
-                    <h1 className="text-2xl font-bold text-center">{t("start_download")}</h1>
+                <div className="flex flex-col items-center w-72">
+                    <h1 className="mobile:text-xl tablet:text-2xl font-bold text-center">{t("start_download")}</h1>
                     {download ? Array.isArray(download) ? <ul className="my-10"> {download.map(d => {
                         const { link, icon } = d
                         return <li key={link}><a href={link} target="_blank" rel="noopener noreferrer" >
@@ -45,8 +45,8 @@ const Index: NextPage = (props: Props) => {
                     })}</ul> : <a href={download.link} target="_blank" rel="noopener noreferrer" className="my-10">
                         <img alt="App Download Icon" src={download.icon} className="max-w-[80%] h-auto m-auto" />
                     </a> : null}
-                    {link && <p className="text-md text-gray-600">{t("have_already")} <a href={`https://voce.chat/join?magic_link=${link}`} className="text-blueLight-600">{t("open")}</a> </p>}
                 </div>
+                {link && <p className="text-md text-gray-600 mb-20">{t("have_already")} <a href={`https://voce.chat/join?magic_link=${link}`} className="text-blueLight-600">{t("open")}</a> </p>}
             </main>
         </>
     );

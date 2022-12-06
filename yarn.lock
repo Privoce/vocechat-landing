@@ -93,7 +93,7 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.14.5", "@babel/runtime@^7.17.2", "@babel/runtime@^7.18.9":
+"@babel/runtime@^7.14.5", "@babel/runtime@^7.18.9", "@babel/runtime@^7.20.6":
   version "7.20.6"
   resolved "https://mirrors.cloud.tencent.com/npm/@babel%2fruntime/-/runtime-7.20.6.tgz#facf4879bfed9b5326326273a64220f099b0fce3"
   integrity sha512-Q+8MqP7TiHMWzSfwiJwXCjyf4GYA4Dgw3emg/7xmwsdLJOZUp+nMqcOwOzzYheuM1rhDu8FSj2l0aoMygEuXuA==
@@ -369,10 +369,10 @@
   resolved "https://mirrors.tencent.com/npm/@types%2fjson5/-/json5-0.0.29.tgz#ee28707ae94e11d2b827bcbe5270bcea7f3e71ee"
   integrity sha1-7ihweulOEdK4J7y+UnC86n8+ce4=
 
-"@types/node@18.11.10":
-  version "18.11.10"
-  resolved "https://mirrors.cloud.tencent.com/npm/@types%2fnode/-/node-18.11.10.tgz#4c64759f3c2343b7e6c4b9caf761c7a3a05cee34"
-  integrity sha512-juG3RWMBOqcOuXC643OAdSA525V44cVgGV6dUDuiFtss+8Fk5x1hI93Rsld43VeJVIeqlP9I7Fn9/qaVqoEAuQ==
+"@types/node@18.11.11":
+  version "18.11.11"
+  resolved "https://mirrors.cloud.tencent.com/npm/@types%2fnode/-/node-18.11.11.tgz#1d455ac0211549a8409d3cdb371cd55cc971e8dc"
+  integrity sha512-KJ021B1nlQUBLopzZmPBVuGU9un7WJd/W4ya7Ih02B4Uwky5Nja0yGYav2EfYIk0RR2Q9oVhf60S2XR1BCWJ2g==
 
 "@types/prop-types@*":
   version "15.7.5"
@@ -1528,12 +1528,12 @@ i18next-fs-backend@^2.0.0:
   resolved "https://mirrors.cloud.tencent.com/npm/i18next-fs-backend/-/i18next-fs-backend-2.0.1.tgz#5e33f28565257617682d622f6ce2c672d3f0ccc5"
   integrity sha512-fzeiFOXqsMiFAFUnNyC4buERI11vTAuf7JIDWqaiPgBK3R+XJQMSY1LyoXaWspBEFaAkXH/0uMbOv7nttBFztg==
 
-i18next@^22.0.6:
-  version "22.0.6"
-  resolved "https://mirrors.cloud.tencent.com/npm/i18next/-/i18next-22.0.6.tgz#d7029912f8aa74ff295c0d9afd1b7dea45859b49"
-  integrity sha512-RlreNGoPIdDP4QG+qSA9PxZKGwlzmcozbI9ObI6+OyUa/Rp0EjZZA9ubyBjw887zVNZsC+7FI3sXX8oiTzAfig==
+i18next@^22.0.8:
+  version "22.0.8"
+  resolved "https://mirrors.cloud.tencent.com/npm/i18next/-/i18next-22.0.8.tgz#0ab088d60cb83495c85422bb2e035a8a1e3756ef"
+  integrity sha512-cQUVZ3KUHtua4E9/9naB7oH5ymun0jAYKopXFgmSRXog0nrWFajAErz9eJ/A/dSj69YxmA8xOR4m5dY1OrKG5g==
   dependencies:
-    "@babel/runtime" "^7.17.2"
+    "@babel/runtime" "^7.20.6"
 
 ignore@^5.2.0:
   version "5.2.0"
@@ -2502,10 +2502,10 @@ styled-jsx@5.1.0:
   dependencies:
     client-only "0.0.1"
 
-styled-reset@^4.4.2:
-  version "4.4.2"
-  resolved "https://mirrors.tencent.com/npm/styled-reset/-/styled-reset-4.4.2.tgz#4da1becb2f6d22a2b22c7ee7ca09b739fe6a685f"
-  integrity sha512-VzVhEZHpO/CD/F5ZllqTAY+GTaKlNDZt5mTrtPf/kXZSe85+wMkhRIiPARgvCP9/HQMk+ZGaEWk1IkdP2SYAUQ==
+styled-reset@^4.4.4:
+  version "4.4.4"
+  resolved "https://mirrors.cloud.tencent.com/npm/styled-reset/-/styled-reset-4.4.4.tgz#62ae44add97e1b6a4c770e6cb865362eb6b6889c"
+  integrity sha512-XCLRYMLejZ/JHCpfgU0Kj71gAbar5TkTxu3VioVL90lzp0OsemAwLu9EQd665RFBCFzuLKUsdJfQCS0ZJkzfJQ==
 
 supports-color@^5.3.0, supports-color@^5.5.0:
   version "5.5.0"
