@@ -1,5 +1,8 @@
 {
+    "join": "Join ",
+    "scan_tip": "Download VoceChat App, paste the invitation link or scan this QR code.",
     "start_download": "Start by downloading VoceChat mobile app",
     "open": "Open VoceChat",
-    "have_already": "Have the app already?"
+    "have_already": "Have the app already?",
+    "default_server_name": "Our Server"
 }
