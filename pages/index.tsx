@@ -21,18 +21,18 @@ const Home: NextPage = () => {
         <Booking />
       </main>
       <Footer />
-      {/* voco chatbot */}
+      {/* bridger chatbot */}
       <Script
         strategy="afterInteractive"
-        src={`https://static.voco.community/sdk/v0.0.4/widget.js`}
+        src={`https://static.bridger.chat/sdk/v0.2.1/widget.js`}
       />
       <Script
-        id="voco-chatbot-init"
+        id="bridger-chatbot-init"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
             window.onload = function() {
-            Voco.initChatbotWidget({ id: '1033949766452772915' });
+              Bridger.initWidget({ id: '130987301507686400' });
           }
           `
         }}
