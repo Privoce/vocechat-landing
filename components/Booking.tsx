@@ -19,8 +19,9 @@ const Booking = () => {
   };
   return (
     <section className="flex flex-col items-center py-24">
-      <h3 className="font-semibold text-4xl sm:text-5xl md:text-4xl tracking-tight text-gray-900 w-[768px] sm:w-[80%] md:w-[768px] text-center">
-        Want to build your own chat app based on VoceChat? Book a meeting with our CEO
+      <h3 className="font-semibold text-4xl sm:text-5xl md:text-4xl tracking-tight text-gray-900 w-[768px] sm:w-[80%] md:w-[768px] text-center ">
+        Want to add chat features to your app?<br />
+        Book a meeting with our CEO
       </h3>
       <p className="w-192 text-center text-xl text-gray-500 mt-5 mb-16 ">
         Be the first to know about releases and industry news and insights.

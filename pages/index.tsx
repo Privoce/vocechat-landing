@@ -8,6 +8,7 @@ import Head from "../components/Head";
 import Footer from "../components/Footer";
 import Booking from "../components/Booking";
 import Script from "next/script";
+import PriceList from "../components/PriceList";
 
 const Home: NextPage = () => {
   return (
@@ -18,6 +19,7 @@ const Home: NextPage = () => {
         <Features />
         <Deploy />
         <Compare />
+        <PriceList />
         <Booking />
       </main>
       <Footer />

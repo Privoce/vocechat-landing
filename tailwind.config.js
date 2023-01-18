@@ -420,6 +420,9 @@ module.exports = {
       }
     },
     extend: {
+      scale: {
+        "-100": "-1"
+      },
       screens: {
         sm: "320px",
         mobile: "320px",
