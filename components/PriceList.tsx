@@ -18,10 +18,10 @@ const PriceBlock = ({ data }: { data: Price }) => {
   const { title, desc, price, pay_link, feats, highlight } = data;
   console.log("data", data);
   const blockClass = clsx(
-    "flex flex-col items-start text-white p-5 border-solid border border-white rounded-3xl bg-black w-[326px]",
-    highlight && "border-[6px] border-[#63EDE6]")
+    "flex flex-col items-start text-white p-5 border-solid border border-white rounded-3xl bg-black w-[326px] transition-all hover:scale-110",
+    highlight && "border-[6px] gradient-border")
   return <div className={blockClass}>
-    <h2 className=" text-5xl font-bold min-h-[68px]">{title}</h2>
+    <h2 className="text-5xl font-bold min-h-[68px] ">{title}</h2>
     <p className="text-lg min-h-[60px]">{desc}</p>
     <div className="text-5xl font-semibold my-4">
       {price ? <>{`$${price.value}`}<span className="text-2xl font-normal">/{price.unit}</span></> : "Let's talk"}

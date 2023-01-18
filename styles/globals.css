@@ -18,9 +18,13 @@
   }
   
 }
-/* for price feature list check icon */
+/* for price */
 .check-flip-x{
   transform: rotateX(180deg) skewX(20deg);
+}
+.gradient-border{
+  border-color: transparent;
+  background: linear-gradient(rgba(22,22,22),rgba(22,22,22)) padding-box,linear-gradient(153.06deg,#3C8CE7 4.31%,#63EDE6 56.27%) border-box;
 }
 
 
