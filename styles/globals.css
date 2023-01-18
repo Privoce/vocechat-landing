@@ -18,6 +18,11 @@
   }
   
 }
+/* for price feature list check icon */
+.check-flip-x{
+  transform: rotateX(180deg) skewX(20deg);
+}
+
 
 html, body, #__next {
   width: 100%;

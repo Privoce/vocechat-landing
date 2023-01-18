@@ -30,7 +30,7 @@ const PriceBlock = ({ data }: { data: Price }) => {
     <h3 className="text-2xl font-semibold my-3">Key Features</h3>
     <ul className="text-lg flex flex-col gap-3 opacity-80">
       {feats.map(f => {
-        return <li key={f} className="flex items-start gap-2"><i className="inline-block rotate-180 transform -scale-x-100 font-light font-mono">ヘ</i>
+        return <li key={f} className="flex items-start gap-2"><i className="inline-block check-flip-x font-light font-mono">ヘ</i>
           <span>
             {f}
           </span>
@@ -62,7 +62,7 @@ const prices: Price[] = [
       value: 49,
       unit: "version"
     },
-    pay_link: "",
+    pay_link: "https://doc.voce.chat/install/",
     feats: [
       "Chat widget for customer service",
       "Unlimited Members and Bot",
