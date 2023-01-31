@@ -1,4 +1,4 @@
-import React, { FormEvent, useState, useEffect } from "react";
+import React, { FormEvent, useState } from "react";
 import axios from 'axios'
 type Props = {};
 const KEY_TOKEN = "LEN_TOKEN";
@@ -6,9 +6,6 @@ const localToken = typeof window !== "undefined" ? (window.localStorage.getItem(
 const Index = (props: Props) => {
     const [token, setToken] = useState(localToken);
     const [license, setLicense] = useState("")
-    useEffect(() => {
-        localStorage.setItem(KEY_TOKEN, token)
-    }, [token])
 
     const handleSubmit = async (evt: FormEvent<HTMLFormElement>) => {
         evt.preventDefault();
@@ -16,6 +13,7 @@ const Index = (props: Props) => {
         const tokenVal = formEle.token?.value;
         if (tokenVal) {
             setToken(tokenVal);
+            localStorage.setItem(KEY_TOKEN, tokenVal)
             return
         } else {
             if (!formEle.checkValidity()) {
