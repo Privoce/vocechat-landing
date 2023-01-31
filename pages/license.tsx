@@ -56,7 +56,7 @@ const Index = (props: Props) => {
                     <input type="date" required className={inputClass} name="expiry_at" placeholder="Expire Date" />
                     <input type="number" required className={inputClass} name="user_limit" placeholder="User Limit" />
                 </>
-                    : <textarea name="token" rows={3} cols={38} className={inputClass} placeholder="Set Token First!"></textarea>}
+                    : <input name="token" required type="text" className={inputClass} placeholder="Set Token First!"></input>}
                 <button type="submit" className="p-2 rounded-full bg-success-700 text-white mt-6">{token ? `Generate` : "Set Token"}</button>
             </form>
             {license && <code className="bg-gray-100 text-xs p-3 rounded-md mt-10 whitespace-pre-wrap">
