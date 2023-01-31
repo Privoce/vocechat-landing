@@ -19,8 +19,11 @@ const Index = (props: Props) => {
                 return
             }
         }
+        const body = {}
         const formData = new FormData(evt.currentTarget);
-        const body = { ...Object.fromEntries(formData.entries()) };
+        formData.forEach((val, key) => {
+            body[key] = key === "user_limit" ? +val : val;
+        })
         console.log(body);
         try {
             const resp = await axios.post(`https://license.voce.chat/license/gen`, body, {
@@ -30,7 +33,7 @@ const Index = (props: Props) => {
                 }
             })
             console.log("resp", resp.data);
-            // setLicense(JSON.stringify(resp.data))
+            setLicense(JSON.stringify(resp.data))
         } catch (err) {
             setLicense(JSON.stringify({
                 a: 22,
