@@ -30,7 +30,7 @@ function FirstView({ }: Props) {
       <p className="text-xl w-[768px] sm:w-[90%] text-center text-primary-700 mt-6 mb-12 mx-4">
         VoceChat is a superlight Rust powered chat App, API and SDK that prioritizes private hosting. Build your own chat feature with VoceChat!
       </p>
-      <div className={`w-[95%] h-screen mt-4 shadow-md rounded-md overflow-hidden border bg-white hidden tablet:block`}>
+      <div className={`w-[95%] h-screen mt-4 shadow-md rounded-md overflow-hidden border bg-white`}>
         <iframe src="https://privoce.voce.chat/" className="w-full h-full"></iframe>
       </div>
       <div id="download" className="pt-4 flex flex-col mobile:flex-col tablet:flex-row mobile:mt-4 tablet:mt-10 mobile:gap-4 tablet:gap-12">
