@@ -63,7 +63,7 @@ function Compare({ }: Props) {
               <Cell />
             </tr>
             <tr>
-              <Cell type="title">Maxtrix</Cell>
+              <Cell type="title">Matrix</Cell>
               <Cell />
               <Cell />
               <Cell />
