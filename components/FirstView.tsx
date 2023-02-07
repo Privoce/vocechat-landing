@@ -25,7 +25,7 @@ function FirstView({ }: Props) {
   return (
     <section className="flex min-h-screen flex-col items-center bg-primary-50 pt-24 xl:pt-16 pb-10 xl:pb-4 bg-[url('/img/bg.first.view.jpg')] bg-bottom bg-no-repeat bg-contain">
       <h2 className="font-semibold xl:text-5xl sm:text-4xl text-primary-900 tracking-tight text-center">
-        Private Hosted IM and Social Channels, Easy Integration to Your Site or App
+        Private Hosted Chat SDK with Bot and Social Channel Features, Easy Integration to Your Site or App
       </h2>
       <p className="text-xl w-[768px] sm:w-[90%] text-center text-primary-700 mt-6 mb-12 mx-4">
         VoceChat is a superlight Rust powered chat App, API and SDK that prioritizes private hosting. Build your own chat feature with VoceChat!

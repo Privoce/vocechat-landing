@@ -9,13 +9,13 @@ const Index = (props: Props) => {
       <meta name="description" content="Welcome to vocechat" />
       <link rel="icon" href="/favicon.ico" />
       <meta name="theme-color" content="#527ff1" />
-      <meta name="description" content="Your Social Media Privately Hosted" />
+      <meta name="description" content="Private Hosted Chat SDK with Bot and Social Channel Features, Easy Integration to Your Site or App" />
+      <meta name="keywords" content="Private Hosted, Chat SDK, Bot, IM, Integration, API, SDK, Rust" />
       <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-
       {/* Twitter */}
       <meta
         name="twitter:card"
-        content="Your Social Media Privately Hosted.As a top alternative to centralized chat services, Voce chat is a superlight Rust powered open-core chat app that prioritizes private hosting."
+        content="Your Social Media Privately Hosted. As a top alternative to centralized chat services, Voce chat is a superlight Rust powered open-core chat app that prioritizes private hosting."
         key="twcard"
       />
       <meta name="twitter:creator" content={"privoce1"} key="twhandle" />
