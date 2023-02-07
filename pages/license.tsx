@@ -21,7 +21,7 @@ const Index = (props: Props) => {
                 return
             }
         }
-        const body = {}
+        const body: Record<string, any> = {}
         const formData = new FormData(evt.currentTarget);
         formData.forEach((val, key) => {
             body[key] = key === "user_limit" ? +val : val;
