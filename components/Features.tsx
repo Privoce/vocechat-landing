@@ -101,7 +101,7 @@ const Features = (props: Props) => {
         <div className="flex flex-col gap-24 sm:items-center sm:order-3">
           {data.slice(2).map((f) => {
             const { title, icon, list } = f;
-            return <Feature key={title} title={title} icon={icon} list={list} />;
+            return <Feature key={icon} title={title} icon={icon} list={list} />;
           })}
         </div>
       </div>
