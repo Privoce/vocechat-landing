@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import Image from "next/image";
 const data = [
   {
@@ -17,7 +17,7 @@ const data = [
   },
   {
     icon: "/img/icon.open.api.png",
-    title: "OpenAPI",
+    title: <a href="https://doc.voce.chat/api/get-the-server-version" target={"_blank"} rel="noreferrer">OpenAPI</a>,
     list: [
       "Utilizes OpenAPI standard, with easy integration with third-party applications and tools. ",
       "With complete documentation and testing."
@@ -32,7 +32,7 @@ const data = [
     ]
   }
 ];
-type FeatureProps = { icon: string; title: string; list: string[] };
+type FeatureProps = { icon: string; title: string | ReactElement; list: string[] };
 const Feature = ({ icon, title, list }: FeatureProps) => {
   return (
     <div className="flex flex-col w-[272px] sm:w-[75%] sm:items-center md:items-start md:w-[272px]">
@@ -74,7 +74,7 @@ const Features = (props: Props) => {
         over 4,000 customers.
       </p>
       <a
-        href="https://dev.voce.chat/api/swagger"
+        href="https://doc.voce.chat/api/get-the-server-version"
         target={"_blank"}
         rel="noopener noreferrer"
         className="btn-primary mb-16"
@@ -85,7 +85,7 @@ const Features = (props: Props) => {
         <div className="flex flex-col gap-24 sm:items-center sm:order-2 md:order-1">
           {data.slice(0, 2).map((f) => {
             const { title, icon, list } = f;
-            return <Feature key={title} title={title} icon={icon} list={list} />;
+            return <Feature key={icon} title={title} icon={icon} list={list} />;
           })}
         </div>
         <div className="relative w-[480px] flex justify-center sm:order-1 md:order-2">
