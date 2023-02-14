@@ -74,7 +74,7 @@ function Compare({ }: Props) {
               <Cell />
               <Cell />
               <Cell />
-              <Cell type="none" />
+              <Cell />
             </tr>
             <tr>
               <Cell type="title">Rocketchat</Cell>
