@@ -51,7 +51,7 @@ function Compare({ }: Props) {
               <HeaderCell>Security & Privacy</HeaderCell>
               <HeaderCell>Open Source</HeaderCell>
               <HeaderCell>Mobile App</HeaderCell>
-              <HeaderCell>Private Hosting</HeaderCell>
+              <HeaderCell>Lightweight(less than 20 MB)</HeaderCell>
             </tr>
           </thead>
           <tbody className="[&_tr:nth-child(odd)]:bg-gray-50">
@@ -67,28 +67,28 @@ function Compare({ }: Props) {
               <Cell />
               <Cell />
               <Cell />
-              <Cell />
+              <Cell type="none" />
             </tr>
             <tr>
               <Cell type="title">XMPP</Cell>
               <Cell />
               <Cell />
               <Cell />
-              <Cell />
+              <Cell type="none" />
             </tr>
             <tr>
               <Cell type="title">Rocketchat</Cell>
               <Cell />
               <Cell />
               <Cell />
-              <Cell />
+              <Cell type="none" />
             </tr>
             <tr>
               <Cell type="title">Mattermost</Cell>
               <Cell />
               <Cell />
               <Cell />
-              <Cell />
+              <Cell type="none" />
             </tr>
             <tr>
               <Cell type="title">Signal</Cell>
@@ -107,7 +107,7 @@ function Compare({ }: Props) {
             <tr>
               <Cell type="title">Discord</Cell>
               <Cell />
-              <Cell />
+              <Cell type="none" />
               <Cell />
               <Cell type="none" />
             </tr>
