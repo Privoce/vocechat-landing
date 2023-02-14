@@ -62,7 +62,7 @@ const prices: Price[] = [
       value: 49,
       unit: "version"
     },
-    pay_link: "https://doc.voce.chat/install/",
+    pay_link: "https://buy.stripe.com/bIY6rqaav2wefbG8wR",
     feats: [
       "Chat widget for customer service",
       "Unlimited Members and Bot",
