@@ -13,12 +13,11 @@ type Price = {
   highlight?: boolean
 }
 
-// `linear-gradient(rgb(40, 40, 40),rgb(40, 40, 40))_padding-box_padding-box,linear-gradient(153.06deg,rgb(60, 140, 231)_4.31%,rgb(99, 237, 230)_56.27%)_border-box_border-box`
 const PriceBlock = ({ data }: { data: Price }) => {
   const { title, desc, price, pay_link, feats, highlight } = data;
   console.log("data", data);
   const blockClass = clsx(
-    "flex flex-col items-start text-white p-5 border-solid border border-white rounded-3xl bg-black w-[326px] transition-all hover:scale-110",
+    "flex flex-col items-start text-white p-5 border-solid border border-white rounded-3xl bg-black w-[326px] transition-all",
     highlight && "border-[6px] gradient-border")
   return <div className={blockClass}>
     <h2 className="text-5xl font-bold min-h-[68px] ">{title}</h2>
