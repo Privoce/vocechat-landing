@@ -48,7 +48,7 @@ function Compare({ }: Props) {
           <thead className="border-solid border-b border-gray-200">
             <tr>
               <HeaderCell isFirst={true}>Products</HeaderCell>
-              <HeaderCell>Security & Privacy</HeaderCell>
+              <HeaderCell>Private Hosted Open API</HeaderCell>
               <HeaderCell>Open Source</HeaderCell>
               <HeaderCell>Mobile App</HeaderCell>
               <HeaderCell>Lightweight(less than 20 MB)</HeaderCell>
@@ -92,56 +92,56 @@ function Compare({ }: Props) {
             </tr>
             <tr>
               <Cell type="title">Signal</Cell>
-              <Cell />
+              <Cell type="none" />
               <Cell />
               <Cell />
               <Cell type="none" />
             </tr>
             <tr>
               <Cell type="title">Telegram</Cell>
-              <Cell />
+              <Cell type="none" />
               <Cell />
               <Cell />
               <Cell type="none" />
             </tr>
             <tr>
               <Cell type="title">Discord</Cell>
-              <Cell />
+              <Cell type="none" />
               <Cell type="none" />
               <Cell />
               <Cell type="none" />
             </tr>
             <tr>
               <Cell type="title">Whatsapp</Cell>
-              <Cell />
+              <Cell type="none" />
               <Cell type="none" />
               <Cell />
               <Cell type="none" />
             </tr>
             <tr>
               <Cell type="title">Line</Cell>
-              <Cell />
+              <Cell type="none" />
               <Cell type="none" />
               <Cell />
               <Cell type="none" />
             </tr>
             <tr>
               <Cell type="title">Slack</Cell>
-              <Cell />
+              <Cell type="none" />
               <Cell type="none" />
               <Cell />
               <Cell type="none" />
             </tr>
             <tr>
               <Cell type="title">Wechat</Cell>
-              <Cell />
+              <Cell type="none" />
               <Cell type="none" />
               <Cell />
               <Cell type="none" />
             </tr>
             <tr>
               <Cell type="title">MSN</Cell>
-              <Cell />
+              <Cell type="none" />
               <Cell type="none" />
               <Cell type="none" />
               <Cell type="none" />
