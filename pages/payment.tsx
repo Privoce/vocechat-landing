@@ -38,7 +38,7 @@ const Index = (props: Props) => {
                     : <span>No Session ID</span>}
                 <button disabled={!sessionId} type="submit" className="p-2 rounded-full bg-success-700 text-white mt-6">Generate License</button>
             </form>
-            {!license && <div className="mt-4 border border-solid border-gray-300 rounded-md p-2 flex flex-col gap-2">
+            {license && <div className="mt-4 border border-solid border-gray-300 rounded-md p-2 flex flex-col gap-2">
                 <span className="text-sm text-gray-700">Copy your License!</span>
                 <code className="bg-gray-100 text-xs p-1 whitespace-pre-wrap max-w-2xl break-all">
                     {license}
