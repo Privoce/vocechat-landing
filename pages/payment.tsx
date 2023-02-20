@@ -12,9 +12,12 @@ const Index = (props: Props) => {
         evt.preventDefault();
         const body: Record<string, any> = {}
         const formData = new FormData(evt.currentTarget);
-        formData.forEach((val, key) => {
-            body[key] = val;
-        })
+        const domain = formData.get('domain') || "";
+        if (!isValidHostname(domain)) {
+            alert("Invalidated Hostname!")
+            return;
+        }
+        body.domain = domain;
         body.stripe_session_id = sessionId;
         console.log(body);
         try {
@@ -35,10 +38,10 @@ const Index = (props: Props) => {
     return (
         <main className="w-screen h-screen bg-gray-50 flex flex-col justify-center items-center text-2xl">
             <h1 className="text-4xl text-greenLight-700 font-bold mb-2">Payment Successfully!</h1>
-            <span className="text-xs text-gray-500 mb-5">Please input your host address,e.g.<code className="bg-gray-200 p-1">https://vocechat.yourdoamin.com</code></span>
+            <span className="text-xs text-gray-500 mb-5">Please input your host address,e.g.<code className="bg-gray-200 p-1">vocechat.yourdoamin.com</code></span>
             <form action="" onSubmit={handleSubmit} className="flex flex-col justify-start gap-2">
                 {sessionId ?
-                    <input type="url" required className={"text-lg p-2 border border-solid border-gray-100 rounded"} name="domain" placeholder="Host" />
+                    <input required className={"text-lg p-2 border border-solid border-gray-100 rounded"} name="domain" placeholder="Hostname" />
                     : <span>No Session ID</span>}
                 <button disabled={!sessionId} type="submit" className="p-2 rounded-full bg-success-700 text-white mt-6">Generate License</button>
             </form>
@@ -59,3 +62,37 @@ const Index = (props: Props) => {
 };
 
 export default Index;
+
+export const isValidHostname = (value: any) => {
+    if (typeof value !== 'string') return false
+
+    const validHostnameChars = /^[a-zA-Z0-9-.]{1,253}\.?$/g
+    if (!validHostnameChars.test(value)) {
+        return false
+    }
+
+    if (value.endsWith('.')) {
+        value = value.slice(0, value.length - 1)
+    }
+
+    if (value.length > 253) {
+        return false
+    }
+
+    const labels = value.split('.')
+
+    const isValid = labels.every(function (label: string) {
+        const validLabelChars = /^([a-zA-Z0-9-]+)$/g
+
+        const validLabel = (
+            validLabelChars.test(label) &&
+            label.length < 64 &&
+            !label.startsWith('-') &&
+            !label.endsWith('-')
+        )
+
+        return validLabel
+    })
+
+    return isValid
+}
