@@ -6,7 +6,7 @@ type Price = {
   desc: string,
   price?: {
     value: number,
-    unit: "forever" | "version"
+    unit: "forever" | "server"
   },
   pay_link: string,
   feats: string[],
@@ -59,14 +59,14 @@ const prices: Price[] = [
     desc: "Build a community of your own with VoceChat",
     price: {
       value: 49,
-      unit: "version"
+      unit: "server"
     },
     pay_link: "https://buy.stripe.com/bIY6rqaav2wefbG8wR",
     feats: [
       "Chat widget for customer service",
       "Unlimited Members and Bot",
       "No recurring charges",
-      "Only pay when you want to upgrade to newer versions"
+      "Great for small and medium teams or product owners"
     ],
     highlight: true
   },
