@@ -6,7 +6,9 @@
                 "appID": "355Y8J4TGX.com.privoce.vocechatclient",
                 "paths": [
                     "/join/*",
-                    "/login/*"
+                    "/login/*",
+                    "/*/join/*",
+                    "/*/login/*"
                 ]
             }
         ]
