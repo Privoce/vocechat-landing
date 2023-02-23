@@ -6,8 +6,8 @@ import { useTranslation } from 'next-i18next';
 import { QRCodeCanvas } from 'qrcode.react'
 import Head from "../components/Head";
 import { getTranslationProps } from '../translations-props.config';
+import useDownload from "../hooks/useDownload";
 
-type Download = { link: string, icon: string }
 type Props = {};
 type ServerProps = {
     name: string
@@ -16,21 +16,7 @@ const Index: NextPage = (props: Props) => {
     const { t } = useTranslation("download")
     const [info, setInfo] = useState<ServerProps | undefined>()
     const router = useRouter()
-    const [download, setDownload] = useState<Download | Download[] | null>(null);
-    useEffect(() => {
-        const isAndroid = typeof window !== 'undefined' ? navigator.userAgent.match(/Android/i) : false;
-        setDownload(isAndroid ? ([{
-            link: "https://play.google.com/store/apps/details?id=com.privoce.vocechatclient",
-            icon: "/img/icon.app.google.play.png"
-        }, {
-            link: "https://s.voce.chat/vocechat.android.apk",
-            icon: "/img/icon.app.apk.png"
-        }]) : ({
-            link: "https://apps.apple.com/app/vocechat/id1631779678",
-            icon: "/img/icon.app.ios.png"
-        }))
-
-    }, []);
+    const download = useDownload()
     const link = router.query.link as string ?? ""
     useEffect(() => {
         const getServerInfo = async (link: string) => {
@@ -71,7 +57,7 @@ const Index: NextPage = (props: Props) => {
                         includeMargin={false} />
                     <p className="text-md text-gray-600 mt-10">{t("have_already")} <a href={app_link} className="text-blueLight-600">{t("open")}</a> </p>
                 </div>}
-                <div className="flex flex-col items-center w-72 mb-12">
+                <div className="flex flex-col items-center mb-12">
                     {/* <h1 className="mobile:text-xl tablet:text-2xl font-bold text-center">{t("start_download")}</h1> */}
                     {download ? Array.isArray(download) ? <ul className="my-10"> {download.map(d => {
                         const { link, icon } = d

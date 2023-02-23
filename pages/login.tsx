@@ -3,12 +3,14 @@ import React, { useState, MouseEvent } from "react";
 import Image from "next/image";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import Head from "../components/Head";
+import useDownload from "../hooks/useDownload";
 type Props = {};
 
 const Index = (props: Props) => {
   const router = useRouter()
   const link = decodeURIComponent(router.query.s as string ?? "")
   const [copied, setCopied] = useState(false);
+  const download = useDownload()
   const handleCopy = () => {
     setCopied(true);
     setTimeout(() => {
@@ -31,7 +33,7 @@ const Index = (props: Props) => {
               height={817}
               className="w-full h-auto"
               src={"/img/login.preview.png"}
-              alt="redirecting image"
+              alt="login image"
             ></Image>
           </div>
           {link && <li className="text-gray-600 text-center w-full flex flex-col gap-2 mt-2">
@@ -47,7 +49,17 @@ const Index = (props: Props) => {
             </CopyToClipboard>
           </li>}
         </ul>
-
+        <div className="flex flex-col items-center mb-6">
+          {/* <h1 className="mobile:text-xl tablet:text-2xl font-bold text-center">{t("start_download")}</h1> */}
+          {download ? Array.isArray(download) ? <ul className="my-10"> {download.map(d => {
+            const { link, icon } = d
+            return <li key={link}><a href={link} target="_blank" rel="noopener noreferrer" >
+              <img alt="App Download Icon" src={icon} className="max-w-[80%] h-auto m-auto mb-2" />
+            </a></li>
+          })}</ul> : <a href={download.link} target="_blank" rel="noopener noreferrer">
+            <img alt="App Download Icon" src={download.icon} className="max-w-[80%] h-auto m-auto" />
+          </a> : null}
+        </div>
       </main>
     </>
   );
