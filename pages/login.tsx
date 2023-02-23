@@ -30,7 +30,7 @@ const Index = (props: Props) => {
               width={412}
               height={817}
               className="w-full h-auto"
-              src={"/img/redirecting.png"}
+              src={"/img/login.preview.png"}
               alt="redirecting image"
             ></Image>
           </div>
