@@ -61,7 +61,7 @@ const prices: Price[] = [
       value: 49,
       unit: "server"
     },
-    pay_link: "https://buy.stripe.com/bIY6rqaav2wefbG8wR",
+    pay_link: "https://buy.stripe.com/00gcPOgyTfj00gM5kL",
     feats: [
       "Chat widget for customer service",
       "Unlimited Members and Bot",
