@@ -15,6 +15,7 @@ type ServerProps = {
 const Index: NextPage = (props: Props) => {
     const { t } = useTranslation("download")
     const [info, setInfo] = useState<ServerProps | undefined>()
+    const [webLink, setWebLink] = useState("")
     const router = useRouter()
     const download = useDownload()
     const link = router.query.link as string ?? ""
@@ -31,12 +32,26 @@ const Index: NextPage = (props: Props) => {
                 })
             }
         }
+        const initWebLink = (link: string) => {
+            try {
+                const dLink = decodeURIComponent(link);
+                const urlObj = new URL(dLink);
+                const token = urlObj.searchParams.get("magic_token");
+                const tmp = `${urlObj.origin}/#/register?magic_token=${token}&ctx=web`;
+                setWebLink(tmp)
+            } catch (error) {
+                console.error("parse web link error");
+
+            }
+        }
         if (link) {
-            getServerInfo(link)
+            getServerInfo(link);
+            initWebLink(link)
         }
     }, [link])
     if (!info) return null;
     const app_link = `https://voce.chat/join?magic_link=${link}`;
+
     return (
         <>
             <Head />
@@ -47,6 +62,7 @@ const Index: NextPage = (props: Props) => {
                         {t("join")}{info?.name}!
                     </span>
                 </div>
+
                 {link && <div className="flex flex-col items-center w-4/5 text-center">
                     <p className="text-md text-gray-600 mb-4">{t("scan_tip")}</p>
                     <QRCodeCanvas value={app_link} className="rounded border border-solid border-gray-200 p-1"
@@ -59,6 +75,9 @@ const Index: NextPage = (props: Props) => {
                 </div>}
                 <div className="flex flex-col items-center mb-12">
                     {/* <h1 className="mobile:text-xl tablet:text-2xl font-bold text-center">{t("start_download")}</h1> */}
+                    {webLink && <a href={webLink} className="p-2 mt-2 rounded bg-primary-500 text-white">
+                        Continue with webapp
+                    </a>}
                     {download ? Array.isArray(download) ? <ul className="my-10"> {download.map(d => {
                         const { link, icon } = d
                         return <li key={link}><a href={link} target="_blank" rel="noopener noreferrer" >
