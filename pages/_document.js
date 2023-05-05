@@ -6,7 +6,7 @@ export default function Document(props) {
   return (
     <Html lang={currentLocale}>
       <Head />
-      <body className="selection:bg-primary-300 selection:text-primary-25">
+      <body className="selection:bg-primary-300 selection:text-primary-25 bg-white">
         <Main />
         <aside
           id="root_modal"
