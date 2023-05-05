@@ -1,16 +1,12 @@
-import { useEffect } from "react";
+// import { useEffect } from "react";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import Script from "next/script";
 import { appWithTranslation } from 'next-i18next';
-import { hotjar } from "react-hotjar";
 import "../styles/globals.css";
 // import nextI18NextConfig from '../next-i18next.config.js';
 
 function MyApp({ Component, pageProps }: AppProps) {
-  useEffect(() => {
-    hotjar.initialize(3177531, 6);
-  }, []);
 
   return (
     <>
