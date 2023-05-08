@@ -49,7 +49,18 @@ const Index = (props: Props) => {
         const body: Record<string, any> = {}
         const formData = new FormData(evt.currentTarget);
         formData.forEach((val, key) => {
-            body[key] = key === "user_limit" ? +val : val;
+            let value: any = val;
+            switch (key) {
+                case "user_limit":
+                    value = +val;
+                    break;
+                case "domain":
+                    value = (val as string).trim();
+                    break
+                default:
+                    break;
+            }
+            body[key] = value;
         })
         console.log(body);
         try {
