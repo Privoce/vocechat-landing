@@ -7,7 +7,7 @@ import "../styles/globals.css";
 // import nextI18NextConfig from '../next-i18next.config.js';
 
 function MyApp({ Component, pageProps }: AppProps) {
-
+  const AnyComponent = Component as any;
   return (
     <>
       <Head>
@@ -31,7 +31,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           `
         }}
       />
-      <Component {...pageProps} />
+      <AnyComponent {...pageProps} />
     </>
   );
 }

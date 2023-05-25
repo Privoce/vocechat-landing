@@ -23,6 +23,9 @@
     "react-dom": "18.2.0",
     "react-i18next": "^12.2.2"
   },
+  "engines": {
+    "node": ">=16"
+  },
   "devDependencies": {
     "@types/node": "20.1.0",
     "@types/react": "18.2.6",
