@@ -8,7 +8,8 @@
                     "/join/*",
                     "/login/*",
                     "/*/join/*",
-                    "/*/login/*"
+                    "/*/login/*",
+                    "/url/*"
                 ]
             }
         ]
