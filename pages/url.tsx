@@ -12,12 +12,8 @@ export const isMobile = () =>
     /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
 type Props = {};
-type ServerProps = {
-    name: string
-}
 const Index: NextPage = (props: Props) => {
     const { t } = useTranslation("download")
-    const [info, setInfo] = useState<ServerProps | undefined>()
     const [webLink, setWebLink] = useState("")
     const router = useRouter()
     const download = useDownload()
@@ -27,18 +23,6 @@ const Index: NextPage = (props: Props) => {
     const link = invitation_link || server_url;
 
     useEffect(() => {
-        const getServerInfo = async (link: string) => {
-            try {
-                const api = `${new URL(link).origin}/api/admin/system/organization`;
-                const resp = await fetch(api);
-                const { name } = await resp.json();
-                setInfo({ name })
-            } catch (error) {
-                setInfo({
-                    name: t("default_server_name")
-                })
-            }
-        }
         const initInviteLink = (link: string) => {
             try {
                 const dLink = decodeURIComponent(link);
@@ -49,13 +33,11 @@ const Index: NextPage = (props: Props) => {
             }
         }
         if (link) {
-            getServerInfo(link);
             if (link_type === "invite") {
                 initInviteLink(link)
             }
         }
     }, [link, link_type])
-    if (!info) return null;
     const app_link = `https://voce.chat/join?magic_link=${link}`;
 
     return (
@@ -65,7 +47,7 @@ const Index: NextPage = (props: Props) => {
                 <div className="relative">
                     <img src="/img/app.grid.png" className="object-cover max-w-[unset]" alt="APP grid" />
                     <span className="absolute left-1/2 bottom-8 -translate-x-1/2 bg-transparent font-bold text-lg ">
-                        {t("join")}{info?.name}!
+                        {t("join")}!
                     </span>
                 </div>
 

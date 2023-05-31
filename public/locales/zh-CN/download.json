@@ -1,8 +1,7 @@
 {
-    "join": "加入",
+    "join": "加入我的空间",
     "scan_tip": "下载APP后，粘贴链接或扫描此二维码。",
     "start_download": "自主聊天，从下载APP开始",
     "open": "打开VoceChat",
-    "have_already": "已经安装APP？",
-    "default_server_name": "我的空间"
+    "have_already": "已经安装APP？"
 }
