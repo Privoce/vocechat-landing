@@ -15,10 +15,6 @@ const Index = (props: Props) => {
       setCopied(false);
     }, 2000);
   };
-  const handleTextareaClick = (evt: MouseEvent<HTMLTextAreaElement>) => {
-    const ele = evt.currentTarget;
-    ele.select()
-  }
   return (
     <>
       <Head />
@@ -36,8 +32,9 @@ const Index = (props: Props) => {
           </div>
           {link && <li className="text-gray-600 text-center w-full flex flex-col gap-2 mt-2">
             <i className="text-gray-400 not-italic text-xs break-words">👇App not showing? You may copy the following invitation link and paste it into VoceChat App.</i>
-            <textarea onClick={handleTextareaClick} readOnly value={link} className="bg-gray-200 font-bold p-2 rounded-md break-all" spellCheck={false}>
-            </textarea>
+            <div className="text-left bg-gray-200 font-bold p-2 rounded-md break-all overflow-y-scroll resize-none" spellCheck={false}>
+              {link}
+            </div>
             <CopyToClipboard text={link} onCopy={handleCopy} >
               <button
                 className="btn-primary"

@@ -13,6 +13,7 @@ export const isMobile = () =>
 
 type Props = {};
 const Index: NextPage = (props: Props) => {
+
     const { t } = useTranslation("download")
     const [webLink, setWebLink] = useState("")
     const router = useRouter()
@@ -43,7 +44,7 @@ const Index: NextPage = (props: Props) => {
             }
         }
     }, [link, link_type])
-    const app_link = `https://voce.chat/join?magic_link=${link}`;
+    const app_link = `${typeof window === "undefined" ? "" : window.location.origin}/join?magic_link=${encodeURIComponent(link)}`;
 
     return (
         <>
