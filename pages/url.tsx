@@ -32,7 +32,7 @@ const Index: NextPage = (props: Props) => {
         const initInviteLink = (link: string) => {
             try {
                 const dLink = decodeURIComponent(link);
-                setWebLink(dLink)
+                setWebLink(`${dLink}&ctx=web`)
             } catch (error) {
                 console.error("parse web link error");
             }
