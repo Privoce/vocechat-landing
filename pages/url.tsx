@@ -21,6 +21,12 @@ const Index: NextPage = (props: Props) => {
     const invitation_link = router.query.i as string ?? ""
     const link_type = server_url ? "server" : invitation_link ? "invite" : "";
     const link = invitation_link || server_url;
+    useEffect(() => {
+        if (!isMobile() && link) {
+            const rLink = decodeURIComponent(link);
+            location.href = rLink
+        }
+    }, [link])
 
     useEffect(() => {
         const initInviteLink = (link: string) => {
@@ -29,7 +35,6 @@ const Index: NextPage = (props: Props) => {
                 setWebLink(dLink)
             } catch (error) {
                 console.error("parse web link error");
-
             }
         }
         if (link) {
