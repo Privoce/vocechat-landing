@@ -2,8 +2,8 @@
 import { useState, useEffect } from "react";
 import { GetServerSideProps, NextPage } from 'next';
 import { useRouter } from 'next/router'
+import CopyToClipboard from "react-copy-to-clipboard";
 import { useTranslation } from 'next-i18next';
-import { QRCodeCanvas } from 'qrcode.react'
 import Head from "../components/Head";
 import { getTranslationProps } from '../translations-props.config';
 import useDownload from "../hooks/useDownload";
@@ -13,15 +13,21 @@ export const isMobile = () =>
 
 type Props = {};
 const Index: NextPage = (props: Props) => {
-
     const { t } = useTranslation("download")
     const [webLink, setWebLink] = useState("")
+    const [copied, setCopied] = useState(false);
     const router = useRouter()
     const download = useDownload()
     const server_url = router.query.s as string ?? ""
     const invitation_link = router.query.i as string ?? ""
     const link_type = server_url ? "server" : invitation_link ? "invite" : "";
     const link = invitation_link || server_url;
+    const handleCopy = () => {
+        setCopied(true);
+        setTimeout(() => {
+            setCopied(false);
+        }, 2000);
+    };
     useEffect(() => {
         if (!isMobile() && link) {
             const rLink = decodeURIComponent(link);
@@ -44,7 +50,7 @@ const Index: NextPage = (props: Props) => {
             }
         }
     }, [link, link_type])
-    const app_link = `${typeof window === "undefined" ? "" : window.location.origin}/join?magic_link=${encodeURIComponent(link)}`;
+    const app_link = `vocechat://i?magic_link=${encodeURIComponent(link)}`;
 
     return (
         <>
@@ -57,20 +63,24 @@ const Index: NextPage = (props: Props) => {
                     </span>
                 </div>
 
-                {link && <div className="flex flex-col items-center w-4/5 text-center">
-                    <p className="text-md text-gray-600 mb-4">{t("scan_tip")}</p>
-                    <QRCodeCanvas value={app_link} className="rounded border border-solid border-gray-200 p-1"
-                        size={200}
-                        bgColor={"#fff"}
-                        fgColor={"#000"}
-                        level={"L"}
-                        includeMargin={false} />
-                    <p className="text-md text-gray-600 mt-10">{t("have_already")} <a href={app_link} className="text-blueLight-600">{t("open")}</a> </p>
-                </div>}
+                <p className="text-md text-gray-600 mt-10">{t("have_already")} <a href={app_link} className="text-blueLight-600">{t("open")}</a> </p>
                 <div className="flex flex-col items-center mb-12">
                     {webLink && <a href={webLink} className="p-2 mt-2 rounded bg-primary-500 text-white">
                         Continue with webapp
                     </a>}
+                    {link && <div className="text-gray-600 text-center w-[80%] flex flex-col gap-2 mt-2">
+                        <i className="text-gray-400 not-italic text-xs break-words">👇App not showing? You may copy the following invitation link and paste it into VoceChat App.</i>
+                        <div className="text-left bg-gray-200 font-bold p-2 rounded-md break-all overflow-y-scroll resize-none" spellCheck={false}>
+                            {link}
+                        </div>
+                        <CopyToClipboard text={link} onCopy={handleCopy} >
+                            <button
+                                className="btn-primary"
+                            >
+                                {copied ? "Copied" : `Copy`}
+                            </button>
+                        </CopyToClipboard>
+                    </div>}
                     {download ? Array.isArray(download) ? <ul className="my-10"> {download.map(d => {
                         const { link, icon } = d
                         return <li key={link}><a href={link} target="_blank" rel="noopener noreferrer" >
