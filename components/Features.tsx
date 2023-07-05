@@ -13,13 +13,13 @@ const data = [
   {
     icon: "/img/icon.lightweight.png",
     title: "Lightweight",
-    list: ["The server is only 10MB in size and can easily run on a NAS and Raspberry Pi."]
+    list: ["The server is less than 20 MB in size and can easily run on a NAS and Raspberry Pi."]
   },
   {
     icon: "/img/icon.open.api.png",
     title: <a href="https://doc.voce.chat/api/get-the-server-version" target={"_blank"} rel="noreferrer">OpenAPI</a>,
     list: [
-      "Utilizes OpenAPI standard, with easy integration with third-party applications and tools. ",
+      "Utilizes open API standard, with easy integration with third-party applications and tools. ",
       "With complete documentation and testing."
     ]
   },
@@ -70,8 +70,8 @@ const Features = (props: Props) => {
         Open API and SDK for you to host anywhere. No central service.
       </h3>
       <p className="sm:w-[80%] w-[768px] text-center text-xl sm:text-2xl md:text-xl text-gray-500 mt-5 mb-16 ">
-        Modern features, open API, open sourced SDK, iterate based on users feedback. Trusted by
-        over 4,000 customers.
+        Bots, video call, publich channel, open ID, open API, open sourced SDK, iterate based on users feedback. Trusted by
+        over <a href="https://hub.docker.com/r/privoce/vocechat-server/tags">15,000</a> customers from 50+ countries.
       </p>
       <a
         href="https://doc.voce.chat/api/get-the-server-version"
