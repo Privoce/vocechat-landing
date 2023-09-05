@@ -71,16 +71,27 @@ const Features = (props: Props) => {
       </h3>
       <p className="sm:w-[80%] w-[768px] text-center text-xl sm:text-2xl md:text-xl text-gray-500 mt-5 mb-16 ">
         Bots, video call, publich channel, open ID, open API, open sourced SDK, iterate based on users feedback. Trusted by
-        over <a href="https://hub.docker.com/r/privoce/vocechat-server/tags">15,000</a> customers from 50+ countries.
+        over <a href="https://hub.docker.com/r/privoce/vocechat-server/tags">40,000</a> customers from 50+ countries.
       </p>
+      <div class = "flex gap-12 md:flex-row">
+        <a
+        href="https://doc.voce.chat/api/get-the-server-version"
+        target={"_blank"}
+        rel="noopener noreferrer"
+        className="btn-primary mb-16"
+      >
+        View doc
+      </a> 
       <a
         href="https://doc.voce.chat/api/get-the-server-version"
         target={"_blank"}
         rel="noopener noreferrer"
         className="btn-primary mb-16"
       >
-        Test Live API
+        Test API
       </a>
+      </div>
+
       <div className="flex gap-24 sm:flex-col sm:items-center md:flex-row">
         <div className="flex flex-col gap-24 sm:items-center sm:order-2 md:order-1">
           {data.slice(0, 2).map((f) => {
