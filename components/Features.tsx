@@ -70,7 +70,7 @@ const Features = (props: Props) => {
         Open API and SDK for you to host anywhere. No central service.
       </h3>
       <p className="sm:w-[80%] w-[768px] text-center text-xl sm:text-2xl md:text-xl text-gray-500 mt-5 mb-16 ">
-        Bots, video call, publich channel, open ID, open API, open sourced SDK, iterate based on users feedback. Trusted by
+        Bots, video call, publish channel, open ID, open API, open sourced SDK, iterate based on users feedback. Trusted by
         over <a href="https://hub.docker.com/r/privoce/vocechat-server/tags">40,000</a> customers from 50+ countries.
       </p>
       <div className="flex gap-12 md:flex-row">
