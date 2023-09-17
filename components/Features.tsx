@@ -75,15 +75,15 @@ const Features = (props: Props) => {
       </p>
       <div className="flex gap-12 md:flex-row">
         <a
-          href="https://doc.voce.chat/api/get-the-server-version"
+          href="https://doc.voce.chat/"
           target={"_blank"}
           rel="noopener noreferrer"
           className="btn-primary mb-16"
         >
-          View doc
+          View docs
         </a>
         <a
-          href="https://doc.voce.chat/api/get-the-server-version"
+          href="https://doc.voce.chat/"
           target={"_blank"}
           rel="noopener noreferrer"
           className="btn-primary mb-16"
