@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import Image from "next/image";
 type Props = {};
@@ -27,9 +28,12 @@ function FirstView({ }: Props) {
       <h2 className="font-semibold xl:text-5xl sm:text-4xl text-primary-900 tracking-tight text-center">
         Private Hosted Chat SDK with Bot and Social Channel Features, Easy Integration to Your Site or App
       </h2>
-      <p className="text-xl w-[768px] sm:w-[90%] text-center text-primary-700 mt-6 mb-12 mx-4">
+      <p className="text-xl w-[768px] sm:w-[90%] text-center text-primary-700 mt-6 mb-8 mx-4">
         VoceChat is a superlight Rust powered chat App, API and SDK that prioritizes private hosting. Build your own chat feature with VoceChat!
       </p>
+      <a className="mb-4" href="https://app.trydome.io/signup?package=privoce-vocechat-server" target="_blank" rel="noopener noreferrer">
+        <img src="https://trydome.io/button.svg" alt="Deploy to Dome" />
+      </a>
       <div className={`w-[95%] h-screen mt-4 shadow-md rounded-md overflow-hidden border bg-white`}>
         <iframe src="https://privoce.voce.chat/" className="w-full h-full"></iframe>
       </div>
