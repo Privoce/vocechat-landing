@@ -1,42 +1,11 @@
-// @ts-nocheck
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
-import dynamic from 'next/dynamic'
-import "plyr/dist/plyr.css";
 import CopyToClipboard from "react-copy-to-clipboard";
 const shellCode = `docker run -d --restart=always \\
 -p 3000:3000 \\
 --name vocechat-server \\
 privoce/vocechat-server:latest`;
-
-const Plyr = dynamic(() => import("plyr"), {
-  ssr: false,
-  loading: () => "Loading..."
-});
-const YoutubePlayer = ({ closePlayer }: { closePlayer?: () => void }) => {
-  useEffect(() => {
-    const player = new Plyr("#youtube_player", {
-      autoplay: false
-    });
-
-    return () => {
-      player.destroy();
-    };
-  }, []);
-
-  return (
-    <div className="flex flex-col items-center gap-3 sm:w-full md:w-[800px] px-2">
-      <div className="shadow-xl rounded-2xl overflow-hidden w-full">
-        <div id="youtube_player" data-plyr-provider="youtube" data-plyr-embed-id="RzmwpFWY-kI" />
-      </div>
-      {closePlayer && (
-        <button onClick={closePlayer} className="btn-primary-small ">
-          Close
-        </button>
-      )}
-    </div>
-  );
-};
+import YouTube from 'react-youtube';
 const Deploy = () => {
   const [copied, setCopied] = useState(false);
   const handleCopy = () => {
@@ -88,7 +57,8 @@ const Deploy = () => {
         <span className="mt-3">We would like to have a 25min chat with you to help you out!</span>
         <div className="my-8">
           {/* video embed */}
-          <YoutubePlayer />
+
+          <YouTube videoId="RzmwpFWY-kI" />
         </div>
         <div className="flex gap-2">
           <a
