@@ -44,6 +44,7 @@ const Booking = () => {
         </button>
       </form>
       {opened && (
+        // @ts-ignore
         <Modal>
           <div className="sm:w-full md:w-[600px] relative">
             <InlineWidget url="https://calendly.com/hansu" prefill={{ email }} />

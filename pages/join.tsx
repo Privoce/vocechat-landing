@@ -1,11 +1,11 @@
 import { useRouter } from "next/router";
-import React, { useState, MouseEvent } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
-import { CopyToClipboard } from "react-copy-to-clipboard";
+import CopyToClipboard from "react-copy-to-clipboard";
 import Head from "../components/Head";
-type Props = {};
+// type Props = {};
 
-const Index = (props: Props) => {
+const Index = () => {
   const router = useRouter()
   const link = decodeURIComponent(router.query.magic_link as string ?? "")
   const [copied, setCopied] = useState(false);

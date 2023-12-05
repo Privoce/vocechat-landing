@@ -1,6 +1,6 @@
 import React, { FormEvent, useState } from "react";
 import axios, { AxiosError } from 'axios'
-import { CopyToClipboard } from "react-copy-to-clipboard";
+import CopyToClipboard from "react-copy-to-clipboard";
 
 type Props = {};
 const KEY_NAME = "LEN_SECRET_NAME";

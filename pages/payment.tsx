@@ -1,6 +1,6 @@
 import React, { FormEvent, useState } from "react";
 import axios from 'axios'
-import { CopyToClipboard } from "react-copy-to-clipboard";
+import CopyToClipboard from "react-copy-to-clipboard";
 import { useRouter } from "next/router";
 type Props = {};
 const Index = (props: Props) => {

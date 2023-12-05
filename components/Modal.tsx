@@ -1,4 +1,5 @@
-import { FC, ReactNode, useEffect, useState } from "react";
+"use client"
+import { ReactNode, useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 
 interface Props {
@@ -6,7 +7,7 @@ interface Props {
   children?: ReactNode;
 }
 
-const Modal: FC<Props> = ({ id = "root_modal", children }) => {
+const Modal = ({ id = "root_modal", children }: Props) => {
   const [root, setRoot] = useState<HTMLElement | null>(null);
 
   useEffect(() => {

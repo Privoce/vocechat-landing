@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import React, { useState, MouseEvent } from "react";
 import Image from "next/image";
-import { CopyToClipboard } from "react-copy-to-clipboard";
+import CopyToClipboard from "react-copy-to-clipboard";
 import Head from "../components/Head";
 import useDownload from "../hooks/useDownload";
 type Props = {};

@@ -1,13 +1,18 @@
 // @ts-nocheck
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
-import Plyr from "plyr";
+import dynamic from 'next/dynamic'
 import "plyr/dist/plyr.css";
-import { CopyToClipboard } from "react-copy-to-clipboard";
+import CopyToClipboard from "react-copy-to-clipboard";
 const shellCode = `docker run -d --restart=always \\
 -p 3000:3000 \\
 --name vocechat-server \\
 privoce/vocechat-server:latest`;
+
+const Plyr = dynamic(() => import("plyr"), {
+  ssr: false,
+  loading: () => "Loading..."
+});
 const YoutubePlayer = ({ closePlayer }: { closePlayer?: () => void }) => {
   useEffect(() => {
     const player = new Plyr("#youtube_player", {
