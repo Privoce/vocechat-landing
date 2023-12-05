@@ -9,8 +9,8 @@ const Index = (props: Props) => {
       <meta name="description" content="Welcome to vocechat" />
       <link rel="icon" href="/favicon.ico" />
       <meta name="theme-color" content="#527ff1" />
-      <meta name="description" content="Private Hosted Chat, AI Bots, Cuztomizable Social Server" />
-      <meta name="keywords" content="Private Hosted, Chat SDK, Bot, IM, Integration, API, SDK, Rust" />
+      <meta name="description" content="Private Hosted Chat, In-app messaginig, AI Bots, NAS self-hosted chat server" />
+      <meta name="keywords" content="Private Hosted, In-app messaginig, Chat framework, Chat SDK, AI agent, IM, Integration, API, SDK, Rust" />
       <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
       {/* Twitter */}
       <meta
