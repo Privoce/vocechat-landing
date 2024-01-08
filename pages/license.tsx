@@ -7,7 +7,7 @@ const KEY_NAME = "LEN_SECRET_NAME";
 const KEY_SECRET = "LEN_SECRET";
 const localName = typeof window !== "undefined" ? (window.localStorage.getItem(KEY_NAME) || "") : ""
 const localSecret = typeof window !== "undefined" ? (window.localStorage.getItem(KEY_SECRET) || "") : ""
-const prefix = process.env.NODE_ENV == "development" ? `http://localhost:4000` : `https://vera.nicegoodthings.com`;
+// const prefix = process.env.NODE_ENV == "development" ? `http://localhost:4000` : `https://vera.nicegoodthings.com`;
 const Index = (props: Props) => {
     const [name, setName] = useState(localName)
     const [secret, setSecret] = useState(localSecret);
@@ -22,7 +22,7 @@ const Index = (props: Props) => {
         if (secretVal) {
             try {
                 setPairing(true)
-                const resp = await axios.post(`${prefix}/vocechat/landing/license/pair`, { secret: secretVal })
+                const resp = await axios.post(`/api/pair`, { secret: secretVal })
                 console.log("resp", resp.data);
                 const name = resp.data?.name ?? "";
                 setPairing(false)
@@ -66,7 +66,7 @@ const Index = (props: Props) => {
         try {
             setLicense("")
             setGenerating(true)
-            const resp = await axios.post(`${prefix}/vocechat/landing/license`, { secret, data: body })
+            const resp = await axios.post(`/api/license`, { secret, data: body })
             console.log("resp", resp.data);
             setLicense(resp.data?.license ?? "")
             setGenerating(false)
