@@ -16,7 +16,7 @@ envString.split("|").forEach((item) => {
 });
 
 const generateLicense = async (md: any, token = null) => {
-  const resp = await axios.post("https://license.voce.chat/license/gen", md, {
+  const resp = await axios.post("https://license.ipter.org/license/gen", md, {
     headers: {
       "Content-Type": "application/json",
       Token: token ?? process.env.VOCE_LICENSE_TOKEN,
@@ -65,8 +65,7 @@ export default async function handler(
           return res.status(200).json({ license: data.license });
         }
         return res.status(400).send({ msg: "bad request!" });
-      } catch (error) {
-        console.log("voce err", error);
+      } catch (error: any) {
         return res.status(500).send({ msg: "license gen failed!" });
       }
     }
