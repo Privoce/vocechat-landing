@@ -23,22 +23,6 @@ const Home: NextPage = () => {
         <Booking />
       </main>
       <Footer />
-      {/* bridger chatbot */}
-      <Script
-        strategy="afterInteractive"
-        src={`https://static.bridger.chat/sdk/v0.2.1/widget.js`}
-      />
-      <Script
-        id="bridger-chatbot-init"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
-            window.onload = function() {
-              Bridger.initWidget({ id: '130987301507686400' });
-          }
-          `
-        }}
-      />
     </>
   );
 };
