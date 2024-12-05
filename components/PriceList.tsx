@@ -112,7 +112,7 @@ const prices: Price[] = [
       "Chat widget for customer service",
       "Unlimited Members and Bot",
       "No recurring charges",
-      "Great for small and medium teams or product owners"
+      "New message email notification"
     ],
     highlight: true
   },
