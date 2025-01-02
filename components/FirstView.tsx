@@ -38,14 +38,7 @@ function FirstView({}: Props) {
         VoceChat is a superlight Rust powered chat app, API and SDK that prioritizes private
         hosting. Build your own in-app messaging feature with VoceChat!
       </p>
-      <a
-        className="mb-4"
-        href="https://app.trydome.io/signup?package=privoce-vocechat-server"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <img src="https://trydome.io/button.svg" alt="Deploy to Dome" />
-      </a>
+
       <div className={`w-[95%] h-screen mt-4 shadow-md rounded-md overflow-hidden border bg-white`}>
         <iframe
           src="https://privoce.voce.chat/"
