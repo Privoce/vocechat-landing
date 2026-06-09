@@ -62,7 +62,11 @@ export default function Login() {
                 return (
                   <li key={link}>
                     <a href={link} target="_blank" rel="noopener noreferrer">
-                      <img alt="App Download Icon" src={icon} className="max-w-[80%] h-auto m-auto mb-2" />
+                      <img
+                        alt="App Download Icon"
+                        src={icon}
+                        className="max-w-[80%] h-auto m-auto mb-2"
+                      />
                     </a>
                   </li>
                 );
@@ -70,7 +74,11 @@ export default function Login() {
             </ul>
           ) : (
             <a href={download.link} target="_blank" rel="noopener noreferrer">
-              <img alt="App Download Icon" src={download.icon} className="max-w-[80%] h-auto m-auto" />
+              <img
+                alt="App Download Icon"
+                src={download.icon}
+                className="max-w-[80%] h-auto m-auto"
+              />
             </a>
           )
         ) : null}

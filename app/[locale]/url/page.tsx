@@ -73,7 +73,8 @@ export default function Url() {
         {link && (
           <div className="text-gray-600 text-center w-[80%] flex flex-col gap-2 mt-2">
             <i className="text-gray-400 not-italic text-xs break-words">
-              👇App not showing? You may copy the following invitation link and paste it into VoceChat App.
+              👇App not showing? You may copy the following invitation link and paste it into
+              VoceChat App.
             </i>
             <div
               className="text-left bg-gray-200 font-bold p-2 rounded-md break-all overflow-y-scroll resize-none"
@@ -95,7 +96,11 @@ export default function Url() {
                 return (
                   <li key={link}>
                     <a href={link} target="_blank" rel="noopener noreferrer">
-                      <img alt="App Download Icon" src={icon} className="max-w-[80%] h-auto m-auto mb-2" />
+                      <img
+                        alt="App Download Icon"
+                        src={icon}
+                        className="max-w-[80%] h-auto m-auto mb-2"
+                      />
                     </a>
                   </li>
                 );
@@ -103,7 +108,11 @@ export default function Url() {
             </ul>
           ) : (
             <a href={download.link} target="_blank" rel="noopener noreferrer" className="my-10">
-              <img alt="App Download Icon" src={download.icon} className="max-w-[80%] h-auto m-auto" />
+              <img
+                alt="App Download Icon"
+                src={download.icon}
+                className="max-w-[80%] h-auto m-auto"
+              />
             </a>
           )
         ) : null}

@@ -8,11 +8,7 @@ import Booking from "../../components/Booking";
 import PriceList from "../../components/PriceList";
 import FAQ from "../../components/FAQ";
 
-export default async function Home({
-  params
-}: {
-  params: Promise<{ locale: string }>;
-}) {
+export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
   return (

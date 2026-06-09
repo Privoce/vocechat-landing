@@ -69,7 +69,7 @@ export default function Download() {
             bgColor={"#fff"}
             fgColor={"#000"}
             level={"L"}
-            includeMargin={false}
+            marginSize={0}
           />
           <p className="text-md text-gray-600 mt-10">
             {t("have_already")}{" "}
@@ -94,7 +94,11 @@ export default function Download() {
                 return (
                   <li key={link}>
                     <a href={link} target="_blank" rel="noopener noreferrer">
-                      <img alt="App Download Icon" src={icon} className="max-w-[80%] h-auto m-auto mb-2" />
+                      <img
+                        alt="App Download Icon"
+                        src={icon}
+                        className="max-w-[80%] h-auto m-auto mb-2"
+                      />
                     </a>
                   </li>
                 );
@@ -102,7 +106,11 @@ export default function Download() {
             </ul>
           ) : (
             <a href={download.link} target="_blank" rel="noopener noreferrer" className="my-10">
-              <img alt="App Download Icon" src={download.icon} className="max-w-[80%] h-auto m-auto" />
+              <img
+                alt="App Download Icon"
+                src={download.icon}
+                className="max-w-[80%] h-auto m-auto"
+              />
             </a>
           )
         ) : null}

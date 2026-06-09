@@ -30,7 +30,8 @@ export default function Join() {
         {link && (
           <li className="text-gray-600 text-center w-full flex flex-col gap-2 mt-2">
             <i className="text-gray-400 not-italic text-xs break-words">
-              👇App not showing? You may copy the following invitation link and paste it into VoceChat App.
+              👇App not showing? You may copy the following invitation link and paste it into
+              VoceChat App.
             </i>
             <div
               className="text-left bg-gray-200 font-bold p-2 rounded-md break-all overflow-y-scroll resize-none"

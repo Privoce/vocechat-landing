@@ -14,8 +14,7 @@ export function generateStaticParams() {
 export const metadata: Metadata = {
   metadataBase: new URL("https://voce.chat"),
   title: "VoceChat Website",
-  description:
-    "Private Hosted Chat, In-app messaging, AI Bots, NAS self-hosted chat server",
+  description: "Private Hosted Chat, In-app messaging, AI Bots, NAS self-hosted chat server",
   keywords:
     "Private Hosted, In-app messaging, Chat framework, Chat SDK, AI agent, IM, Integration, API, SDK, Rust",
   icons: {
@@ -48,16 +47,46 @@ export const viewport: Viewport = {
 };
 
 const SPLASH_SCREENS = [
-  { href: "/splash/iphone5_splash.png", media: "(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" },
-  { href: "/splash/iphone6_splash.png", media: "(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" },
-  { href: "/splash/iphoneplus_splash.png", media: "(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3)" },
-  { href: "/splash/iphonex_splash.png", media: "(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" },
-  { href: "/splash/iphonexr_splash.png", media: "(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)" },
-  { href: "/splash/iphonexsmax_splash.png", media: "(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)" },
-  { href: "/splash/ipad_splash.png", media: "(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)" },
-  { href: "/splash/ipadpro1_splash.png", media: "(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)" },
-  { href: "/splash/ipadpro3_splash.png", media: "(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)" },
-  { href: "/splash/ipadpro2_splash.png", media: "(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)" }
+  {
+    href: "/splash/iphone5_splash.png",
+    media: "(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)"
+  },
+  {
+    href: "/splash/iphone6_splash.png",
+    media: "(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)"
+  },
+  {
+    href: "/splash/iphoneplus_splash.png",
+    media: "(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3)"
+  },
+  {
+    href: "/splash/iphonex_splash.png",
+    media: "(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)"
+  },
+  {
+    href: "/splash/iphonexr_splash.png",
+    media: "(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)"
+  },
+  {
+    href: "/splash/iphonexsmax_splash.png",
+    media: "(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)"
+  },
+  {
+    href: "/splash/ipad_splash.png",
+    media: "(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)"
+  },
+  {
+    href: "/splash/ipadpro1_splash.png",
+    media: "(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)"
+  },
+  {
+    href: "/splash/ipadpro3_splash.png",
+    media: "(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)"
+  },
+  {
+    href: "/splash/ipadpro2_splash.png",
+    media: "(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)"
+  }
 ];
 
 export default async function LocaleLayout({
@@ -77,12 +106,7 @@ export default async function LocaleLayout({
     <html lang={locale}>
       <head>
         {SPLASH_SCREENS.map((s) => (
-          <link
-            key={s.href}
-            href={s.href}
-            media={s.media}
-            rel="apple-touch-startup-image"
-          />
+          <link key={s.href} href={s.href} media={s.media} rel="apple-touch-startup-image" />
         ))}
       </head>
       <body className="selection:bg-primary-300 selection:text-primary-25 bg-white">

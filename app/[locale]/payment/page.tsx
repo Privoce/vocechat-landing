@@ -65,7 +65,8 @@ export default function Payment() {
       {license && (
         <div className="mt-4 border border-solid border-gray-300 rounded-md p-2 flex flex-col items-center gap-2">
           <span className="text-sm text-gray-700">
-            After setting up the server, go to settings-license and paste this license to update manually.
+            After setting up the server, go to settings-license and paste this license to update
+            manually.
           </span>
           <CopyToClipboard text={license} onCopy={handleCopy}>
             <code className="cursor-pointer bg-gray-100 text-xs p-1 whitespace-pre-wrap max-w-2xl break-all">

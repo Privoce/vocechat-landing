@@ -6,7 +6,7 @@ const shellCode = `docker run -d --restart=always \\
 -p 3000:3000 \\
 --name vocechat-server \\
 privoce/vocechat-server:latest`;
-import YouTube from 'react-youtube';
+import YouTube from "react-youtube";
 const Deploy = () => {
   const [copied, setCopied] = useState(false);
   const handleCopy = () => {

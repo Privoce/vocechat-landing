@@ -5,8 +5,7 @@ import CopyToClipboard from "../../../components/CopyToClipboard";
 
 const KEY_NAME = "LEN_SECRET_NAME";
 const KEY_SECRET = "LEN_SECRET";
-const localName =
-  typeof window !== "undefined" ? window.localStorage.getItem(KEY_NAME) || "" : "";
+const localName = typeof window !== "undefined" ? window.localStorage.getItem(KEY_NAME) || "" : "";
 const localSecret =
   typeof window !== "undefined" ? window.localStorage.getItem(KEY_SECRET) || "" : "";
 

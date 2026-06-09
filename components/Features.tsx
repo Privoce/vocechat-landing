@@ -17,7 +17,11 @@ const data = [
   },
   {
     icon: "/img/icon.open.api.png",
-    title: <a href="https://doc.voce.chat/api/get-the-server-version" target={"_blank"} rel="noreferrer">OpenAPI</a>,
+    title: (
+      <a href="https://doc.voce.chat/api/get-the-server-version" target={"_blank"} rel="noreferrer">
+        OpenAPI
+      </a>
+    ),
     list: [
       "Utilizes open API standard, with easy integration with third-party applications and tools. ",
       "With complete documentation and testing."
@@ -70,8 +74,10 @@ const Features = (props: Props) => {
         Open API and SDK for you to host anywhere. No central service.
       </h3>
       <p className="sm:w-[80%] w-[768px] text-center text-xl sm:text-2xl md:text-xl text-gray-500 mt-5 mb-16 ">
-        Bots, video call, publish channel, open ID, open API, open sourced SDK, iterate based on users feedback. Trusted by
-        over <a href="https://hub.docker.com/r/privoce/vocechat-server/tags">40,000</a> customers from 50+ countries.
+        Bots, video call, publish channel, open ID, open API, open sourced SDK, iterate based on
+        users feedback. Trusted by over{" "}
+        <a href="https://hub.docker.com/r/privoce/vocechat-server/tags">40,000</a> customers from
+        50+ countries.
       </p>
       <div className="flex gap-12 md:flex-row">
         <a

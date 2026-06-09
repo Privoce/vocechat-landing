@@ -315,7 +315,8 @@ const Index = (props: Props) => {
                                                                     fulfill our contractual
                                                                     obligations, to protect your
                                                                     rights, or to fulfill our
-                                                                    legitimate business interests.{" "}
+                                                                    legitimate business
+                                                                    interests.{" "}
                                                                   </em>
                                                                 </div>
                                                                 <div>
@@ -374,7 +375,8 @@ const Index = (props: Props) => {
                                                                       defend our legal rights, or
                                                                       disclose your information as
                                                                       evidence in litigation in
-                                                                      which we are involved. <br />{" "}
+                                                                      which we are involved.{" "}
+                                                                      <br />{" "}
                                                                     </li>
                                                                   </ul>
                                                                   <ul>
@@ -588,7 +590,8 @@ const Index = (props: Props) => {
                                                                                 outlined in this
                                                                                 privacy notice
                                                                                 unless otherwise
-                                                                                required by law.{" "}
+                                                                                required by
+                                                                                law.{" "}
                                                                               </em>
                                                                             </div>
                                                                             <div>
@@ -697,7 +700,8 @@ const Index = (props: Props) => {
                                                                               own risk. You should
                                                                               only access the
                                                                               Services within a
-                                                                              secure environment.{" "}
+                                                                              secure
+                                                                              environment.{" "}
                                                                             </div>
                                                                             <div>
                                                                               <strong>
@@ -724,7 +728,8 @@ const Index = (props: Props) => {
                                                                                 information. You may
                                                                                 review, change, or
                                                                                 terminate your
-                                                                                account at any time.{" "}
+                                                                                account at any
+                                                                                time.{" "}
                                                                               </em>{" "}
                                                                             </div>
                                                                             <div>
@@ -862,7 +867,8 @@ const Index = (props: Props) => {
                                                                               information conducted
                                                                               in reliance on lawful
                                                                               processing grounds
-                                                                              other than consent.{" "}
+                                                                              other than
+                                                                              consent.{" "}
                                                                             </div>
                                                                             <div>
                                                                               If you have questions
@@ -1386,7 +1392,8 @@ const Index = (props: Props) => {
                                                                               <li>
                                                                                 Receiving help
                                                                                 through our customer
-                                                                                support channels;{" "}
+                                                                                support
+                                                                                channels;{" "}
                                                                               </li>
                                                                             </ul>
                                                                             <ul>
@@ -1474,7 +1481,8 @@ const Index = (props: Props) => {
                                                                               demonstration. This is
                                                                               not considered to be
                                                                               "selling" of your
-                                                                              personal information.{" "}
+                                                                              personal
+                                                                              information.{" "}
                                                                             </div>
                                                                             <div>
                                                                               {" "}
@@ -1545,7 +1553,8 @@ const Index = (props: Props) => {
                                                                             <div>
                                                                               Depending on the
                                                                               circumstances, you
-                                                                              have a right to know:{" "}
+                                                                              have a right to
+                                                                              know:{" "}
                                                                             </div>
                                                                             <ul>
                                                                               <li>
@@ -1559,7 +1568,8 @@ const Index = (props: Props) => {
                                                                               <li>
                                                                                 the categories of
                                                                                 personal information
-                                                                                that we collect;{" "}
+                                                                                that we
+                                                                                collect;{" "}
                                                                               </li>
                                                                             </ul>
                                                                             <ul>
@@ -1574,7 +1584,8 @@ const Index = (props: Props) => {
                                                                               <li>
                                                                                 whether we sell your
                                                                                 personal information
-                                                                                to third parties;{" "}
+                                                                                to third
+                                                                                parties;{" "}
                                                                               </li>
                                                                             </ul>
                                                                             <ul>
@@ -1583,7 +1594,8 @@ const Index = (props: Props) => {
                                                                                 personal information
                                                                                 that we sold or
                                                                                 disclosed for a
-                                                                                business purpose;{" "}
+                                                                                business
+                                                                                purpose;{" "}
                                                                               </li>
                                                                             </ul>
                                                                             <ul>
@@ -1674,7 +1686,8 @@ const Index = (props: Props) => {
                                                                               us. We may also use
                                                                               other verification
                                                                               methods as the
-                                                                              circumstances dictate.{" "}
+                                                                              circumstances
+                                                                              dictate.{" "}
                                                                             </div>
                                                                             <div>
                                                                               We will only use
@@ -1766,7 +1779,8 @@ const Index = (props: Props) => {
                                                                                 but no later than
                                                                                 fifteen (15) days
                                                                                 from the date of the
-                                                                                request submission.{" "}
+                                                                                request
+                                                                                submission.{" "}
                                                                               </li>
                                                                             </ul>
                                                                             <div>
@@ -1849,7 +1863,8 @@ const Index = (props: Props) => {
                                                                             </div>
                                                                             <div>
                                                                               {" "}
-                                                                              235 LINHART STREET{" "}
+                                                                              235 LINHART
+                                                                              STREET{" "}
                                                                             </div>
                                                                             <div>
                                                                               {" "}
