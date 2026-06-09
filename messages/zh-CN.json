@@ -7,5 +7,117 @@
     "open": "打开VoceChat",
     "have_already": "已经安装APP？",
     "default_server_name": "VoceChat 服务器"
+  },
+  "home": {
+    "firstView": {
+      "title": "把你的聊天，私有化部署！",
+      "subtitle": "VoceChat 是一款由 Rust 驱动的超轻量聊天应用、API 与 SDK，专为私有部署而生。用 VoceChat 为你的应用打造专属的即时通讯功能！",
+      "downloadGooglePlay": "从 Google Play 下载安卓 App",
+      "downloadApk": "下载安卓 APK 安装包",
+      "downloadIos": "从 App Store 下载 iOS App",
+      "downloadDesktop": "从 GitHub Releases 下载桌面版"
+    },
+    "features": {
+      "heading": "开放的 API 与 SDK，随处自托管，无需中心化服务。",
+      "intro": "机器人、视频通话、发布频道、Open ID、开放 API、开源 SDK，依据用户反馈持续迭代。已获得来自 50 多个国家的 <count>40,000</count> 多家客户信赖。",
+      "viewDocs": "查看文档",
+      "testApi": "测试 API",
+      "securityTitle": "安全",
+      "securityItem1": "所有数据都存储在你自己的私有服务器上。",
+      "securityItem2": "服务端用 Rust 开发，关键业务流程测试覆盖率超过 80%。",
+      "securityItem3": "支持消息已读与删除功能。",
+      "lightweightTitle": "轻量",
+      "lightweightItem1": "服务端体积不到 20 MB，可轻松运行在 NAS 和树莓派上。",
+      "crossPlatformTitle": "跨平台",
+      "crossPlatformItem1": "基于 Flutter + React 开发。",
+      "crossPlatformItem2": "支持 Android、iOS、macOS、Web 和 Windows 平台。",
+      "openapiItem1": "采用开放 API 标准，可轻松与第三方应用和工具集成。",
+      "openapiItem2": "配有完整的文档与测试。"
+    },
+    "deploy": {
+      "heading": "通过 Docker 部署我们的免费试用版：",
+      "docHint": "其他安装方式，请查阅我们的<link>文档</link>。",
+      "copyCode": "复制代码",
+      "copied": "已复制！",
+      "afterStart": "启动服务后，访问 http://localhost:3000/ 即可使用。",
+      "stillProblem": "仍然遇到问题？",
+      "chatHint": "我们很乐意花 25 分钟与你聊聊，帮你解决问题！",
+      "bookMeeting": "预约会议",
+      "viewDoc": "查看文档"
+    },
+    "compare": {
+      "heading": "把我们的产品与同类对比",
+      "colProducts": "产品",
+      "colPrivateApi": "私有部署的开放 API",
+      "colOpenSource": "开源",
+      "colMobile": "移动端 App",
+      "colLightweight": "轻量（小于 20 MB）"
+    },
+    "faq": {
+      "heading": "常见问题",
+      "subtitle": "关于 VoceChat，你需要了解的一切。",
+      "q1": "什么是 VoceChat？",
+      "a1": "VoceChat 是一款轻量、可自托管的团队协作平台，提供安全的消息、文件共享和协作功能。它资源占用低、部署简单，非常适合希望完全掌控自身通讯基础设施的团队。",
+      "q2": "如何安装 VoceChat？",
+      "a2Lead": "用 Docker 一条命令即可安装 VoceChat：",
+      "a2Tail": "同时也支持通过二进制文件或从源码在不同平台上安装。",
+      "q3": "系统要求是什么？",
+      "a3": "VoceChat 仅需 20MB 内存，可运行在 Linux、Windows、macOS 以及树莓派等 ARM 设备上。任意一台拥有 512MB 及以上内存的 VPS 都足以运行 VoceChat。",
+      "q4": "VoceChat 免费吗？",
+      "a4": "是的，VoceChat 提供免费的自托管版本，包含不限人数、频道和消息等核心功能。付费方案则提供额外的企业级功能与支持。",
+      "q5": "VoceChat 的安全性如何？",
+      "a5": "VoceChat 支持端到端加密、传输过程中的 SSL/TLS 加密，以及由你自己掌控的本地数据存储。自托管确保了完整的数据所有权与隐私。",
+      "q6": "VoceChat 有移动端 App 吗？",
+      "a6": "有，VoceChat 为 iOS 和 Android 设备都提供了原生移动应用，同时还有可在任意现代浏览器上使用的自适应网页端。",
+      "q7": "VoceChat 能与其他工具集成吗？",
+      "a7": "可以，VoceChat 支持 Webhook 和 API 集成，可连接第三方服务并实现工作流自动化。同时还支持机器人，满足自定义自动化需求。",
+      "q8": "VoceChat 与 Slack 或 Discord 相比如何？",
+      "a8": "与云端方案不同，VoceChat 是自托管的，拥有完整的数据所有权、资源占用极低、自托管版本不限用户数，并提供专注于核心通讯功能的更简洁界面。",
+      "q9": "可以从其他聊天平台迁移过来吗？",
+      "a9": "VoceChat 提供从部分平台迁移数据的导入工具，其 API 也支持自定义迁移脚本。具体的迁移指南与支持格式请查阅文档。",
+      "q10": "在哪里可以获得帮助？",
+      "a10": "你可以通过 <link>doc.voce.chat</link> 上的文档、社区论坛、用于反馈问题的 GitHub 仓库，以及面向付费用户的直接支持获得帮助。"
+    },
+    "priceList": {
+      "freeTitle": "免费版",
+      "freeDesc": "在你自己的服务器上运行 VoceChat",
+      "freeFeat1": "有限的机器人与 Webhook",
+      "freeFeat2": "公开与私密频道",
+      "freeFeat3": "最多 20 名成员",
+      "proTitle": "专业版",
+      "proDesc": "用 VoceChat 打造属于你自己的社区",
+      "proFeat1": "用于客户服务的聊天挂件",
+      "proFeat2": "不限成员与机器人数量",
+      "proFeat3": "无周期性扣费",
+      "proFeat4": "新消息邮件通知",
+      "helpTitle": "需要帮助？",
+      "helpDesc": "联系我们获取技术支持，例如托管、定制开发、AI 智能体开发等。",
+      "helpFeat1": "提供带授权的源代码",
+      "helpFeat2": "无周期性扣费",
+      "helpFeat3": "按需定制",
+      "helpFeat4": "视频与音频",
+      "toStart": "$139 起",
+      "unitForever": "永久",
+      "unitServer": "每服务器",
+      "getStarted": "立即开始",
+      "email": "邮箱",
+      "zoom": "Zoom",
+      "keyFeatures": "核心功能"
+    },
+    "wechat": {
+      "label": "微信",
+      "closeHint": "点击任意处关闭"
+    },
+    "booking": {
+      "headingLine1": "想给你的应用加上聊天功能？",
+      "headingLine2": "预约与我们 CEO 的一次会议",
+      "subtitle": "第一时间获取产品发布、行业资讯与洞察。",
+      "emailPlaceholder": "请输入你的邮箱",
+      "submit": "点击这里预约！",
+      "close": "关闭"
+    },
+    "footer": {
+      "rights": "© {year} Privoce Inc. 保留所有权利。"
+    }
   }
 }

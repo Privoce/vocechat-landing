@@ -1,6 +1,7 @@
 "use client";
-import React, { useState, useEffect, useRef, FC } from "react";
+import React from "react";
 import clsx from "clsx";
+import { useTranslations } from "next-intl";
 import WechatButton from "./WechatButton";
 
 type Price = {
@@ -16,8 +17,8 @@ type Price = {
 };
 
 const PriceBlock = ({ data }: { data: Price }) => {
+  const t = useTranslations("home.priceList");
   const { title, desc, price, pay_link, feats, highlight } = data;
-  console.log("data", data);
   const blockClass = clsx(
     "flex flex-col items-start text-white p-5 border-solid border border-white rounded-3xl bg-black w-[326px] transition-all",
     highlight && "border-[6px] gradient-border"
@@ -30,10 +31,12 @@ const PriceBlock = ({ data }: { data: Price }) => {
         {price ? (
           <>
             {`$${price.value}`}
-            <span className="text-2xl font-normal">/{price.unit}</span>
+            <span className="text-2xl font-normal">
+              /{price.unit === "forever" ? t("unitForever") : t("unitServer")}
+            </span>
           </>
         ) : (
-          "$139 to start"
+          t("toStart")
         )}
       </div>
       {price ? (
@@ -46,7 +49,7 @@ const PriceBlock = ({ data }: { data: Price }) => {
             highlight && "bg-[#52EDFF]"
           )}
         >
-          Get Started
+          {t("getStarted")}
         </a>
       ) : (
         <ul className="flex items-center gap-2 md:gap-3 text-black text-sm my-6">
@@ -55,7 +58,7 @@ const PriceBlock = ({ data }: { data: Price }) => {
               className="py-2 px-4 rounded-full bg-white  hover:opacity-80"
               href="mailto:han@privoce.com"
             >
-              Email
+              {t("email")}
             </a>
           </li>
           <li className="relative">
@@ -71,12 +74,12 @@ const PriceBlock = ({ data }: { data: Price }) => {
                 highlight && "bg-[#52EDFF]"
               )}
             >
-              Zoom
+              {t("zoom")}
             </a>
           </li>
         </ul>
       )}
-      <h3 className="text-2xl font-semibold my-3">Key Features</h3>
+      <h3 className="text-2xl font-semibold my-3">{t("keyFeatures")}</h3>
       <ul className="text-lg flex flex-col gap-3 opacity-80">
         {feats.map((f) => {
           return (
@@ -90,47 +93,38 @@ const PriceBlock = ({ data }: { data: Price }) => {
     </div>
   );
 };
-const prices: Price[] = [
-  {
-    title: "Free",
-    desc: "Run VoceChat on your server",
-    price: {
-      value: 0,
-      unit: "forever"
-    },
-    pay_link: "https://doc.voce.chat/install/",
-    feats: ["Limited Bot and Webhook", "Public and Private Channel", "Limited to 20 members"]
-  },
-  {
-    title: "Pro",
-    desc: "Build a community of your own with VoceChat",
-    price: {
-      value: 49,
-      unit: "server"
-    },
-    pay_link: "https://buy.stripe.com/00gcPOgyTfj00gM5kL",
-    feats: [
-      "Chat widget for customer service",
-      "Unlimited Members and Bot",
-      "No recurring charges",
-      "New message email notification"
-    ],
-    highlight: true
-  },
-  {
-    title: "Need help?",
-    desc: "Contact us for tech support, e.g. hosting, customization, AI agent development.",
-    pay_link: "https://calendly.com/hansu",
-    feats: [
-      "Source code with license",
-      "No recurring charges",
-      "On-demand customization",
-      "Video and Audio"
-    ]
-  }
-];
+
 const PriceList = () => {
-  // const [copied, setCopied] = useState(false);
+  const t = useTranslations("home.priceList");
+  const prices: Price[] = [
+    {
+      title: t("freeTitle"),
+      desc: t("freeDesc"),
+      price: {
+        value: 0,
+        unit: "forever"
+      },
+      pay_link: "https://doc.voce.chat/install/",
+      feats: [t("freeFeat1"), t("freeFeat2"), t("freeFeat3")]
+    },
+    {
+      title: t("proTitle"),
+      desc: t("proDesc"),
+      price: {
+        value: 49,
+        unit: "server"
+      },
+      pay_link: "https://buy.stripe.com/00gcPOgyTfj00gM5kL",
+      feats: [t("proFeat1"), t("proFeat2"), t("proFeat3"), t("proFeat4")],
+      highlight: true
+    },
+    {
+      title: t("helpTitle"),
+      desc: t("helpDesc"),
+      pay_link: "https://calendly.com/hansu",
+      feats: [t("helpFeat1"), t("helpFeat2"), t("helpFeat3"), t("helpFeat4")]
+    }
+  ];
   return (
     <section className="flex flex-col gap-12 items-center justify-center py-[96px] bg-gray-800 md:flex-row md:items-stretch">
       {prices.map((p) => {

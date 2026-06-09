@@ -1,5 +1,6 @@
 import React, { ReactNode } from "react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 const Cell = ({
   type = "check",
   children
@@ -37,20 +38,19 @@ const HeaderCell = ({ isFirst = false, children }: { isFirst?: boolean; children
 };
 
 function Compare() {
+  const t = useTranslations("home.compare");
   return (
     <section className="flex flex-col items-center pt-24">
-      <h2 className="font-semibold text-5xl text-gray-900 mb-24 text-center">
-        Compare our tool with others
-      </h2>
+      <h2 className="font-semibold text-5xl text-gray-900 mb-24 text-center">{t("heading")}</h2>
       <div className="pb-24 md:w-fit sm:w-full overflow-auto">
         <table className="table border-b m-auto">
           <thead className="border-solid border-b border-gray-200">
             <tr>
-              <HeaderCell isFirst={true}>Products</HeaderCell>
-              <HeaderCell>Private Hosted Open API</HeaderCell>
-              <HeaderCell>Open Source</HeaderCell>
-              <HeaderCell>Mobile App</HeaderCell>
-              <HeaderCell>Lightweight(less than 20 MB)</HeaderCell>
+              <HeaderCell isFirst={true}>{t("colProducts")}</HeaderCell>
+              <HeaderCell>{t("colPrivateApi")}</HeaderCell>
+              <HeaderCell>{t("colOpenSource")}</HeaderCell>
+              <HeaderCell>{t("colMobile")}</HeaderCell>
+              <HeaderCell>{t("colLightweight")}</HeaderCell>
             </tr>
           </thead>
           <tbody className="[&_tr:nth-child(odd)]:bg-gray-50">

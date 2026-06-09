@@ -7,5 +7,117 @@
     "open": "Open VoceChat",
     "have_already": "Have the app already?",
     "default_server_name": "VoceChat Server"
+  },
+  "home": {
+    "firstView": {
+      "title": "Your Chat Privately Hosted!",
+      "subtitle": "VoceChat is a superlight Rust powered chat app, API and SDK that prioritizes private hosting. Build your own in-app messaging feature with VoceChat!",
+      "downloadGooglePlay": "download Android APP from Google Play",
+      "downloadApk": "download Android APP from APK file",
+      "downloadIos": "download iOS APP from app store",
+      "downloadDesktop": "download desktop version from github releases"
+    },
+    "features": {
+      "heading": "Open API and SDK for you to host anywhere. No central service.",
+      "intro": "Bots, video call, publish channel, open ID, open API, open sourced SDK, iterate based on users feedback. Trusted by over <count>40,000</count> customers from 50+ countries.",
+      "viewDocs": "View docs",
+      "testApi": "Test API",
+      "securityTitle": "Security",
+      "securityItem1": "All data is stored on your own, private, server.",
+      "securityItem2": "The server is developed in Rust with critical business process tests with 80%+ coverage.",
+      "securityItem3": "Read and delete functionality.",
+      "lightweightTitle": "Lightweight",
+      "lightweightItem1": "The server is less than 20 MB in size and can easily run on a NAS and Raspberry Pi.",
+      "crossPlatformTitle": "Cross Platform",
+      "crossPlatformItem1": "Developed with Flutter + React.",
+      "crossPlatformItem2": "Support Android, iOS, MacOS, Web, and Windows platforms.",
+      "openapiItem1": "Utilizes open API standard, with easy integration with third-party applications and tools.",
+      "openapiItem2": "With complete documentation and testing."
+    },
+    "deploy": {
+      "heading": "Deploy our free-trial version through docker:",
+      "docHint": "For other ways of installation, check out our <link>documentation</link>.",
+      "copyCode": "Copy Code",
+      "copied": "Copied!",
+      "afterStart": "After starting the server, visit http://localhost:3000/ to use the app.",
+      "stillProblem": "Still having a problem?",
+      "chatHint": "We would like to have a 25min chat with you to help you out!",
+      "bookMeeting": "Book a Meeting",
+      "viewDoc": "View Doc"
+    },
+    "compare": {
+      "heading": "Compare our tool with others",
+      "colProducts": "Products",
+      "colPrivateApi": "Private Hosted Open API",
+      "colOpenSource": "Open Source",
+      "colMobile": "Mobile App",
+      "colLightweight": "Lightweight(less than 20 MB)"
+    },
+    "faq": {
+      "heading": "FAQ",
+      "subtitle": "Everything you need to know about VoceChat.",
+      "q1": "What is Voce Chat?",
+      "a1": "Voce Chat is a lightweight, self-hosted team communication platform that provides secure messaging, file sharing, and collaboration features. It's designed to be resource-efficient and easy to deploy, making it ideal for teams who want full control over their communication infrastructure.",
+      "q2": "How do I install Voce Chat?",
+      "a2Lead": "Voce Chat can be installed using Docker with a single command:",
+      "a2Tail": "It also supports installation via binary files or from source for different platforms.",
+      "q3": "What are the system requirements?",
+      "a3": "Voce Chat requires only 20MB of RAM and works on Linux, Windows, macOS, and ARM devices like Raspberry Pi. Any VPS with 512MB RAM or more is sufficient for running Voce Chat.",
+      "q4": "Is Voce Chat free?",
+      "a4": "Yes, Voce Chat offers a free self-hosted version with core features including unlimited users, channels, and messages. Paid plans are available for additional enterprise features and support.",
+      "q5": "How secure is Voce Chat?",
+      "a5": "Voce Chat provides end-to-end encryption support, SSL/TLS encryption for data in transit, and local data storage under your control. Being self-hosted ensures complete data ownership and privacy.",
+      "q6": "Does Voce Chat have mobile apps?",
+      "a6": "Yes, Voce Chat provides native mobile applications for both iOS and Android devices, as well as a responsive web interface that works on any modern browser.",
+      "q7": "Can I integrate Voce Chat with other tools?",
+      "a7": "Yes, Voce Chat supports webhooks and API integrations, allowing connections with third-party services and workflow automation. Bot support is also available for custom automation needs.",
+      "q8": "How does Voce Chat compare to Slack or Discord?",
+      "a8": "Unlike cloud-based solutions, Voce Chat is self-hosted with complete data ownership, requires minimal resources, has no user limits in the self-hosted version, and offers a simpler interface focused on essential communication features.",
+      "q9": "Can I migrate from another chat platform?",
+      "a9": "Voce Chat provides data import tools for migrating from certain platforms. The API also allows for custom migration scripts. Check the documentation for specific migration guides and supported formats.",
+      "q10": "Where can I get help?",
+      "a10": "Help is available through the documentation at <link>doc.voce.chat</link>, community forums, GitHub repository for issue reporting, and direct support for paid plan users."
+    },
+    "priceList": {
+      "freeTitle": "Free",
+      "freeDesc": "Run VoceChat on your server",
+      "freeFeat1": "Limited Bot and Webhook",
+      "freeFeat2": "Public and Private Channel",
+      "freeFeat3": "Limited to 20 members",
+      "proTitle": "Pro",
+      "proDesc": "Build a community of your own with VoceChat",
+      "proFeat1": "Chat widget for customer service",
+      "proFeat2": "Unlimited Members and Bot",
+      "proFeat3": "No recurring charges",
+      "proFeat4": "New message email notification",
+      "helpTitle": "Need help?",
+      "helpDesc": "Contact us for tech support, e.g. hosting, customization, AI agent development.",
+      "helpFeat1": "Source code with license",
+      "helpFeat2": "No recurring charges",
+      "helpFeat3": "On-demand customization",
+      "helpFeat4": "Video and Audio",
+      "toStart": "$139 to start",
+      "unitForever": "forever",
+      "unitServer": "server",
+      "getStarted": "Get Started",
+      "email": "Email",
+      "zoom": "Zoom",
+      "keyFeatures": "Key Features"
+    },
+    "wechat": {
+      "label": "WeChat",
+      "closeHint": "Click anywhere to close"
+    },
+    "booking": {
+      "headingLine1": "Want to add chat features to your app?",
+      "headingLine2": "Book a meeting with our CEO",
+      "subtitle": "Be the first to know about releases and industry news and insights.",
+      "emailPlaceholder": "Enter your email",
+      "submit": "Click here to schedule!",
+      "close": "Close"
+    },
+    "footer": {
+      "rights": "© {year} Privoce Inc. All rights reserved."
+    }
   }
 }

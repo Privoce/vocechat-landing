@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import CopyToClipboard from "./CopyToClipboard";
 const shellCode = `docker run -d --restart=always \\
 -p 3000:3000 \\
@@ -8,6 +9,7 @@ const shellCode = `docker run -d --restart=always \\
 privoce/vocechat-server:latest`;
 import YouTube from "react-youtube";
 const Deploy = () => {
+  const t = useTranslations("home.deploy");
   const [copied, setCopied] = useState(false);
   const handleCopy = () => {
     setCopied(true);
@@ -17,20 +19,20 @@ const Deploy = () => {
   };
   return (
     <section className="flex flex-col items-center py-[96px] bg-gray-800 text-white text-center">
-      <h3 className="font-semibold text-4xl tracking-tight text-gray-25 ">
-        Deploy our free-trial version through docker:
-      </h3>
+      <h3 className="font-semibold text-4xl tracking-tight text-gray-25 ">{t("heading")}</h3>
       <p className="text-gray-300 text-xl mt-5">
-        For other ways of installation, check out our{" "}
-        <a
-          className="text-primary-500"
-          href="https://doc.voce.chat"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          documentation
-        </a>
-        .
+        {t.rich("docHint", {
+          link: (chunks) => (
+            <a
+              className="text-primary-500"
+              href="https://doc.voce.chat"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {chunks}
+            </a>
+          )
+        })}
       </p>
       <code className="flex w-fit font-mono text-md bg-gray-900 sm:px-8 md:px-10 py-5 rounded-xl whitespace-pre mt-16 mb-10 sm:w-[90%] md:w-fit overflow-x-auto overflow-y-hidden text-left">
         {shellCode}
@@ -45,17 +47,15 @@ const Deploy = () => {
               src={"/img/icon.copy.svg"}
               alt="Copy Icon"
             ></Image>
-            {copied ? `Copied!` : `Copy Code`}
+            {copied ? t("copied") : t("copyCode")}
           </button>
         </CopyToClipboard>
       </div>
 
-      <span className="my-16 text-gray-25 text-md">
-        After starting the server, visit http://localhost:3000/ to use the app.
-      </span>
+      <span className="my-16 text-gray-25 text-md">{t("afterStart")}</span>
       <div className="flex flex-col items-center">
-        <h4 className="font-semibold text-4xl text-gray-25 ">Still having a problem?</h4>
-        <span className="mt-3">We would like to have a 25min chat with you to help you out!</span>
+        <h4 className="font-semibold text-4xl text-gray-25 ">{t("stillProblem")}</h4>
+        <span className="mt-3">{t("chatHint")}</span>
         <div className="my-8">
           {/* video embed */}
 
@@ -68,15 +68,15 @@ const Deploy = () => {
             rel="noopener noreferrer"
             className="btn-primary"
           >
-            Book a Meeting
+            {t("bookMeeting")}
           </a>
           <a
             href="https://doc.voce.chat"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-primary bg-white text-gray-700 hover:bg-gray-25/80"
+            className="px-5 py-3 sm:text-lg md:text-md font-medium rounded-lg shadow-[0_1px_2px_rgba(16,24,40,0.05)] cursor-pointer bg-white text-gray-700 border border-gray-300 hover:bg-gray-50"
           >
-            View Doc
+            {t("viewDoc")}
           </a>
         </div>
       </div>

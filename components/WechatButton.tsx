@@ -1,9 +1,11 @@
 "use client";
 import React, { useState } from "react";
+import { useTranslations } from "next-intl";
 
 type Props = {};
 
 const WechatButton = ({}: Props) => {
+  const t = useTranslations("home.wechat");
   const [visible, setVisible] = useState(false);
   const toggleVisible = () => setVisible(!visible);
   const handleClick = (evt: React.MouseEvent) => {
@@ -24,7 +26,7 @@ const WechatButton = ({}: Props) => {
             alt="wechat contact qr image"
           />
           <span className="text-white -mt-9 rounded-full px-3 py-1 bg-warning-600 text-xs border border-warning-500/50">
-            Click anywhere to close
+            {t("closeHint")}
           </span>
         </aside>
       )}
@@ -33,7 +35,7 @@ const WechatButton = ({}: Props) => {
         href="#"
         className="py-2 px-4 rounded-full bg-white hover:opacity-80"
       >
-        WeChat
+        {t("label")}
       </a>
     </>
   );

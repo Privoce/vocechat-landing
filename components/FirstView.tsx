@@ -1,42 +1,43 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 type Props = {};
 const downloads = [
   {
-    title: "download Android APP from Google Play",
+    titleKey: "downloadGooglePlay",
     icon: `/img/icon.app.google.play.png`,
     alt: "Google Play Icon",
     link: "https://play.google.com/store/apps/details?id=com.privoce.vocechatclient"
   },
   {
-    title: "download Android APP from APK file",
+    titleKey: "downloadApk",
     icon: `/img/icon.app.apk.png`,
     alt: "APK Icon",
     link: "https://s.voce.chat/vocechat.android.apk"
   },
   {
-    title: "download iOS APP from app store",
+    titleKey: "downloadIos",
     icon: `/img/icon.app.ios.png`,
     alt: "App Store Icon",
     link: "https://apps.apple.com/app/vocechat/id1631779678"
   },
   {
-    title: "download desktop version from github releases",
+    titleKey: "downloadDesktop",
     icon: `/img/icon.app.desktop.png`,
     alt: "Desktop Download Icon",
     link: "https://github.com/Privoce/vocechat-desktop/releases/latest"
   }
-];
+] as const;
 function FirstView({}: Props) {
+  const t = useTranslations("home.firstView");
   return (
     <section className="flex min-h-screen flex-col items-center bg-primary-50 pt-24 xl:pt-16 pb-10 xl:pb-4 bg-[url('/img/bg.first.view.jpg')] bg-bottom bg-no-repeat bg-contain">
       <h2 className="font-semibold xl:text-5xl sm:text-4xl text-primary-900 tracking-tight text-center">
-        Your Chat Privately Hosted!
+        {t("title")}
       </h2>
       <p className="text-xl w-[768px] sm:w-[90%] text-center text-primary-700 mt-6 mb-8 mx-4">
-        VoceChat is a superlight Rust powered chat app, API and SDK that prioritizes private
-        hosting. Build your own in-app messaging feature with VoceChat!
+        {t("subtitle")}
       </p>
 
       <div className={`w-[95%] h-screen mt-4 shadow-md rounded-md overflow-hidden border bg-white`}>
@@ -50,10 +51,10 @@ function FirstView({}: Props) {
         id="download"
         className="pt-4 flex flex-col mobile:flex-col tablet:flex-row mobile:mt-4 tablet:mt-10 mobile:gap-4 tablet:gap-12"
       >
-        {downloads.map(({ title, link, alt, icon }) => (
+        {downloads.map(({ titleKey, link, alt, icon }) => (
           <a
             key={link}
-            title={title}
+            title={t(titleKey)}
             className="flex"
             href={link}
             target="_blank"

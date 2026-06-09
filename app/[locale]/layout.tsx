@@ -1,9 +1,9 @@
-import { Suspense } from "react";
 import type { Metadata, Viewport } from "next";
-import Script from "next/script";
-import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
+import { notFound } from "next/navigation";
+import Script from "next/script";
+import { Suspense } from "react";
 import { routing } from "../../i18n/routing";
 import "../../styles/globals.css";
 
@@ -140,7 +140,7 @@ export default async function LocaleLayout({
           data-open-height="680"
           data-title="Live Chat"
           data-logo="https://voce.chat/favicon.ico"
-          src="https://bridger.privoce.com/widgets.js"
+          src="https://bridger.privoce.com/widget.js"
           data-welcome="Hello!"
           strategy="afterInteractive"
         />
