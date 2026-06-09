@@ -1,6 +1,7 @@
+"use client";
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
-import CopyToClipboard from "react-copy-to-clipboard";
+import CopyToClipboard from "./CopyToClipboard";
 const shellCode = `docker run -d --restart=always \\
 -p 3000:3000 \\
 --name vocechat-server \\

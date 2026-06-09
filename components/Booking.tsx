@@ -1,3 +1,4 @@
+"use client";
 import React, { useState, useRef, FormEvent } from "react";
 import { InlineWidget } from "react-calendly";
 import Modal from "./Modal";

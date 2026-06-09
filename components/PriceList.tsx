@@ -1,3 +1,4 @@
+"use client";
 import React, { useState, useEffect, useRef, FC } from "react";
 import clsx from "clsx";
 import WechatButton from "./WechatButton";
