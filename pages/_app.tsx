@@ -47,7 +47,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         data-open-height="680"
         data-title="Live Chat"
         data-logo="https://voce.chat/favicon.ico"
-        src="https://bridge.ipter.org/widget.js"
+        src="https://bridger.privoce.com/widgets.js"
         data-welcome="Hello!"
         async
       />
