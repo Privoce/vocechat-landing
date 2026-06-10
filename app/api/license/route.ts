@@ -1,5 +1,5 @@
-import { NextRequest, NextResponse } from "next/server";
 import axios from "axios";
+import { NextRequest, NextResponse } from "next/server";
 
 const WhiteMap: Record<string, string> = {};
 const envString = process.env.VOCE_LICENSE_PASSWORD ?? "";
@@ -11,7 +11,7 @@ envString.split("|").forEach((item) => {
 });
 
 const generateLicense = async (md: any, token = null) => {
-  const resp = await axios.post("https://license.ipter.org/license/gen", md, {
+  const resp = await axios.post("https://license.privoce.com/license/gen", md, {
     headers: {
       "Content-Type": "application/json",
       Token: token ?? process.env.VOCE_LICENSE_TOKEN
