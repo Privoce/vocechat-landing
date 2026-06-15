@@ -7,18 +7,22 @@ import Footer from "../../components/Footer";
 import Booking from "../../components/Booking";
 import PriceList from "../../components/PriceList";
 import FAQ from "../../components/FAQ";
+import Blog from "../../components/Blog";
+import StructuredData from "../../components/StructuredData";
 
 export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
   return (
     <>
+      <StructuredData />
       <main>
         <FirstView />
         <Features />
         <Deploy />
         <Compare />
         <FAQ />
+        <Blog />
         <PriceList />
         <Booking />
       </main>

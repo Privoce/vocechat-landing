@@ -40,7 +40,7 @@ const HeaderCell = ({ isFirst = false, children }: { isFirst?: boolean; children
 function Compare() {
   const t = useTranslations("home.compare");
   return (
-    <section className="flex flex-col items-center pt-24">
+    <section id="compare" className="flex flex-col items-center pt-24">
       <h2 className="font-semibold text-5xl text-gray-900 mb-24 text-center">{t("heading")}</h2>
       <div className="pb-24 md:w-fit sm:w-full overflow-auto">
         <table className="table border-b m-auto">

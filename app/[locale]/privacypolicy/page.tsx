@@ -1,8 +1,29 @@
 /* eslint-disable react/no-unescaped-entities */
+import type { Metadata } from "next";
 import React from "react";
-type Props = {};
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { buildPageMetadata } from "../../../lib/seo";
 
-const Index = (props: Props) => {
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "metadata" });
+
+  return buildPageMetadata({
+    locale,
+    path: "/privacypolicy",
+    title: t("privacyTitle"),
+    description: t("privacyDescription")
+  });
+}
+
+const Index = async ({ params }: { params: Promise<{ locale: string }> }) => {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
   return (
     <>
       <main className="px-4 py-2">

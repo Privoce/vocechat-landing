@@ -1,47 +1,85 @@
 import React, { ReactNode } from "react";
 import { useTranslations } from "next-intl";
+import { Link } from "../i18n/navigation";
+
+const FAQ_COUNT = 11;
+
+function docLink(path: string) {
+  return function DocLink(chunks: ReactNode) {
+    return (
+      <a href={`https://doc.voce.chat${path}`} target="_blank" rel="noopener noreferrer">
+        {chunks}
+      </a>
+    );
+  };
+}
+
+const richLinkRenderers = {
+  link: docLink("/"),
+  install: docLink("/install"),
+  blog: (chunks: ReactNode) => <Link href="/blog">{chunks}</Link>,
+  support: (chunks: ReactNode) => <Link href="/support">{chunks}</Link>,
+  bot: docLink("/bot/bot-and-webhook"),
+  api: docLink("/api-doc"),
+  gpt: docLink("/bot/demo-gpt"),
+  openclaw: docLink("/openclaw-integration"),
+  widget: docLink("/widget"),
+  github: (chunks: ReactNode) => (
+    <a
+      href="https://github.com/Privoce/vocechat-server"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      {chunks}
+    </a>
+  ),
+  vocespace: (chunks: ReactNode) => (
+    <a href="https://vocespace.com" target="_blank" rel="noopener noreferrer">
+      {chunks}
+    </a>
+  )
+};
+
+const richAnswerKeys = new Set([3, 6, 7, 8, 9, 11]);
+
+function getAnswer(t: ReturnType<typeof useTranslations>, index: number): ReactNode {
+  if (index === 2) {
+    return (
+      <>
+        {t("a2Lead")} <br />
+        <br />
+        <code className="whitespace-pre text-white bg-black p-2 my-2">
+          docker run -d --restart=always <br />
+          -p 3000:3000 <br />
+          --name vocechat-server <br />
+          privoce/vocechat-server:latest
+        </code>
+        <br /> <br />
+        {t.rich("a2Tail", richLinkRenderers)}
+      </>
+    );
+  }
+
+  if (richAnswerKeys.has(index)) {
+    return t.rich(`a${index}` as "a3", richLinkRenderers);
+  }
+
+  return t(`a${index}` as "a1");
+}
 
 const FAQ = () => {
   const t = useTranslations("home.faq");
 
-  const items: { question: string; answer: ReactNode }[] = [
-    { question: t("q1"), answer: t("a1") },
-    {
-      question: t("q2"),
-      answer: (
-        <>
-          {t("a2Lead")} <br />
-          <br />
-          <code className="whitespace-pre text-white bg-black p-2 my-2">
-            docker run -d -p 3000:3000 <br /> -v ~/.vocechat:/home/vocechat <br />
-            vocechat/vocechat-server:latest
-          </code>
-          <br /> <br />
-          {t("a2Tail")}
-        </>
-      )
-    },
-    { question: t("q3"), answer: t("a3") },
-    { question: t("q4"), answer: t("a4") },
-    { question: t("q5"), answer: t("a5") },
-    { question: t("q6"), answer: t("a6") },
-    { question: t("q7"), answer: t("a7") },
-    { question: t("q8"), answer: t("a8") },
-    { question: t("q9"), answer: t("a9") },
-    {
-      question: t("q10"),
-      answer: t.rich("a10", {
-        link: (chunks) => (
-          <a href="http://doc.voce.chat" target="_blank" rel="noopener noreferrer">
-            {chunks}
-          </a>
-        )
-      })
-    }
-  ];
+  const items = Array.from({ length: FAQ_COUNT }, (_, i) => {
+    const index = i + 1;
+    return {
+      question: t(`q${index}` as "q1"),
+      answer: getAnswer(t, index)
+    };
+  });
 
   return (
-    <section className="flex flex-col items-center py-24 px-4">
+    <section id="faq" className="flex flex-col items-center py-24 px-4">
       <div className="w-full max-w-3xl">
         <div className="text-center mb-12">
           <h2 className="font-semibold text-4xl sm:text-5xl tracking-tight text-gray-900">
@@ -82,6 +120,29 @@ const FAQ = () => {
             );
           })}
         </ul>
+        <div className="mt-12 rounded-2xl border border-primary-200 bg-primary-25 px-6 py-5 text-center">
+          <p className="text-md text-gray-600">{t("blogCta")}</p>
+          <Link
+            href="/blog"
+            className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-primary-600 hover:text-primary-700"
+          >
+            {t("blogCtaLink")}
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M5 12h14" />
+              <path d="m12 5 7 7-7 7" />
+            </svg>
+          </Link>
+        </div>
       </div>
     </section>
   );

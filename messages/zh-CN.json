@@ -1,5 +1,16 @@
 {
   "common": {},
+  "metadata": {
+    "title": "Voce Chat - 本地运行，随处聊天",
+    "description": "VoceChat 是一款轻量级自托管聊天应用、API 与 SDK。支持 Docker、NAS 或树莓派部署，数据完全自主，用户数不限。",
+    "supportTitle": "技术支持",
+    "supportDescription": "获取 VoceChat 安装、托管、定制开发和技术支持方面的帮助。",
+    "privacyTitle": "隐私政策",
+    "privacyDescription": "Privoce 旗下 VoceChat 移动应用及相关服务的隐私政策。",
+    "blogTitle": "博客",
+    "blogDescription": "来自互联网的文章、视频和官方文档精选——引用原文并链接至出处。",
+    "keywords": "VoceChat, 自托管聊天, 私有聊天服务器, Docker 聊天, NAS 聊天, Rust IM, 聊天 SDK, 应用内消息, 团队聊天, 开源聊天"
+  },
   "download": {
     "join": "加入我的空间",
     "scan_tip": "下载APP后，粘贴链接或扫描此二维码。",
@@ -9,6 +20,16 @@
     "default_server_name": "VoceChat 服务器"
   },
   "home": {
+    "nav": {
+      "features": "功能",
+      "pricing": "定价",
+      "faq": "常见问题",
+      "docs": "文档",
+      "github": "GitHub",
+      "getStarted": "立即开始",
+      "openMenu": "打开菜单",
+      "closeMenu": "关闭菜单"
+    },
     "firstView": {
       "title": "把你的聊天，私有化部署！",
       "subtitle": "VoceChat 是一款由 Rust 驱动的超轻量聊天应用、API 与 SDK，专为私有部署而生。用 VoceChat 为你的应用打造专属的即时通讯功能！",
@@ -22,6 +43,7 @@
       "intro": "机器人、视频通话、发布频道、Open ID、开放 API、开源 SDK，依据用户反馈持续迭代。已获得来自 50 多个国家的 <count>40,000</count> 多家客户信赖。",
       "viewDocs": "查看文档",
       "testApi": "测试 API",
+      "viewBlog": "社区精选",
       "securityTitle": "安全",
       "securityItem1": "所有数据都存储在你自己的私有服务器上。",
       "securityItem2": "服务端用 Rust 开发，关键业务流程测试覆盖率超过 80%。",
@@ -36,7 +58,7 @@
     },
     "deploy": {
       "heading": "通过 Docker 部署我们的免费试用版：",
-      "docHint": "其他安装方式，请查阅我们的<link>文档</link>。",
+      "docHint": "其他安装方式，请查阅我们的<link>文档</link>或<blog>社区教程精选</blog>。",
       "copyCode": "复制代码",
       "copied": "已复制！",
       "afterStart": "启动服务后，访问 http://localhost:3000/ 即可使用。",
@@ -55,28 +77,39 @@
     },
     "faq": {
       "heading": "常见问题",
-      "subtitle": "关于 VoceChat，你需要了解的一切。",
+      "subtitle": "关于自托管聊天、机器人、AI 智能体、Webhook 与视频通话——内容基于 doc.voce.chat 与社区实践。",
       "q1": "什么是 VoceChat？",
-      "a1": "VoceChat 是一款轻量、可自托管的团队协作平台，提供安全的消息、文件共享和协作功能。它资源占用低、部署简单，非常适合希望完全掌控自身通讯基础设施的团队。",
+      "a1": "VoceChat 是一款用 Rust 编写的轻量级自托管聊天服务器（约 20 MB），提供私聊与群聊、回复、@提及、文件传输、阅后即焚、开放 API 与 SDK、机器人 Webhook，以及可嵌入网站的聊天挂件——全部运行在你自己的基础设施上。服务端开源，适合私有云、NAS、homelab 和本地优先部署。",
       "q2": "如何安装 VoceChat？",
-      "a2Lead": "用 Docker 一条命令即可安装 VoceChat：",
-      "a2Tail": "同时也支持通过二进制文件或从源码在不同平台上安装。",
-      "q3": "系统要求是什么？",
-      "a3": "VoceChat 仅需 20MB 内存，可运行在 Linux、Windows、macOS 以及树莓派等 ARM 设备上。任意一台拥有 512MB 及以上内存的 VPS 都足以运行 VoceChat。",
-      "q4": "VoceChat 免费吗？",
-      "a4": "是的，VoceChat 提供免费的自托管版本，包含不限人数、频道和消息等核心功能。付费方案则提供额外的企业级功能与支持。",
-      "q5": "VoceChat 的安全性如何？",
-      "a5": "VoceChat 支持端到端加密、传输过程中的 SSL/TLS 加密，以及由你自己掌控的本地数据存储。自托管确保了完整的数据所有权与隐私。",
-      "q6": "VoceChat 有移动端 App 吗？",
-      "a6": "有，VoceChat 为 iOS 和 Android 设备都提供了原生移动应用，同时还有可在任意现代浏览器上使用的自适应网页端。",
-      "q7": "VoceChat 能与其他工具集成吗？",
-      "a7": "可以，VoceChat 支持 Webhook 和 API 集成，可连接第三方服务并实现工作流自动化。同时还支持机器人，满足自定义自动化需求。",
-      "q8": "VoceChat 与 Slack 或 Discord 相比如何？",
-      "a8": "与云端方案不同，VoceChat 是自托管的，拥有完整的数据所有权、资源占用极低、自托管版本不限用户数，并提供专注于核心通讯功能的更简洁界面。",
-      "q9": "可以从其他聊天平台迁移过来吗？",
-      "a9": "VoceChat 提供从部分平台迁移数据的导入工具，其 API 也支持自定义迁移脚本。具体的迁移指南与支持格式请查阅文档。",
-      "q10": "在哪里可以获得帮助？",
-      "a10": "你可以通过 <link>doc.voce.chat</link> 上的文档、社区论坛、用于反馈问题的 GitHub 仓库，以及面向付费用户的直接支持获得帮助。"
+      "a2Lead": "最快的方式是用 Docker，一条命令即可启动官方镜像：",
+      "a2Tail": "也支持二进制或源码安装。TLS、反向代理与升级步骤请参阅 <install>安装文档</install>。",
+      "a2Schema": "Docker 安装：docker run -d --restart=always -p 3000:3000 --name vocechat-server privoce/vocechat-server:latest。详见 https://doc.voce.chat/install/",
+      "q3": "可以在哪里托管 VoceChat？",
+      "a3": "任何你能掌控的环境都可以。最简单的起步方式是在自己的电脑上运行——笔记本或台式机均可。VoceChat 内置 Cloudflare Tunnel，会自动给你一个公网链接，无需开端口或购买 VPS，就能在互联网任何地方访问你的服务器。你也可以部署到云 VPS、群晖或绿联 NAS，或仅在内网中供团队内部使用。个人使用推荐本机 + 隧道；长期在线的社区可选 VPS 或 NAS；完全内网部署则无需公网暴露。各方案详见 <install>安装文档</install>。",
+      "a3Schema": "可在本机托管（内置 Cloudflare Tunnel 提供公网访问），或部署到 VPS、NAS（群晖/绿联）或私有内网。本机托管通过默认 Cloudflare 隧道获得公网链接，无需端口转发。详见 https://doc.voce.chat/install/",
+      "q4": "系统要求是什么？",
+      "a4": "VoceChat 服务端约 20 MB，可运行在 Linux、Windows、macOS 及树莓派等 ARM 设备上。512 MB 及以上内存的 VPS 足以服务小团队。官方 Docker 镜像约 24 MB。客户端覆盖 iOS、Android、桌面端与 Web。",
+      "q5": "VoceChat 免费吗？",
+      "a5": "是的——自托管社区版对 20 人以内的服务器免费。更大规模需要购买许可证。专业版解锁不限成员、更多机器人与 Webhook、网站聊天挂件及邮件通知。无后门、无使用遥测；许可证校验在本地通过 RSA 完成。",
+      "q6": "机器人和 Webhook 如何工作？",
+      "a6": "服务器管理员在「设置 → Bot & Webhook」创建机器人并生成 API Key。在请求头 x-api-key 中使用该密钥，即可通过 Bot API 向用户和频道发送文本、Markdown 或文件消息。在同一机器人上配置 Webhook URL 可接收入站事件——新消息、回复、编辑、删除以及新用户注册（用于欢迎消息）。Webhook 可选 AES 加密。常用于网站在线客服挂件、静态站表单转聊天、简报推送与自动化后台。请参阅<bot>机器人与 Webhook 指南</bot>和<api>API 文档</api>。",
+      "a6Schema": "在设置 → Bot & Webhook 创建机器人，用 API Key 发送消息、用 Webhook 接收入站事件，支持欢迎消息与可选 AES 加密。文档：https://doc.voce.chat/bot/bot-and-webhook 与 https://doc.voce.chat/api-doc",
+      "q7": "能否将 VoceChat 接入 AI 智能体与 OpenClaw？",
+      "a7": "可以。VoceChat 专为作为智能体的聊天前端而设计。自定义 AI 机器人：将 bot webhook 指向你的后端（OpenAI、本地 LLM 或任意服务），再通过 Bot API 回复——参见<gpt>GPT 机器人示例</gpt>。接入 OpenClaw：使用官方 VoceChat 插件，OpenClaw 在 8010 端口监听，接收 VoceChat webhook POST，路由到智能体运行时，并通过 Bot API 回发消息——支持私聊、群聊、文本、回复与文件上传。常见组合包括个人 AI 助手、本地 LLM API + VoceChat，以及在本机运行的 OpenClaw 机器人。阅读<openclaw>OpenClaw 集成指南</openclaw>。",
+      "a7Schema": "通过 bot webhook 与 Bot API 接入 AI（GPT 示例：https://doc.voce.chat/bot/demo-gpt）。OpenClaw 通过 8010 端口插件双向通信。指南：https://doc.voce.chat/openclaw-integration",
+      "q8": "VoceChat 支持视频和语音通话吗？",
+      "a8": "支持，有两种方式。<vocespace>VoceSpace</vocespace>可在自有域名下自托管品牌化音视频会议，适合面向客户的聊天+视频方案。自托管服务器也可在设置中启用 Agora WebRTC：Agora 提供免费额度（约 167 小时/月，由服务器上所有通话共享）。在任意聊天窗口点击通话图标即可发起。",
+      "a8Schema": "视频/语音可通过 VoceSpace（https://vocespace.com 自托管会议）或 VoceChat 设置中的 Agora WebRTC（约 167 免费小时/月）。文档：https://doc.voce.chat/setting/setting-agora",
+      "q9": "除了团队聊天，还能用 VoceChat 做什么？",
+      "a9": "社区与 GitHub 上的实践包括：网站在线客服与联系挂件、静态站表单经 webhook 汇入聊天、企业内部通讯、落地页公开活动看板、NAS 书签与文件分享、私有社交动态、客服机器人、对接 Discord/Slack 的桥接，以及通过开放 API/SDK 做应用内消息。用几行 JavaScript 即可嵌入<widget>聊天挂件</widget>。",
+      "a9Schema": "用途包括网站挂件、Webhook 自动化、内部通讯、活动看板、客服机器人与应用内消息。挂件文档：https://doc.voce.chat/widget",
+      "q10": "VoceChat 安全性如何？",
+      "a10": "VoceChat 无后门，Privoce 不收集你的聊天数据——一切留在你的实例上。传输可加密；消息支持阅后即焚；Webhook 载荷可 AES 加密。自托管意味着你掌控存储、访问控制与留存策略。",
+      "q11": "在哪里可以获得帮助？",
+      "a11": "从<link>doc.voce.chat</link>开始（安装、机器人、API、OpenClaw、挂件）。浏览我们整理的<blog>社区精选</blog>，在<github>GitHub</github>（vocechat-server、vocechat-web）搜索或提交 issue，发邮件至 han@privoce.com，或访问<support>技术支持页面</support>获取托管与定制帮助。",
+      "a11Schema": "帮助渠道：https://doc.voce.chat/、社区精选 https://voce.chat/blog、GitHub https://github.com/Privoce/vocechat-server、邮箱 han@privoce.com、技术支持 https://voce.chat/support",
+      "blogCta": "查看来自互联网上的教程、评测与部署指南。",
+      "blogCtaLink": "浏览社区精选"
     },
     "priceList": {
       "freeTitle": "免费版",
@@ -116,8 +149,35 @@
       "submit": "点击这里预约！",
       "close": "关闭"
     },
+    "blog": {
+      "heading": "来自网络",
+      "subtitle": "关于 VoceChat 的文章、视频与文档精选——引用原文并附上出处链接。",
+      "readMore": "查看引用",
+      "viewAll": "查看全部精选",
+      "minRead": "分钟阅读",
+      "source": "来源",
+      "featured": "精选"
+    },
     "footer": {
-      "rights": "© {year} Privoce Inc. 保留所有权利。"
+      "rights": "© {year} Privoce Inc. 保留所有权利。",
+      "privacy": "隐私政策",
+      "support": "技术支持",
+      "docs": "文档",
+      "blog": "博客"
     }
+  },
+  "blog": {
+    "heading": "来自网络",
+    "subtitle": "关于 VoceChat 的文章、视频与官方文档精选——引用原文并附上出处链接。",
+    "readMore": "查看引用",
+    "viewAll": "查看全部精选",
+    "minRead": "分钟阅读",
+    "source": "来源",
+    "backHome": "返回首页",
+    "backToBlog": "返回博客",
+    "readOriginal": "阅读原文",
+    "watchOriginal": "前往原视频",
+    "curatedNote": "本文为精选推荐，内容版权归原作者所有。",
+    "featured": "精选"
   }
 }

@@ -126,7 +126,7 @@ const PriceList = () => {
     }
   ];
   return (
-    <section className="flex flex-col gap-12 items-center justify-center py-[96px] bg-gray-800 md:flex-row md:items-stretch">
+    <section id="pricing" className="flex flex-col gap-12 items-center justify-center py-[96px] bg-gray-800 md:flex-row md:items-stretch">
       {prices.map((p) => {
         return <PriceBlock data={p} key={p.title} />;
       })}

@@ -28,8 +28,10 @@ export function GET() {
           borderRadius: "50%"
         }}
       />
-      <h1 style={{ fontFamily: "-apple-system", fontWeight: "bold", fontSize: 90 }}>voce.chat</h1>
-      <span style={{ fontSize: 25, color: "#666" }}>Your Private Social Space</span>
+      <h1 style={{ fontFamily: "-apple-system", fontWeight: "bold", fontSize: 72 }}>Voce Chat</h1>
+      <span style={{ fontSize: 32, color: "#527ff1", fontWeight: 600 }}>
+        runs locally, chat anywhere
+      </span>
     </div>,
     {
       width: 1200,

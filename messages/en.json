@@ -1,5 +1,16 @@
 {
   "common": {},
+  "metadata": {
+    "title": "Voce Chat - runs locally, chat anywhere",
+    "description": "VoceChat is a lightweight self-hosted chat app, API and SDK. Deploy on Docker, NAS, or Raspberry Pi with full data ownership and no user limits.",
+    "supportTitle": "Support",
+    "supportDescription": "Get help with VoceChat installation, hosting, customization, and technical support.",
+    "privacyTitle": "Privacy Policy",
+    "privacyDescription": "Privacy policy for the VoceChat mobile application and related services by Privoce.",
+    "blogTitle": "Blog",
+    "blogDescription": "Curated articles, videos, and docs about VoceChat from across the web — with quotes and links to the originals.",
+    "keywords": "VoceChat, self-hosted chat, private chat server, Docker chat, NAS chat, Rust IM, chat SDK, in-app messaging, team chat, open source chat"
+  },
   "download": {
     "join": "Join our Server",
     "scan_tip": "Download VoceChat App, paste the link or scan this QR code.",
@@ -9,6 +20,16 @@
     "default_server_name": "VoceChat Server"
   },
   "home": {
+    "nav": {
+      "features": "Features",
+      "pricing": "Pricing",
+      "faq": "FAQ",
+      "docs": "Docs",
+      "github": "GitHub",
+      "getStarted": "Get Started",
+      "openMenu": "Open menu",
+      "closeMenu": "Close menu"
+    },
     "firstView": {
       "title": "Your Chat Privately Hosted!",
       "subtitle": "VoceChat is a superlight Rust powered chat app, API and SDK that prioritizes private hosting. Build your own in-app messaging feature with VoceChat!",
@@ -22,6 +43,7 @@
       "intro": "Bots, video call, publish channel, open ID, open API, open sourced SDK, iterate based on users feedback. Trusted by over <count>40,000</count> customers from 50+ countries.",
       "viewDocs": "View docs",
       "testApi": "Test API",
+      "viewBlog": "Community guides",
       "securityTitle": "Security",
       "securityItem1": "All data is stored on your own, private, server.",
       "securityItem2": "The server is developed in Rust with critical business process tests with 80%+ coverage.",
@@ -36,7 +58,7 @@
     },
     "deploy": {
       "heading": "Deploy our free-trial version through docker:",
-      "docHint": "For other ways of installation, check out our <link>documentation</link>.",
+      "docHint": "For other ways of installation, check out our <link>documentation</link> or <blog>community tutorials</blog>.",
       "copyCode": "Copy Code",
       "copied": "Copied!",
       "afterStart": "After starting the server, visit http://localhost:3000/ to use the app.",
@@ -55,28 +77,39 @@
     },
     "faq": {
       "heading": "FAQ",
-      "subtitle": "Everything you need to know about VoceChat.",
-      "q1": "What is Voce Chat?",
-      "a1": "Voce Chat is a lightweight, self-hosted team communication platform that provides secure messaging, file sharing, and collaboration features. It's designed to be resource-efficient and easy to deploy, making it ideal for teams who want full control over their communication infrastructure.",
-      "q2": "How do I install Voce Chat?",
-      "a2Lead": "Voce Chat can be installed using Docker with a single command:",
-      "a2Tail": "It also supports installation via binary files or from source for different platforms.",
-      "q3": "What are the system requirements?",
-      "a3": "Voce Chat requires only 20MB of RAM and works on Linux, Windows, macOS, and ARM devices like Raspberry Pi. Any VPS with 512MB RAM or more is sufficient for running Voce Chat.",
-      "q4": "Is Voce Chat free?",
-      "a4": "Yes, Voce Chat offers a free self-hosted version with core features including unlimited users, channels, and messages. Paid plans are available for additional enterprise features and support.",
-      "q5": "How secure is Voce Chat?",
-      "a5": "Voce Chat provides end-to-end encryption support, SSL/TLS encryption for data in transit, and local data storage under your control. Being self-hosted ensures complete data ownership and privacy.",
-      "q6": "Does Voce Chat have mobile apps?",
-      "a6": "Yes, Voce Chat provides native mobile applications for both iOS and Android devices, as well as a responsive web interface that works on any modern browser.",
-      "q7": "Can I integrate Voce Chat with other tools?",
-      "a7": "Yes, Voce Chat supports webhooks and API integrations, allowing connections with third-party services and workflow automation. Bot support is also available for custom automation needs.",
-      "q8": "How does Voce Chat compare to Slack or Discord?",
-      "a8": "Unlike cloud-based solutions, Voce Chat is self-hosted with complete data ownership, requires minimal resources, has no user limits in the self-hosted version, and offers a simpler interface focused on essential communication features.",
-      "q9": "Can I migrate from another chat platform?",
-      "a9": "Voce Chat provides data import tools for migrating from certain platforms. The API also allows for custom migration scripts. Check the documentation for specific migration guides and supported formats.",
-      "q10": "Where can I get help?",
-      "a10": "Help is available through the documentation at <link>doc.voce.chat</link>, community forums, GitHub repository for issue reporting, and direct support for paid plan users."
+      "subtitle": "Self-hosted chat, bots, AI agents, webhooks, and video — based on doc.voce.chat and the VoceChat community.",
+      "q1": "What is VoceChat?",
+      "a1": "VoceChat is a lightweight, self-hosted chat server built in Rust (about 20 MB). It offers DM and group chat, replies, @mentions, file sharing, burn-after-reading, an open API and SDK, bots with webhooks, and an embeddable website widget — all on infrastructure you control. The server is open source and designed for private cloud, NAS, homelab, and local-first deployment.",
+      "q2": "How do I install VoceChat?",
+      "a2Lead": "The fastest way is Docker — one command starts the official image:",
+      "a2Tail": "Binary and source installs are also supported. See the <install>install guides</install> for TLS, reverse proxy, and upgrade steps.",
+      "a2Schema": "Install VoceChat with Docker: docker run -d --restart=always -p 3000:3000 --name vocechat-server privoce/vocechat-server:latest. See https://doc.voce.chat/install/",
+      "q3": "Where can I host VoceChat?",
+      "a3": "Anywhere you control. The simplest start is on your own computer — laptop or desktop — and VoceChat includes a built-in Cloudflare Tunnel that gives you a public link to your server, so you can chat from anywhere on the internet without opening router ports or buying a VPS. You can also host on a cloud VPS, a Synology or UGREEN NAS, or keep it on a private intranet for internal teams only. Pick local + tunnel for personal use, VPS or NAS for always-on communities, or intranet when you want zero public exposure. See the <install>install guides</install> for each option.",
+      "a3Schema": "Host locally on your computer with VoceChat's built-in Cloudflare Tunnel for internet access, or on a VPS, NAS (Synology/UGREEN), or private intranet. Local hosting provides a public tunnel link without port forwarding. See https://doc.voce.chat/install/",
+      "q4": "What are the system requirements?",
+      "a4": "The VoceChat server itself is about 20 MB and runs on Linux, Windows, macOS, and ARM devices including Raspberry Pi. A VPS with 512 MB RAM or more is plenty for small teams. The official Docker image is roughly 24 MB. Clients are available for iOS, Android, desktop, and web.",
+      "q5": "Is VoceChat free?",
+      "a5": "Yes — the self-hosted community edition is free for servers with up to 20 members. Larger communities need a license. Pro unlocks unlimited members, more bots and webhooks, the website chat widget, and email notifications. There is no backdoor and no usage telemetry; license checks use local RSA verification.",
+      "q6": "How do Bots and Webhooks work?",
+      "a6": "Server admins create a Bot under Settings → Bot & Webhook, then generate an API Key. Use the key in the x-api-key header to send text, Markdown, or file messages to users and channels via the Bot API. Set a webhook URL on the same bot to receive inbound events — new messages, replies, edits, deletions, and new-user signups (for welcome messages). Webhooks can optionally use AES encryption. This is how teams build live-chat widgets, form-to-chat dashboards, newsletters, and automation backends. See the <bot>Bot & Webhook guide</bot> and <api>API docs</api>.",
+      "a6Schema": "Admins create bots at Settings → Bot & Webhook with an API Key for outbound messages (text, Markdown, files) and a webhook URL for inbound events. Supports welcome messages, optional AES encryption, and automation use cases. Docs: https://doc.voce.chat/bot/bot-and-webhook and https://doc.voce.chat/api-doc",
+      "q7": "Can I connect VoceChat to AI agents and OpenClaw?",
+      "a7": "Yes. VoceChat is built to be a chat frontend for agents. For a custom AI bot, point a bot webhook at your backend (OpenAI, local LLM, or any service) and reply through the Bot API — see the <gpt>GPT bot example</gpt>. For OpenClaw, use the official VoceChat plugin: OpenClaw listens on port 8010, receives VoceChat webhook POSTs, routes them to your agent runtime, and sends replies back via the Bot API — supporting private chat, groups, text, replies, and file uploads. Popular setups include personal AI assistants, local LLM APIs + VoceChat, and OpenClaw-powered bots on your own machine. Read the <openclaw>OpenClaw integration guide</openclaw>.",
+      "a7Schema": "VoceChat supports AI via bot webhooks and the Bot API (see GPT example at https://doc.voce.chat/bot/demo-gpt). OpenClaw integrates through the VoceChat plugin on port 8010 for bidirectional private and group chat. Guide: https://doc.voce.chat/openclaw-integration",
+      "q8": "Does VoceChat support video and voice calls?",
+      "a8": "Yes, in two ways. <vocespace>VoceSpace</vocespace> lets you self-host branded video and audio conferencing under your own domain with enterprise-grade control — ideal for client-facing chat + video solutions. For the self-hosted server, you can also enable Agora WebRTC in Settings: Agora offers a generous free tier (about 167 hours/month shared across all callers on your server). Start a call from the icon in any chat window.",
+      "a8Schema": "Video/voice via VoceSpace (self-hosted branded conferencing at https://vocespace.com) or Agora WebRTC configured in VoceChat settings (~167 free hours/month). Docs: https://doc.voce.chat/setting/setting-agora",
+      "q9": "What can I build with VoceChat beyond team chat?",
+      "a9": "Community and GitHub use cases include: website live-chat and contact widgets, webhook dashboards for static-site form submissions, internal company messaging, public event boards on landing pages, NAS bookmark and file sharing, private social feeds, customer-support bots, bridges toward Discord or Slack, and in-app messaging via the open API and SDK. Embed the <widget>chat widget</widget> on any site with a few lines of JavaScript.",
+      "a9Schema": "Use cases include website widgets, webhook automation, internal messaging, event boards, support bots, and in-app messaging via API/SDK. Widget docs: https://doc.voce.chat/widget",
+      "q10": "How secure is VoceChat?",
+      "a10": "VoceChat has no backdoor and collects no chat data on Privoce servers — everything stays on your instance. Traffic can use encrypted transmission; messages support burn-after-reading. Webhook payloads can be AES-encrypted. Being self-hosted means you own storage, access control, and retention policies.",
+      "q11": "Where can I get help?",
+      "a11": "Start with <link>doc.voce.chat</link> (install, bots, API, OpenClaw, widget). Browse our curated <blog>community guides</blog>, search or file issues on <github>GitHub</github> (vocechat-server, vocechat-web), email han@privoce.com, or visit the <support>support page</support> for hosting and customization help.",
+      "a11Schema": "Help: https://doc.voce.chat/, community guides at https://voce.chat/blog, GitHub issues at https://github.com/Privoce/vocechat-server, email han@privoce.com, and https://voce.chat/support",
+      "blogCta": "See tutorials, reviews, and deployment guides from across the web.",
+      "blogCtaLink": "Browse community picks"
     },
     "priceList": {
       "freeTitle": "Free",
@@ -116,8 +149,35 @@
       "submit": "Click here to schedule!",
       "close": "Close"
     },
+    "blog": {
+      "heading": "From the Web",
+      "subtitle": "Articles, videos, and docs about VoceChat — quoted and linked from across the internet.",
+      "readMore": "View quote",
+      "viewAll": "View all picks",
+      "minRead": "min read",
+      "source": "Source",
+      "featured": "Featured"
+    },
     "footer": {
-      "rights": "© {year} Privoce Inc. All rights reserved."
+      "rights": "© {year} Privoce Inc. All rights reserved.",
+      "privacy": "Privacy Policy",
+      "support": "Support",
+      "docs": "Documentation",
+      "blog": "Blog"
     }
+  },
+  "blog": {
+    "heading": "From the Web",
+    "subtitle": "Articles, videos, and official docs about VoceChat — quoted and linked from across the internet.",
+    "readMore": "View quote",
+    "viewAll": "View all picks",
+    "minRead": "min read",
+    "source": "Source",
+    "backHome": "Back to home",
+    "backToBlog": "Back to blog",
+    "readOriginal": "Read original",
+    "watchOriginal": "Watch on source",
+    "curatedNote": "This is a curated pick. Content belongs to the original author.",
+    "featured": "Featured"
   }
 }

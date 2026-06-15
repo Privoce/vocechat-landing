@@ -1,6 +1,7 @@
 import React, { ReactElement } from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import { Link } from "../i18n/navigation";
 
 type FeatureProps = { icon: string; title: string | ReactElement; list: string[] };
 const Feature = ({ icon, title, list }: FeatureProps) => {
@@ -52,7 +53,7 @@ const Features = (props: Props) => {
         <a
           href="https://doc.voce.chat/api/get-the-server-version"
           target={"_blank"}
-          rel="noreferrer"
+          rel="noopener noreferrer"
         >
           OpenAPI
         </a>
@@ -66,7 +67,7 @@ const Features = (props: Props) => {
     }
   ];
   return (
-    <section className="flex flex-col items-center pb-24">
+    <section id="features" className="flex flex-col items-center pb-24">
       <h3 className="font-semibold text-4xl tracking-tight text-gray-900 text-center">
         {t("heading")}
       </h3>
@@ -77,7 +78,7 @@ const Features = (props: Props) => {
           )
         })}
       </p>
-      <div className="flex gap-12 md:flex-row">
+      <div className="flex flex-wrap justify-center gap-4 md:gap-12">
         <a
           href="https://doc.voce.chat/"
           target={"_blank"}
@@ -87,13 +88,16 @@ const Features = (props: Props) => {
           {t("viewDocs")}
         </a>
         <a
-          href="https://doc.voce.chat/"
+          href="https://doc.voce.chat/api/get-the-server-version"
           target={"_blank"}
           rel="noopener noreferrer"
           className="btn-primary mb-16"
         >
           {t("testApi")}
         </a>
+        <Link href="/blog" className="btn-primary mb-16">
+          {t("viewBlog")}
+        </Link>
       </div>
 
       <div className="flex gap-24 sm:flex-col sm:items-center md:flex-row">

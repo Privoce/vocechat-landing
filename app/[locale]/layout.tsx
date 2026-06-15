@@ -1,9 +1,10 @@
 import type { Metadata, Viewport } from "next";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import Script from "next/script";
 import { Suspense } from "react";
+import { buildPageMetadata, DEFAULT_OG_IMAGE } from "../../lib/seo";
 import { routing } from "../../i18n/routing";
 import "../../styles/globals.css";
 
@@ -11,31 +12,38 @@ export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
 
-export const metadata: Metadata = {
-  metadataBase: new URL("https://voce.chat"),
-  title: "VoceChat Website",
-  description: "Private Hosted Chat, In-app messaging, AI Bots, NAS self-hosted chat server",
-  keywords:
-    "Private Hosted, In-app messaging, Chat framework, Chat SDK, AI agent, IM, Integration, API, SDK, Rust",
-  icons: {
-    icon: "/favicon.ico",
-    apple: "/apple-touch-icon.png"
-  },
-  twitter: {
-    card: "summary_large_image",
-    creator: "@privoce1",
-    title: "VoceChat",
-    description: "Your Social Media Privately Hosted"
-  },
-  openGraph: {
-    type: "website",
-    url: "https://voce.chat",
-    siteName: "VoceChat",
-    title: "VoceChat",
-    description: "Your Social Media Privately Hosted",
-    images: ["https://voce.chat/api/og"]
-  }
-};
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "metadata" });
+
+  const description = t("description");
+  const title = t("title");
+  const keywords = t("keywords");
+
+  return {
+    metadataBase: new URL("https://voce.chat"),
+    title: {
+      default: title,
+      template: `%s | VoceChat`
+    },
+    icons: {
+      icon: "/favicon.ico",
+      apple: "/apple-touch-icon.png"
+    },
+    manifest: "/manifest.json",
+    ...buildPageMetadata({
+      locale,
+      title,
+      description,
+      keywords,
+      ogImage: DEFAULT_OG_IMAGE
+    })
+  };
+}
 
 export const viewport: Viewport = {
   width: "device-width",
