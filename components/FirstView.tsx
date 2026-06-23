@@ -53,7 +53,7 @@ function FirstView({}: Props) {
       <DeployQuickStart />
       <div
         id="download"
-        className="flex w-full flex-col items-center px-4 pt-10 mobile:flex-col tablet:flex-row mobile:mt-4 tablet:mt-10 mobile:gap-4 tablet:gap-12"
+        className="flex w-full flex-wrap items-center justify-center gap-4 px-4 pt-10 sm:gap-6 lg:gap-10"
       >
         {downloads.map(({ titleKey, link, alt, icon }) => (
           <a

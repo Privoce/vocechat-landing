@@ -40,7 +40,7 @@
     },
     "features": {
       "heading": "Open API and SDK for you to host anywhere. No central service.",
-      "intro": "Bots, video call, publish channel, open ID, open API, open sourced SDK, iterate based on users feedback. Trusted by over <count>40,000</count> customers from 50+ countries.",
+      "intro": "Bots, video call, Cloudflare Tunnel, public front page and channels, open ID, open API, open sourced SDK, iterate based on users feedback. Trusted by over <count>200,000+</count> customers from 50+ countries.",
       "viewDocs": "View docs",
       "testApi": "Test API",
       "viewBlog": "Community guides",
