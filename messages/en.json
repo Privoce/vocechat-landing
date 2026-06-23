@@ -32,7 +32,7 @@
     },
     "firstView": {
       "title": "Your Chat Privately Hosted!",
-      "subtitle": "VoceChat is a superlight Rust powered chat app, API and SDK that prioritizes private hosting. Build your own in-app messaging feature with VoceChat!",
+      "subtitle": "VoceChat is a superlight chat app, host on your computer, access anywhere. Perfect for lauching your vibe coding project!",
       "downloadGooglePlay": "download Android APP from Google Play",
       "downloadApk": "download Android APP from APK file",
       "downloadIos": "download iOS APP from app store",

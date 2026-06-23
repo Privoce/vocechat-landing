@@ -34,9 +34,16 @@ export default function LazyYouTube({ videoId, title }: LazyYouTubeProps) {
   }, []);
 
   return (
-    <div ref={containerRef} className="min-h-[315px] w-full max-w-[560px]">
+    <div ref={containerRef} className="mx-auto w-full max-w-[560px] px-4 sm:px-0">
       {isVisible ? (
-        <YouTube videoId={videoId} />
+        <div className="aspect-video w-full overflow-hidden rounded-xl [&>div]:!h-full [&>div]:!w-full [&_iframe]:!h-full [&_iframe]:!w-full">
+          <YouTube
+            videoId={videoId}
+            opts={{ width: 560, height: 315 }}
+            className="h-full w-full"
+            iframeClassName="h-full w-full"
+          />
+        </div>
       ) : (
         <a
           href={`https://www.youtube.com/watch?v=${videoId}`}

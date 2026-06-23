@@ -64,12 +64,10 @@ const Deploy = () => {
       <div className="flex flex-col items-center">
         <h4 className="font-semibold text-4xl text-gray-25 ">{t("stillProblem")}</h4>
         <span className="mt-3">{t("chatHint")}</span>
-        <div className="my-8">
-          {/* video embed */}
-
+        <div className="my-8 flex w-full justify-center">
           <LazyYouTube videoId="RzmwpFWY-kI" title={t("bookMeeting")} />
         </div>
-        <div className="flex gap-2">
+        <div className="flex flex-wrap justify-center gap-2">
           <a
             href="https://calendly.com/hansu/han-meeting"
             target="_blank"
