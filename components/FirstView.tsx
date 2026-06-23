@@ -2,6 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import DeployQuickStart from "./DeployQuickStart";
 type Props = {};
 const downloads = [
   {
@@ -40,7 +41,7 @@ function FirstView({}: Props) {
         {t("subtitle")}
       </p>
 
-      <div className={`w-[95%] h-screen mt-4 shadow-md rounded-md overflow-hidden border bg-white`}>
+      <div className="mt-4 mb-12 w-[95%] h-screen overflow-hidden rounded-md border bg-white shadow-md sm:mb-16 lg:mb-20">
         <iframe
           src="https://privoce.voce.chat/"
           className="w-full h-full"
@@ -49,9 +50,10 @@ function FirstView({}: Props) {
           title="VoceChat live demo"
         ></iframe>
       </div>
+      <DeployQuickStart />
       <div
         id="download"
-        className="pt-4 flex flex-col mobile:flex-col tablet:flex-row mobile:mt-4 tablet:mt-10 mobile:gap-4 tablet:gap-12"
+        className="flex w-full flex-col items-center px-4 pt-10 mobile:flex-col tablet:flex-row mobile:mt-4 tablet:mt-10 mobile:gap-4 tablet:gap-12"
       >
         {downloads.map(({ titleKey, link, alt, icon }) => (
           <a

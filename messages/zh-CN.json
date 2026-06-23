@@ -31,8 +31,8 @@
       "closeMenu": "关闭菜单"
     },
     "firstView": {
-      "title": "把你的聊天，私有化部署！",
-      "subtitle": "VoceChat 是一款由 Rust 驱动的超轻量聊天应用、API 与 SDK，专为私有部署而生。用 VoceChat 为你的应用打造专属的即时通讯功能！",
+      "title": "聊天，频道，部署AI项目，让电脑成为你的个人云！",
+      "subtitle": "VoceChat 是一款超轻量聊天应用、专为私有部署和Vibe Coding而生。用VoceChat和你的电脑上线你的专属应用！",
       "downloadGooglePlay": "从 Google Play 下载安卓 App",
       "downloadApk": "下载安卓 APK 安装包",
       "downloadIos": "从 App Store 下载 iOS App",
@@ -57,11 +57,16 @@
       "openapiItem2": "配有完整的文档与测试。"
     },
     "deploy": {
-      "heading": "通过 Docker 部署我们的免费试用版：",
+      "headingBadge": "5 秒上手",
+      "heading": "Docker 一键启动",
+      "headingDetail": "复制下方命令，在 Vibe Coding 工具或 Terminal 中运行。",
       "docHint": "其他安装方式，请查阅我们的<link>文档</link>或<blog>社区教程精选</blog>。",
-      "copyCode": "复制代码",
+      "terminalLabel": "Terminal",
+      "copyCode": "复制",
       "copied": "已复制！",
-      "afterStart": "启动服务后，访问 http://localhost:3000/ 即可使用。",
+      "afterStart": "启动后访问",
+      "afterStartUrl": "http://localhost:3000/",
+      "afterStartTail": "或系统分配给你的公网域名。",
       "stillProblem": "仍然遇到问题？",
       "chatHint": "我们很乐意花 25 分钟与你聊聊，帮你解决问题！",
       "bookMeeting": "预约会议",
