@@ -13,12 +13,12 @@ export default function Deploy() {
       <div className="my-8 flex w-full justify-center px-4">
         <LazyYouTube videoId="RzmwpFWY-kI" title={t("bookMeeting")} />
       </div>
-      <div className="flex flex-wrap justify-center gap-2">
+      <div className="flex flex-wrap items-stretch justify-center gap-3">
         <a
           href="https://calendly.com/hansu/han-meeting"
           target="_blank"
           rel="noopener noreferrer"
-          className="btn-primary"
+          className="inline-flex items-center justify-center rounded-lg bg-primary-400 px-5 py-3 font-medium text-gray-25 shadow-[0_1px_2px_rgba(16,24,40,0.05)] hover:bg-primary-400/80 sm:text-lg md:text-md"
         >
           {t("bookMeeting")}
         </a>
@@ -26,7 +26,7 @@ export default function Deploy() {
           href="https://doc.voce.chat/"
           target="_blank"
           rel="noopener noreferrer"
-          className="cursor-pointer rounded-lg border border-gray-300 bg-white px-5 py-3 text-md font-medium text-gray-700 shadow-[0_1px_2px_rgba(16,24,40,0.05)] hover:bg-gray-50 sm:text-lg"
+          className="inline-flex items-center justify-center rounded-lg border border-gray-300 bg-white px-5 py-3 font-medium text-gray-700 shadow-[0_1px_2px_rgba(16,24,40,0.05)] hover:bg-gray-50 sm:text-lg md:text-md"
         >
           {t("viewDoc")}
         </a>

@@ -40,7 +40,7 @@
     },
     "features": {
       "heading": "开放的 API 与 SDK，随处自托管，无需中心化服务。",
-      "intro": "机器人、视频通话、Cloudflare Tunnel、公开首页与频道、Open ID、开放 API、开源 SDK，依据用户反馈持续迭代。已获得来自 50 多个国家的 <count>200,000+</count> 多家客户信赖。",
+      "intro": "机器人、视频通话、专属公网域名、公开首页与频道、Open ID、开放 API、开源 SDK，依据用户反馈持续迭代。已获得来自 50 多个国家的 <count>200,000+</count> 多家客户信赖。",
       "viewDocs": "查看文档",
       "testApi": "测试 API",
       "viewBlog": "社区精选",

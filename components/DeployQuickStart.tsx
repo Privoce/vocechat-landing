@@ -31,7 +31,7 @@ export default function DeployQuickStart() {
           <h3 className="mt-4 font-semibold text-2xl tracking-tight text-white sm:text-3xl">
             {t("heading")}
           </h3>
-          <p className="mx-auto mt-3 max-w-xl text-base leading-relaxed text-gray-400 sm:text-lg">
+          <p className="shimmer-text mx-auto mt-3 max-w-xl text-base font-medium leading-relaxed sm:text-lg">
             {t("headingDetail")}
           </p>
         </div>

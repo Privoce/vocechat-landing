@@ -24,6 +24,41 @@
     @apply text-gray-25 px-7 py-4 sm:text-xl md:text-lg font-medium rounded-lg  shadow-[0_1px_2px_rgba(16,24,40,0.05)] cursor-pointer bg-primary-400 hover:bg-primary-400/80;
   }
 }
+/* Lighting "shimmer" sweep used to draw attention without moving the element. */
+@keyframes shimmer-sweep {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+.shimmer-text {
+  background-image: linear-gradient(
+    100deg,
+    #98a2b3 0%,
+    #98a2b3 38%,
+    #67e3f9 48%,
+    #ffffff 52%,
+    #67e3f9 56%,
+    #98a2b3 66%,
+    #98a2b3 100%
+  );
+  background-size: 200% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer-sweep 2.8s linear infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .shimmer-text {
+    animation: none;
+    color: #98a2b3;
+    -webkit-text-fill-color: #98a2b3;
+  }
+}
+
 /* for price */
 .check-flip-x {
   transform: rotateX(180deg) skewX(20deg);
