@@ -22,7 +22,7 @@ export default function DeployQuickStart() {
   };
 
   return (
-    <div id="deploy" className="w-full px-4 pb-4 sm:px-6">
+    <div id="deploy" className="w-full scroll-mt-24 px-4 pb-4 sm:px-6">
       <div className="mx-auto max-w-3xl overflow-hidden rounded-2xl border border-gray-800/10 bg-gray-900 shadow-[0_20px_50px_rgba(15,23,42,0.18)]">
         <div className="border-b border-white/10 px-6 py-8 text-center sm:px-8">
           <span className="inline-flex items-center rounded-full border border-primary-400/30 bg-primary-400/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-primary-300">

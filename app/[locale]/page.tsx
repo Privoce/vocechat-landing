@@ -9,6 +9,7 @@ import PriceList from "../../components/PriceList";
 import FAQ from "../../components/FAQ";
 import Blog from "../../components/Blog";
 import StructuredData from "../../components/StructuredData";
+import ScrollToHash from "../../components/ScrollToHash";
 
 export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -16,6 +17,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
   return (
     <>
       <StructuredData />
+      <ScrollToHash />
       <main>
         <FirstView />
         <Features />
