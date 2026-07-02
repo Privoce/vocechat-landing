@@ -57,9 +57,9 @@
       "openapiItem2": "With complete documentation and testing."
     },
     "deploy": {
-      "headingBadge": "5 second setup",
+      "headingBadge": "One line setup",
       "heading": "Get started with Docker",
-      "headingDetail": "Copy the command and run it in your Vibe Coding tool or Terminal.",
+      "headingDetail": "Copy the command below, then paste and run it in your AI coding tool—Cursor, Claude. Or Terminal, PowerShell.",
       "docHint": "For other ways of installation, check out our <link>documentation</link> or <blog>community tutorials</blog>.",
       "terminalLabel": "Terminal",
       "copyCode": "Copy",

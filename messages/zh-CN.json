@@ -57,9 +57,9 @@
       "openapiItem2": "配有完整的文档与测试。"
     },
     "deploy": {
-      "headingBadge": "5 秒上手",
+      "headingBadge": "一行命令部署",
       "heading": "Docker 一键启动",
-      "headingDetail": "复制下方命令，在 Vibe Coding 工具或 Terminal 中运行。",
+      "headingDetail": "复制下方命令，然后粘贴并在你的 AI 编程工具（Cursor、Claude）或 Terminal、PowerShell 中运行。",
       "docHint": "其他安装方式，请查阅我们的<link>文档</link>或<blog>社区教程精选</blog>。",
       "terminalLabel": "Terminal",
       "copyCode": "复制",
