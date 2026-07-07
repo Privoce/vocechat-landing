@@ -3,7 +3,6 @@ import React from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import DeployQuickStart from "./DeployQuickStart";
-import LiveDemo from "./LiveDemo";
 type Props = {};
 const downloads = [
   {
@@ -61,7 +60,15 @@ function FirstView({}: Props) {
         {t("subtitle")}
       </p>
 
-      <LiveDemo />
+      <div className="relative z-10 mt-4 mb-12 w-[95%] h-screen overflow-hidden rounded-md border bg-white shadow-md sm:mb-16 lg:mb-20">
+        <iframe
+          src="https://privoce.voce.chat/"
+          className="w-full h-full"
+          allow="camera;microphone"
+          loading="lazy"
+          title="VoceChat live demo"
+        ></iframe>
+      </div>
       <DeployQuickStart />
       <p className="relative z-10 pt-12 pb-5 text-center text-sm font-semibold uppercase tracking-wide text-primary-800/70">
         {t("downloadLabel")}

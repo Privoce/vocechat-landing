@@ -37,9 +37,7 @@
       "downloadApk": "download Android APP from APK file",
       "downloadIos": "download iOS APP from app store",
       "downloadDesktop": "download desktop version from github releases",
-      "downloadLabel": "Get the apps",
-      "demoInteract": "Click to try the live demo",
-      "demoLive": "Live"
+      "downloadLabel": "Get the apps"
     },
     "features": {
       "eyebrow": "No central service",

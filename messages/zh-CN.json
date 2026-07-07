@@ -37,9 +37,7 @@
       "downloadApk": "下载安卓 APK 安装包",
       "downloadIos": "从 App Store 下载 iOS App",
       "downloadDesktop": "从 GitHub Releases 下载桌面版",
-      "downloadLabel": "下载客户端",
-      "demoInteract": "点击体验在线演示",
-      "demoLive": "在线"
+      "downloadLabel": "下载客户端"
     },
     "features": {
       "eyebrow": "无需中心化服务",
