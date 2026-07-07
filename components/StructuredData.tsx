@@ -43,12 +43,25 @@ export default async function StructuredData() {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     name: "VoceChat",
+    alternateName: "Voce Chat",
     applicationCategory: "CommunicationApplication",
     operatingSystem: "iOS, Android, Windows, macOS, Linux, Web",
     description:
-      "A lightweight self-hosted chat app, API and SDK powered by Rust. Bots, webhooks, AI agents, OpenClaw, VoceSpace video, and embeddable widgets.",
+      "A lightweight self-hosted chat server and open-source Slack alternative powered by Rust. Bots, webhooks, AI agents, OpenClaw, VoceSpace video, and embeddable widgets.",
     url: SITE_URL,
     downloadUrl: "https://doc.voce.chat/install/",
+    softwareHelp: "https://doc.voce.chat/",
+    featureList: [
+      "Self-hosted chat server (~20 MB, Rust)",
+      "One-line Docker deployment",
+      "Built-in Cloudflare Tunnel for public access without port forwarding",
+      "Bots, webhooks, and AI agent integration (OpenClaw)",
+      "Open API and SDK for in-app messaging",
+      "Embeddable website chat widget",
+      "Cross-platform apps: iOS, Android, Windows, macOS, Web",
+      "Runs on NAS (Synology, UGREEN) and Raspberry Pi"
+    ],
+    sameAs: ["https://github.com/Privoce/vocechat-server"],
     offers: {
       "@type": "Offer",
       price: "0",

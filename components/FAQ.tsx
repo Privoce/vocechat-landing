@@ -1,6 +1,7 @@
 import React, { ReactNode } from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "../i18n/navigation";
+import Eyebrow from "./Eyebrow";
 
 const FAQ_COUNT = 11;
 
@@ -79,9 +80,10 @@ const FAQ = () => {
   });
 
   return (
-    <section id="faq" className="flex flex-col items-center py-24 px-4">
+    <section id="faq" className="flex scroll-mt-20 flex-col items-center py-24 px-4">
       <div className="w-full max-w-3xl">
         <div className="text-center mb-12">
+          <Eyebrow className="mb-5">{t("eyebrow")}</Eyebrow>
           <h2 className="font-semibold text-4xl sm:text-5xl tracking-tight text-gray-900">
             {t("heading")}
           </h2>

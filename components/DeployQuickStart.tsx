@@ -19,16 +19,25 @@ export default function DeployQuickStart() {
   };
 
   return (
-    <div id="deploy" className="w-full scroll-mt-24 px-4 pb-4 sm:px-6">
-      <div className="mx-auto max-w-5xl overflow-hidden rounded-2xl border border-gray-800/10 bg-gray-900 shadow-[0_20px_50px_rgba(15,23,42,0.18)]">
-        <div className="border-b border-white/10 px-6 py-8 text-center sm:px-8">
+    <div id="deploy" className="relative w-full scroll-mt-24 px-4 pb-4 sm:px-6">
+      <div className="relative mx-auto max-w-5xl">
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute -inset-x-6 -bottom-8 top-1/2 rounded-[48px] bg-[radial-gradient(closest-side,rgba(34,204,238,0.2),transparent)] blur-2xl"
+        />
+        <div className="relative overflow-hidden rounded-2xl bg-gray-900 shadow-[0_1px_2px_rgba(16,24,40,0.1),0_28px_64px_-16px_rgba(15,23,42,0.4)] ring-1 ring-white/10">
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary-400/60 to-transparent"
+          />
+          <div className="border-b border-white/10 px-6 py-8 text-center sm:px-8">
           <span className="inline-flex items-center rounded-full border border-primary-400/30 bg-primary-400/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-primary-300">
             {t("headingBadge")}
           </span>
-          <h3 className="mt-4 font-semibold text-2xl tracking-tight text-white sm:text-3xl">
+          <h2 className="mt-4 font-semibold text-2xl tracking-tight text-white sm:text-3xl">
             {t("heading")}
-          </h3>
-          <p className="shimmer-text mx-auto mt-3 text-base font-medium leading-relaxed sm:whitespace-nowrap sm:text-lg">
+          </h2>
+          <p className="shimmer-text mx-auto mt-3 text-base font-medium leading-relaxed sm:text-lg lg:whitespace-nowrap">
             {t("headingDetail")}
           </p>
         </div>
@@ -86,7 +95,7 @@ export default function DeployQuickStart() {
                 </button>
               </CopyToClipboard>
             </div>
-            <pre className="overflow-x-auto px-4 py-5 font-mono text-sm leading-relaxed text-[#e6edf3] sm:text-[15px]">
+            <pre className="overflow-x-auto whitespace-pre-wrap break-all px-4 py-5 font-mono text-sm leading-relaxed text-[#e6edf3] sm:text-[15px] lg:whitespace-pre lg:break-normal">
               <code>{shellCode}</code>
             </pre>
           </div>
@@ -123,6 +132,7 @@ export default function DeployQuickStart() {
               </Link>
             )
           })}
+        </div>
         </div>
       </div>
     </div>

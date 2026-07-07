@@ -33,7 +33,7 @@ const WechatButton = ({}: Props) => {
       <a
         onClick={handleClick}
         href="#"
-        className="py-2 px-4 rounded-full bg-white hover:opacity-80"
+        className="rounded-full border border-white/30 bg-transparent px-4 py-2 text-white transition-colors hover:bg-white/10"
       >
         {t("label")}
       </a>

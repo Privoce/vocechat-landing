@@ -3,6 +3,7 @@ import React from "react";
 import clsx from "clsx";
 import { useTranslations } from "next-intl";
 import WechatButton from "./WechatButton";
+import Eyebrow from "./Eyebrow";
 
 type Price = {
   title: string;
@@ -16,22 +17,41 @@ type Price = {
   highlight?: boolean;
 };
 
+const CheckIcon = () => (
+  <svg
+    width="18"
+    height="18"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2.5"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    aria-hidden="true"
+    className="mt-0.5 shrink-0 text-primary-300"
+  >
+    <path d="M20 6 9 17l-5-5" />
+  </svg>
+);
+
 const PriceBlock = ({ data }: { data: Price }) => {
   const t = useTranslations("home.priceList");
   const { title, desc, price, pay_link, feats, highlight } = data;
   const blockClass = clsx(
-    "flex flex-col items-start text-white p-5 border-solid border border-white rounded-3xl bg-black w-[326px] transition-all",
-    highlight && "border-[6px] gradient-border"
+    "relative flex flex-col items-start text-white p-7 rounded-3xl w-[326px] max-w-[92vw] transition-all duration-300 hover:-translate-y-1",
+    highlight
+      ? "border-[3px] gradient-border bg-[#161616] shadow-[0_0_80px_-12px_rgba(60,140,231,0.35)]"
+      : "border border-white/10 bg-white/[0.04] backdrop-blur-sm shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] hover:border-white/20"
   );
   return (
     <div className={blockClass}>
-      <h2 className="text-5xl font-bold min-h-[68px] ">{title}</h2>
-      <p className="text-lg min-h-[60px]">{desc}</p>
+      <h3 className="text-4xl font-bold min-h-[56px]">{title}</h3>
+      <p className="text-lg min-h-[60px] text-white/80">{desc}</p>
       <div className="text-5xl font-semibold my-4">
         {price ? (
           <>
             {`$${price.value}`}
-            <span className="text-2xl font-normal">
+            <span className="text-2xl font-normal text-white/70">
               /{price.unit === "forever" ? t("unitForever") : t("unitServer")}
             </span>
           </>
@@ -45,17 +65,17 @@ const PriceBlock = ({ data }: { data: Price }) => {
           target="_blank"
           rel="noopener noreferrer"
           className={clsx(
-            "py-2 px-4 rounded-full bg-white text-black text-sm my-6 hover:opacity-80",
-            highlight && "bg-[#52EDFF]"
+            "my-6 rounded-full px-5 py-2.5 text-sm font-semibold text-gray-900 transition-colors",
+            highlight ? "bg-primary-300 hover:bg-primary-200" : "bg-white hover:bg-gray-100"
           )}
         >
           {t("getStarted")}
         </a>
       ) : (
-        <ul className="flex items-center gap-2 md:gap-3 text-black text-sm my-6">
+        <ul className="my-6 flex items-center gap-2 text-sm text-gray-900 md:gap-3">
           <li>
             <a
-              className="py-2 px-4 rounded-full bg-white  hover:opacity-80"
+              className="rounded-full border border-white/30 bg-transparent px-4 py-2 text-white transition-colors hover:bg-white/10"
               href="mailto:han@privoce.com"
             >
               {t("email")}
@@ -69,22 +89,19 @@ const PriceBlock = ({ data }: { data: Price }) => {
               href={pay_link}
               target="_blank"
               rel="noopener noreferrer"
-              className={clsx(
-                "py-2 px-4 rounded-full bg-white text-black text-sm my-6 hover:opacity-80",
-                highlight && "bg-[#52EDFF]"
-              )}
+              className="rounded-full bg-white px-4 py-2 font-semibold text-gray-900 transition-colors hover:bg-gray-100"
             >
               {t("zoom")}
             </a>
           </li>
         </ul>
       )}
-      <h3 className="text-2xl font-semibold my-3">{t("keyFeatures")}</h3>
-      <ul className="text-lg flex flex-col gap-3 opacity-80">
+      <h4 className="text-xl font-semibold my-3">{t("keyFeatures")}</h4>
+      <ul className="text-md flex flex-col gap-3 text-white/80">
         {feats.map((f) => {
           return (
-            <li key={f} className="flex items-start gap-2">
-              <i className="inline-block check-flip-x font-light font-mono">ヘ</i>
+            <li key={f} className="flex items-start gap-2.5">
+              <CheckIcon />
               <span>{f}</span>
             </li>
           );
@@ -126,10 +143,28 @@ const PriceList = () => {
     }
   ];
   return (
-    <section id="pricing" className="flex flex-col gap-12 items-center justify-center py-[96px] bg-gray-800 md:flex-row md:items-stretch">
-      {prices.map((p) => {
-        return <PriceBlock data={p} key={p.title} />;
-      })}
+    <section
+      id="pricing"
+      className="relative scroll-mt-20 overflow-hidden bg-gray-900 py-[96px] [background-image:radial-gradient(ellipse_50%_40%_at_50%_0%,rgba(34,204,238,0.1),transparent),radial-gradient(ellipse_40%_40%_at_80%_100%,rgba(60,140,231,0.08),transparent)]"
+    >
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/15 to-transparent"
+      />
+      <div className="mb-14 flex flex-col items-center px-4 text-center">
+        <Eyebrow tone="dark" className="mb-5">
+          {t("eyebrow")}
+        </Eyebrow>
+        <h2 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl md:text-4xl">
+          {t("heading")}
+        </h2>
+        <p className="mt-4 text-lg text-gray-400">{t("subtitle")}</p>
+      </div>
+      <div className="flex flex-col items-center justify-center gap-10 md:flex-row md:items-stretch">
+        {prices.map((p) => {
+          return <PriceBlock data={p} key={p.title} />;
+        })}
+      </div>
     </section>
   );
 };

@@ -1,15 +1,15 @@
 {
   "common": {},
   "metadata": {
-    "title": "Voce Chat - runs locally, chat anywhere",
-    "description": "VoceChat is a lightweight self-hosted chat app, API and SDK. Deploy on Docker, NAS, or Raspberry Pi with full data ownership and no user limits.",
+    "title": "VoceChat — Self-Hosted Chat Server & Open-Source Slack Alternative",
+    "description": "VoceChat is a lightweight self-hosted chat server and open-source Slack alternative. One-line Docker install on your PC, NAS, or Raspberry Pi — bots, AI agents, full data ownership.",
     "supportTitle": "Support",
     "supportDescription": "Get help with VoceChat installation, hosting, customization, and technical support.",
     "privacyTitle": "Privacy Policy",
     "privacyDescription": "Privacy policy for the VoceChat mobile application and related services by Privoce.",
     "blogTitle": "Blog",
     "blogDescription": "Curated articles, videos, and docs about VoceChat from across the web — with quotes and links to the originals.",
-    "keywords": "VoceChat, self-hosted chat, private chat server, Docker chat, NAS chat, Rust IM, chat SDK, in-app messaging, team chat, open source chat"
+    "keywords": "VoceChat, self-hosted chat, self hosted chat server, open source slack alternative, discord alternative, private chat server, Docker chat server, NAS chat, Synology chat, Raspberry Pi chat, Rust IM, chat SDK, in-app messaging, team chat, AI agent chat, website chat widget"
   },
   "download": {
     "join": "Join our Server",
@@ -31,17 +31,21 @@
       "closeMenu": "Close menu"
     },
     "firstView": {
-      "title": "Personal Chat, Personal AI, Personal Cloud, all hosted on your PC !",
-      "subtitle": "VoceChat is a superlight chat app! Host on your computer, access anywhere. Perfect for launching your AI agent or vibe coding project!",
+      "title": "Personal Chat, Personal AI, Personal Cloud, all hosted on your PC!",
+      "subtitle": "VoceChat is a superlight, open-source, self-hosted chat app! Host on your own computer, access anywhere. Perfect for launching your AI agent or vibe coding project!",
       "downloadGooglePlay": "download Android APP from Google Play",
       "downloadApk": "download Android APP from APK file",
       "downloadIos": "download iOS APP from app store",
-      "downloadDesktop": "download desktop version from github releases"
+      "downloadDesktop": "download desktop version from github releases",
+      "downloadLabel": "Get the apps",
+      "demoInteract": "Click to try the live demo",
+      "demoLive": "Live"
     },
     "features": {
-      "heading": "Open API and SDK for you to host anywhere. No central service.",
-      "intro": "Bots, video call, public domain for your project, public front page and channels, open ID, open API, open sourced SDK, iterate based on users feedback. Trusted by over <count>200,000+</count> customers from 50+ countries.",
-      "viewDocs": "View docs",
+      "eyebrow": "No central service",
+      "heading": "Open API and SDK for you to host anywhere.",
+      "intro": "Bots, video call, public domain for your project, public front page and channels, open ID, open API, open sourced SDK, iterate based on users feedback. Running on nearly <count>1,000,000</count> servers across 50+ countries.",
+      "viewDocs": "Read the docs",
       "testApi": "Test API",
       "viewBlog": "Community guides",
       "securityTitle": "Security",
@@ -67,24 +71,27 @@
       "afterStart": "Then open",
       "afterStartUrl": "http://localhost:3000/",
       "afterStartTail": "or the public domain assigned to you.",
+      "helpEyebrow": "Support",
       "stillProblem": "Still having a problem?",
       "chatHint": "We would like to have a 25min chat with you to help you out!",
       "bookMeeting": "Book a Meeting",
-      "viewDoc": "View Doc"
+      "viewDoc": "Read the docs"
     },
     "compare": {
-      "heading": "Compare our tool with others",
+      "eyebrow": "Comparison",
+      "heading": "Compare VoceChat with Slack, Discord, and other chat apps",
       "colProducts": "Products",
       "colPrivateApi": "Private Hosted Open API",
       "colOpenSource": "Open Source",
       "colMobile": "Mobile App",
-      "colLightweight": "Lightweight(less than 20 MB)"
+      "colLightweight": "Lightweight (less than 20 MB)"
     },
     "faq": {
-      "heading": "FAQ",
+      "eyebrow": "FAQ",
+      "heading": "Frequently asked questions",
       "subtitle": "Self-hosted chat, bots, AI agents, webhooks, and video — based on doc.voce.chat and the VoceChat community.",
       "q1": "What is VoceChat?",
-      "a1": "VoceChat is a lightweight, self-hosted chat server built in Rust (about 20 MB). It offers DM and group chat, replies, @mentions, file sharing, burn-after-reading, an open API and SDK, bots with webhooks, and an embeddable website widget — all on infrastructure you control. The server is open source and designed for private cloud, NAS, homelab, and local-first deployment.",
+      "a1": "VoceChat is a lightweight, self-hosted chat server built in Rust (about 20 MB) — an open-source alternative to Slack and Discord that runs on your own infrastructure. It offers DM and group chat, replies, @mentions, file sharing, burn-after-reading, an open API and SDK, bots with webhooks, and an embeddable website widget. The server is open source and designed for private cloud, NAS, homelab, and local-first deployment.",
       "q2": "How do I install VoceChat?",
       "a2Lead": "The fastest way is Docker — one command starts the official image:",
       "a2Tail": "Binary and source installs are also supported. See the <install>install guides</install> for TLS, reverse proxy, and upgrade steps.",
@@ -117,6 +124,9 @@
       "blogCtaLink": "Browse community picks"
     },
     "priceList": {
+      "eyebrow": "Pricing",
+      "heading": "Simple pricing",
+      "subtitle": "Free to start. One-time payment to grow. No subscriptions.",
       "freeTitle": "Free",
       "freeDesc": "Run VoceChat on your server",
       "freeFeat1": "Limited Bot and Webhook",
@@ -147,14 +157,16 @@
       "closeHint": "Click anywhere to close"
     },
     "booking": {
+      "eyebrow": "Talk to us",
       "headingLine1": "Want to add chat features to your app?",
       "headingLine2": "Book a meeting with our CEO",
-      "subtitle": "Be the first to know about releases and industry news and insights.",
+      "subtitle": "A free 25-minute call — hosting, customization, or AI agent development. Pick a time that works for you.",
       "emailPlaceholder": "Enter your email",
-      "submit": "Click here to schedule!",
+      "submit": "Book a 25-min call",
       "close": "Close"
     },
     "blog": {
+      "eyebrow": "Community",
       "heading": "From the Web",
       "subtitle": "Articles, videos, and docs about VoceChat — quoted and linked from across the internet.",
       "readMore": "View quote",
@@ -164,6 +176,7 @@
       "featured": "Featured"
     },
     "footer": {
+      "tagline": "A superlight, open-source, self-hosted chat server — your data, your machine.",
       "rights": "© {year} Privoce Inc. All rights reserved.",
       "privacy": "Privacy Policy",
       "support": "Support",

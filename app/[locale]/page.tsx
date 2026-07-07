@@ -1,4 +1,5 @@
 import { setRequestLocale } from "next-intl/server";
+import Header from "../../components/Header";
 import FirstView from "../../components/FirstView";
 import Features from "../../components/Features";
 import Deploy from "../../components/Deploy";
@@ -18,6 +19,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
     <>
       <StructuredData />
       <ScrollToHash />
+      <Header />
       <main>
         <FirstView />
         <Features />

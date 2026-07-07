@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import DeployQuickStart from "./DeployQuickStart";
+import LiveDemo from "./LiveDemo";
 type Props = {};
 const downloads = [
   {
@@ -33,33 +34,47 @@ const downloads = [
 function FirstView({}: Props) {
   const t = useTranslations("home.firstView");
   return (
-    <section className="flex min-h-screen flex-col items-center bg-primary-50 pt-24 xl:pt-16 pb-10 xl:pb-4 bg-[url('/img/bg.first.view.jpg')] bg-bottom bg-no-repeat bg-contain">
-      <h1 className="font-semibold xl:text-5xl sm:text-4xl text-primary-900 tracking-tight text-center">
+    <section className="relative flex min-h-screen flex-col items-center overflow-hidden bg-primary-50 pt-32 xl:pt-28 pb-10 xl:pb-4 bg-[url('/img/bg.first.view.jpg')] bg-bottom bg-no-repeat bg-contain">
+      {/* blueprint grid, fading out radially */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-0 top-0 h-[720px] bg-[linear-gradient(to_right,rgba(14,112,144,0.07)_1px,transparent_1px),linear-gradient(to_bottom,rgba(14,112,144,0.07)_1px,transparent_1px)] bg-[size:56px_56px] [mask-image:radial-gradient(ellipse_60%_60%_at_50%_0%,black_40%,transparent_100%)]"
+      />
+      {/* layered radial glows behind the headline */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -top-40 left-1/2 h-[560px] w-[900px] -translate-x-1/2 rounded-full bg-[radial-gradient(closest-side,rgba(34,204,238,0.22),transparent)]"
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -top-10 left-[15%] h-[360px] w-[360px] rounded-full bg-[radial-gradient(closest-side,rgba(103,227,249,0.18),transparent)] blur-2xl"
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute top-24 right-[12%] h-[300px] w-[300px] rounded-full bg-[radial-gradient(closest-side,rgba(6,174,212,0.14),transparent)] blur-2xl"
+      />
+
+      <h1 className="relative z-10 mx-4 max-w-5xl bg-gradient-to-b from-primary-900 via-primary-800 to-primary-600 bg-clip-text text-center font-semibold tracking-tight text-transparent sm:text-4xl xl:text-6xl xl:leading-[1.1]">
         {t("title")}
       </h1>
-      <p className="text-xl w-[768px] sm:w-[90%] text-center text-primary-700 mt-6 mb-8 mx-4">
+      <p className="relative z-10 mx-4 mt-6 mb-8 w-[768px] text-center text-xl leading-relaxed text-primary-800/80 sm:w-[90%]">
         {t("subtitle")}
       </p>
 
-      <div className="mt-4 mb-12 w-[95%] h-screen overflow-hidden rounded-md border bg-white shadow-md sm:mb-16 lg:mb-20">
-        <iframe
-          src="https://privoce.voce.chat/"
-          className="w-full h-full"
-          allow="camera;microphone"
-          loading="lazy"
-          title="VoceChat live demo"
-        ></iframe>
-      </div>
+      <LiveDemo />
       <DeployQuickStart />
+      <p className="relative z-10 pt-12 pb-5 text-center text-sm font-semibold uppercase tracking-wide text-primary-800/70">
+        {t("downloadLabel")}
+      </p>
       <div
         id="download"
-        className="flex w-full flex-wrap items-center justify-center gap-4 px-4 pt-10 sm:gap-6 lg:gap-10"
+        className="relative z-10 flex w-full flex-wrap items-center justify-center gap-4 px-4 sm:gap-6 lg:gap-8"
       >
         {downloads.map(({ titleKey, link, alt, icon }) => (
           <a
             key={link}
             title={t(titleKey)}
-            className="flex"
+            className="flex rounded-xl transition-all duration-200 hover:-translate-y-1 hover:drop-shadow-[0_12px_24px_rgba(14,112,144,0.25)]"
             href={link}
             target="_blank"
             rel="noopener noreferrer"
@@ -70,26 +85,10 @@ function FirstView({}: Props) {
               height={75}
               alt={alt}
               src={icon}
-              className="hover:scale-110 transition-transform h-[66px]"
+              className="h-[66px] w-auto"
             ></Image>
           </a>
         ))}
-        {/* <a
-          href="#"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="w-[200px] text-white flex items-center gap-2 p-2 h-[66px] rounded-xl border-2 border-gray-300/50 bg-black"
-        >
-          <img
-            className="w-10"
-            src="https://icons.iconarchive.com/icons/vexels/office/256/desktop-icon.png"
-            alt="icon"
-          />
-          <div className="flex flex-col whitespace-nowrap">
-            <p className="text-xs">Download desktop</p>
-            <p className="text-lg font-bold">Windows/Mac</p>
-          </div>
-        </a> */}
       </div>
     </section>
   );

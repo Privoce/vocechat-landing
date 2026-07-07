@@ -15,13 +15,16 @@
 
 @layer components {
   .btn-primary {
-    @apply text-gray-25 px-5 py-3 sm:text-lg md:text-md font-medium rounded-lg  shadow-[0_1px_2px_rgba(16,24,40,0.05)] cursor-pointer bg-primary-400 hover:bg-primary-400/80;
+    @apply text-gray-900 px-5 py-3 sm:text-lg md:text-md font-semibold rounded-xl cursor-pointer bg-gradient-to-b from-primary-300 to-primary-400 shadow-[inset_0_1px_0_rgba(255,255,255,0.5),0_1px_2px_rgba(16,24,40,0.1),0_8px_24px_-8px_rgba(34,204,238,0.55)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[inset_0_1px_0_rgba(255,255,255,0.5),0_2px_4px_rgba(16,24,40,0.1),0_14px_32px_-8px_rgba(34,204,238,0.75)] active:translate-y-0;
   }
   .btn-primary-small {
-    @apply text-gray-25 px-4 py-2 sm:text-md md:text-sm font-medium rounded-lg  shadow-[0_1px_2px_rgba(16,24,40,0.05)] cursor-pointer bg-primary-400 hover:bg-primary-400/80;
+    @apply text-gray-900 px-4 py-2 sm:text-md md:text-sm font-semibold rounded-lg cursor-pointer bg-gradient-to-b from-primary-300 to-primary-400 shadow-[inset_0_1px_0_rgba(255,255,255,0.5),0_1px_2px_rgba(16,24,40,0.1),0_6px_18px_-6px_rgba(34,204,238,0.55)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[inset_0_1px_0_rgba(255,255,255,0.5),0_2px_4px_rgba(16,24,40,0.1),0_10px_24px_-6px_rgba(34,204,238,0.75)] active:translate-y-0;
   }
   .btn-primary-large {
-    @apply text-gray-25 px-7 py-4 sm:text-xl md:text-lg font-medium rounded-lg  shadow-[0_1px_2px_rgba(16,24,40,0.05)] cursor-pointer bg-primary-400 hover:bg-primary-400/80;
+    @apply text-gray-900 px-7 py-4 sm:text-xl md:text-lg font-semibold rounded-xl cursor-pointer bg-gradient-to-b from-primary-300 to-primary-400 shadow-[inset_0_1px_0_rgba(255,255,255,0.5),0_1px_2px_rgba(16,24,40,0.1),0_10px_28px_-8px_rgba(34,204,238,0.55)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[inset_0_1px_0_rgba(255,255,255,0.5),0_2px_4px_rgba(16,24,40,0.1),0_16px_36px_-8px_rgba(34,204,238,0.75)] active:translate-y-0;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center text-gray-700 px-5 py-3 sm:text-lg md:text-md font-medium rounded-xl cursor-pointer border border-gray-300 bg-white shadow-[0_1px_2px_rgba(16,24,40,0.05)] transition-all duration-200 hover:-translate-y-0.5 hover:border-gray-400 hover:shadow-[0_8px_20px_-6px_rgba(16,24,40,0.15)] active:translate-y-0;
   }
 }
 /* Lighting "shimmer" sweep used to draw attention without moving the element. */

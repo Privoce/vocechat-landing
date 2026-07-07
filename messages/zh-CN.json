@@ -1,15 +1,15 @@
 {
   "common": {},
   "metadata": {
-    "title": "Voce Chat - 本地运行，随处聊天",
-    "description": "VoceChat 是一款轻量级自托管聊天应用、API 与 SDK。支持 Docker、NAS 或树莓派部署，数据完全自主，用户数不限。",
+    "title": "VoceChat — 自托管聊天服务器，开源 Slack 替代方案",
+    "description": "VoceChat 是一款轻量级自托管聊天服务器，开源的 Slack/Discord 替代方案。一行 Docker 命令即可部署在电脑、NAS 或树莓派上——支持机器人、AI 智能体，数据完全自主。",
     "supportTitle": "技术支持",
     "supportDescription": "获取 VoceChat 安装、托管、定制开发和技术支持方面的帮助。",
     "privacyTitle": "隐私政策",
     "privacyDescription": "Privoce 旗下 VoceChat 移动应用及相关服务的隐私政策。",
     "blogTitle": "博客",
     "blogDescription": "来自互联网的文章、视频和官方文档精选——引用原文并链接至出处。",
-    "keywords": "VoceChat, 自托管聊天, 私有聊天服务器, Docker 聊天, NAS 聊天, Rust IM, 聊天 SDK, 应用内消息, 团队聊天, 开源聊天"
+    "keywords": "VoceChat, 自托管聊天, 私有聊天服务器, 私有化部署 IM, Slack 替代, Discord 替代, Docker 聊天服务器, NAS 聊天, 群晖聊天, 树莓派聊天, Rust IM, 聊天 SDK, 应用内消息, 团队聊天, AI 智能体聊天, 网站聊天挂件"
   },
   "download": {
     "join": "加入我的空间",
@@ -32,16 +32,20 @@
     },
     "firstView": {
       "title": "聊天，频道，部署AI项目，让电脑成为你的个人云！",
-      "subtitle": "VoceChat 是一款超轻量聊天应用、专为私有部署和Vibe Coding而生。用VoceChat和你的电脑上线你的专属应用！",
+      "subtitle": "VoceChat 是一款超轻量开源自托管聊天应用，专为私有部署和 Vibe Coding 而生。用 VoceChat 和你的电脑上线你的专属应用！",
       "downloadGooglePlay": "从 Google Play 下载安卓 App",
       "downloadApk": "下载安卓 APK 安装包",
       "downloadIos": "从 App Store 下载 iOS App",
-      "downloadDesktop": "从 GitHub Releases 下载桌面版"
+      "downloadDesktop": "从 GitHub Releases 下载桌面版",
+      "downloadLabel": "下载客户端",
+      "demoInteract": "点击体验在线演示",
+      "demoLive": "在线"
     },
     "features": {
-      "heading": "开放的 API 与 SDK，随处自托管，无需中心化服务。",
-      "intro": "机器人、视频通话、专属公网域名、公开首页与频道、Open ID、开放 API、开源 SDK，依据用户反馈持续迭代。已获得来自 50 多个国家的 <count>200,000+</count> 多家客户信赖。",
-      "viewDocs": "查看文档",
+      "eyebrow": "无需中心化服务",
+      "heading": "开放的 API 与 SDK，随处自托管。",
+      "intro": "机器人、视频通话、专属公网域名、公开首页与频道、Open ID、开放 API、开源 SDK，依据用户反馈持续迭代。已在 50 多个国家的近 <count>1,000,000</count> 台服务器上运行。",
+      "viewDocs": "阅读文档",
       "testApi": "测试 API",
       "viewBlog": "社区精选",
       "securityTitle": "安全",
@@ -67,13 +71,15 @@
       "afterStart": "启动后访问",
       "afterStartUrl": "http://localhost:3000/",
       "afterStartTail": "或系统分配给你的公网域名。",
+      "helpEyebrow": "支持",
       "stillProblem": "仍然遇到问题？",
       "chatHint": "我们很乐意花 25 分钟与你聊聊，帮你解决问题！",
       "bookMeeting": "预约会议",
-      "viewDoc": "查看文档"
+      "viewDoc": "阅读文档"
     },
     "compare": {
-      "heading": "把我们的产品与同类对比",
+      "eyebrow": "产品对比",
+      "heading": "VoceChat 与 Slack、Discord 等同类产品对比",
       "colProducts": "产品",
       "colPrivateApi": "私有部署的开放 API",
       "colOpenSource": "开源",
@@ -81,10 +87,11 @@
       "colLightweight": "轻量（小于 20 MB）"
     },
     "faq": {
+      "eyebrow": "FAQ",
       "heading": "常见问题",
       "subtitle": "关于自托管聊天、机器人、AI 智能体、Webhook 与视频通话——内容基于 doc.voce.chat 与社区实践。",
       "q1": "什么是 VoceChat？",
-      "a1": "VoceChat 是一款用 Rust 编写的轻量级自托管聊天服务器（约 20 MB），提供私聊与群聊、回复、@提及、文件传输、阅后即焚、开放 API 与 SDK、机器人 Webhook，以及可嵌入网站的聊天挂件——全部运行在你自己的基础设施上。服务端开源，适合私有云、NAS、homelab 和本地优先部署。",
+      "a1": "VoceChat 是一款用 Rust 编写的轻量级自托管聊天服务器（约 20 MB），是可运行在自有基础设施上的开源 Slack/Discord 替代方案。提供私聊与群聊、回复、@提及、文件传输、阅后即焚、开放 API 与 SDK、机器人 Webhook，以及可嵌入网站的聊天挂件。服务端开源，适合私有云、NAS、homelab 和本地优先部署。",
       "q2": "如何安装 VoceChat？",
       "a2Lead": "最快的方式是用 Docker，一条命令即可启动官方镜像：",
       "a2Tail": "也支持二进制或源码安装。TLS、反向代理与升级步骤请参阅 <install>安装文档</install>。",
@@ -117,6 +124,9 @@
       "blogCtaLink": "浏览社区精选"
     },
     "priceList": {
+      "eyebrow": "定价",
+      "heading": "定价简单透明",
+      "subtitle": "免费起步，一次性付费，无订阅。",
       "freeTitle": "免费版",
       "freeDesc": "在你自己的服务器上运行 VoceChat",
       "freeFeat1": "有限的机器人与 Webhook",
@@ -147,14 +157,16 @@
       "closeHint": "点击任意处关闭"
     },
     "booking": {
+      "eyebrow": "联系我们",
       "headingLine1": "想给你的应用加上聊天功能？",
       "headingLine2": "预约与我们 CEO 的一次会议",
-      "subtitle": "第一时间获取产品发布、行业资讯与洞察。",
+      "subtitle": "免费 25 分钟通话——托管、定制或 AI 智能体开发，选择适合你的时间。",
       "emailPlaceholder": "请输入你的邮箱",
-      "submit": "点击这里预约！",
+      "submit": "预约 25 分钟通话",
       "close": "关闭"
     },
     "blog": {
+      "eyebrow": "社区",
       "heading": "来自网络",
       "subtitle": "关于 VoceChat 的文章、视频与文档精选——引用原文并附上出处链接。",
       "readMore": "查看引用",
@@ -164,6 +176,7 @@
       "featured": "精选"
     },
     "footer": {
+      "tagline": "超轻量开源自托管聊天服务器——数据在你自己的机器上。",
       "rights": "© {year} Privoce Inc. 保留所有权利。",
       "privacy": "隐私政策",
       "support": "技术支持",

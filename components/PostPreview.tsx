@@ -70,7 +70,13 @@ function ImageThumbnail({
         unoptimized
         className="object-cover transition-transform duration-300 group-hover:scale-[1.02]"
       />
-      <div className="absolute inset-0 flex items-center justify-center bg-black/20 transition-colors group-hover:bg-black/30">
+      <div
+        className={
+          sourceType === "video"
+            ? "absolute inset-0 flex items-center justify-center bg-black/20 transition-colors group-hover:bg-black/30"
+            : "absolute inset-0 flex items-center justify-center bg-black/0 opacity-0 transition-all duration-200 group-hover:bg-black/25 group-hover:opacity-100"
+        }
+      >
         <OverlayIcon sourceType={sourceType} />
       </div>
     </div>

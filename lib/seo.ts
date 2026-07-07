@@ -90,6 +90,7 @@ export function buildPageMetadata({
     },
     twitter: {
       card: "summary_large_image",
+      site: "@privoce1",
       creator: "@privoce1",
       title,
       description,

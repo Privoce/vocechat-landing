@@ -34,9 +34,9 @@ export default function LazyYouTube({ videoId, title }: LazyYouTubeProps) {
   }, []);
 
   return (
-    <div ref={containerRef} className="mx-auto w-full max-w-[560px] px-4 sm:px-0">
+    <div ref={containerRef} className="mx-auto w-full max-w-[720px] px-4 sm:px-0">
       {isVisible ? (
-        <div className="aspect-video w-full overflow-hidden rounded-xl [&>div]:!h-full [&>div]:!w-full [&_iframe]:!h-full [&_iframe]:!w-full">
+        <div className="relative aspect-video w-full overflow-hidden rounded-2xl ring-1 ring-white/15 shadow-[0_24px_64px_-16px_rgba(0,0,0,0.6)] [&>div]:!h-full [&>div]:!w-full [&_iframe]:!h-full [&_iframe]:!w-full">
           <YouTube
             videoId={videoId}
             opts={{ width: 560, height: 315 }}
@@ -49,7 +49,7 @@ export default function LazyYouTube({ videoId, title }: LazyYouTubeProps) {
           href={`https://www.youtube.com/watch?v=${videoId}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="group relative flex aspect-video w-full items-center justify-center overflow-hidden rounded-xl border border-gray-600 bg-gray-900"
+          className="group relative flex aspect-video w-full items-center justify-center overflow-hidden rounded-2xl bg-gray-900 ring-1 ring-white/15 shadow-[0_24px_64px_-16px_rgba(0,0,0,0.6)]"
           aria-label={title}
         >
           <Image

@@ -86,7 +86,7 @@ export default function BlogPostCard({
       <div className="flex flex-1 flex-col p-6">
         <div className="mb-4 flex flex-wrap items-center gap-2">
           {featured && (
-            <span className="rounded-full bg-primary-500 px-2.5 py-1 text-xs font-semibold text-white">
+            <span className="rounded-full bg-primary-700 px-2.5 py-1 text-xs font-semibold text-white">
               {featuredLabel}
             </span>
           )}
